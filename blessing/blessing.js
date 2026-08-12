@@ -17,7 +17,7 @@ const show=id=>screens.forEach(s=>s.classList.toggle("active",s.id===id));
 const portraitPositions={p1:"0% 0%",p2:"33.333% 0%",p3:"66.667% 0%",p4:"100% 0%",p5:"0% 100%",p6:"33.333% 100%",p7:"66.667% 100%",p8:"100% 100%"};
 document.querySelectorAll(".choices button").forEach(btn=>btn.addEventListener("click",()=>{
   const name=btn.dataset.name;
-  const portraitClass=[...btn.querySelector(".portrait").classList].find(c=>/^p\d$/.test(c));
+  const portraitClass=[...btn.querySelector(".portrait").classList].find(c=>/^[pn]\d$/.test(c));
   show("drawing");
   window.setTimeout(()=>{
     const item=teachings[Math.floor(Math.random()*teachings.length)];
@@ -26,9 +26,11 @@ document.querySelectorAll(".choices button").forEach(btn=>btn.addEventListener("
     resultPortrait.textContent="";
     resultPortrait.className="seal result-portrait "+portraitClass;
     const isRenyi=name==="仁義大仙";
-    resultPortrait.style.backgroundImage=isRenyi?'url("images/renyi-daxian-v1.jpg?v=20260812-1")':'url("images/eight-immortals-v3.jpg?v=20260812-5")';
-    resultPortrait.style.backgroundPosition=isRenyi?"center":portraitPositions[portraitClass];
-    resultPortrait.style.backgroundSize=isRenyi?"cover":"400% 200%";
+    const isNew=/^n/.test(portraitClass);
+    const newPositions={n1:"0% 0%",n2:"100% 0%",n3:"0% 100%",n4:"100% 100%"};
+    resultPortrait.style.backgroundImage=isRenyi?'url("images/renyi-daxian-v1.jpg?v=20260812-2")':isNew?'url("images/four-faith-portraits-v1.jpg?v=20260812-1")':'url("images/eight-immortals-v3.jpg?v=20260812-5")';
+    resultPortrait.style.backgroundPosition=isRenyi?"center":isNew?newPositions[portraitClass]:portraitPositions[portraitClass];
+    resultPortrait.style.backgroundSize=isRenyi?"cover":isNew?"200% 200%":"400% 200%";
     resultPortrait.setAttribute("aria-label",name+"畫像");
     document.querySelector("#quote").textContent="「"+item.q+"」";
     document.querySelector("#guidance").textContent=item.g;
@@ -40,4 +42,3 @@ document.querySelector("#copy").addEventListener("click",async e=>{
   const text=document.querySelector("#chosen-name").textContent+"\n"+document.querySelector("#quote").textContent+"\n"+document.querySelector("#guidance").textContent;
   try{await navigator.clipboard.writeText(text);e.currentTarget.textContent="已複製";setTimeout(()=>e.currentTarget.textContent="複製慈語",1500)}catch{e.currentTarget.textContent="請長按文字複製"}
 });
-
