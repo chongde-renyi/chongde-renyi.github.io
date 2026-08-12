@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 1 seconds
-Output:
 const button = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#site-nav');
 const links = [...document.querySelectorAll('#site-nav a')];
@@ -23,4 +20,3 @@ const observer = new IntersectionObserver(entries => {
   links.forEach(link => link.classList.toggle('active', link.hash === `#${visible.target.id}`));
 }, { rootMargin: '-25% 0px -60%', threshold: [0, .25, .6] });
 sections.forEach(section => observer.observe(section));
-
