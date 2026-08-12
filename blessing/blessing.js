@@ -15,6 +15,13 @@ const teachings=[
 const screens=[...document.querySelectorAll(".screen")];
 const show=id=>screens.forEach(s=>s.classList.toggle("active",s.id===id));
 const portraitPositions={p1:"0% 0%",p2:"33.333% 0%",p3:"66.667% 0%",p4:"100% 0%",p5:"0% 100%",p6:"33.333% 100%",p7:"66.667% 100%",p8:"100% 100%"};
+const choices=document.querySelector(".choices");
+const shuffled=[...choices.children];
+for(let i=shuffled.length-1;i>0;i--){
+  const j=Math.floor(Math.random()*(i+1));
+  [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];
+}
+shuffled.forEach(choice=>choices.appendChild(choice));
 document.querySelectorAll(".choices button").forEach(btn=>btn.addEventListener("click",()=>{
   const name=btn.dataset.name;
   const portraitClass=[...btn.querySelector(".portrait").classList].find(c=>/^[pn]\d$/.test(c));
