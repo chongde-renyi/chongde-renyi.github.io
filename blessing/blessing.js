@@ -28,7 +28,7 @@ document.querySelectorAll(".choices button").forEach(btn=>btn.addEventListener("
     const isRenyi=name==="仁義大仙";
     const isNew=/^n/.test(portraitClass);
     const newPositions={n1:"0% 0%",n2:"100% 0%",n3:"0% 100%",n4:"100% 100%"};
-    resultPortrait.style.backgroundImage=isRenyi?'url("images/renyi-daxian-v1.jpg?v=20260812-2")':isNew?'url("images/four-faith-portraits-v1.jpg?v=20260812-1")':'url("images/eight-immortals-v3.jpg?v=20260812-5")';
+    resultPortrait.style.setProperty("background-image",isRenyi?'url("images/renyi-daxian-v1.jpg?v=20260812-2")':isNew?'url("images/four-faith-portraits-v1.jpg?v=20260812-1")':'url("images/eight-immortals-v3.jpg?v=20260812-5")',"important");
     resultPortrait.style.backgroundPosition=isRenyi?"center":isNew?newPositions[portraitClass]:portraitPositions[portraitClass];
     resultPortrait.style.backgroundSize=isRenyi?"cover":isNew?"200% 200%":"400% 200%";
     resultPortrait.setAttribute("aria-label",name+"畫像");
