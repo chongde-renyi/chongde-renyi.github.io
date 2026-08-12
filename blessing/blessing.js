@@ -25,9 +25,10 @@ document.querySelectorAll(".choices button").forEach(btn=>btn.addEventListener("
     const resultPortrait=document.querySelector("#seal");
     resultPortrait.textContent="";
     resultPortrait.className="seal result-portrait "+portraitClass;
-    resultPortrait.style.backgroundImage='url("images/eight-immortals-v3.jpg?v=20260812-5")';
-    resultPortrait.style.backgroundPosition=portraitPositions[portraitClass];
-    resultPortrait.style.backgroundSize="400% 200%";
+    const isRenyi=name==="仁義大仙";
+    resultPortrait.style.backgroundImage=isRenyi?'url("images/renyi-daxian-v1.jpg?v=20260812-1")':'url("images/eight-immortals-v3.jpg?v=20260812-5")';
+    resultPortrait.style.backgroundPosition=isRenyi?"center":portraitPositions[portraitClass];
+    resultPortrait.style.backgroundSize=isRenyi?"cover":"400% 200%";
     resultPortrait.setAttribute("aria-label",name+"畫像");
     document.querySelector("#quote").textContent="「"+item.q+"」";
     document.querySelector("#guidance").textContent=item.g;
