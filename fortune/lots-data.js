@@ -1,4 +1,4 @@
-const LOTS=[
+globalThis.LOTS=[
   {
     "n": 1,
     "grade": "上上",
@@ -224,7 +224,7 @@ const LOTS=[
     "grade": "中平",
     "poem": "欲去長江水闊茫，\n前途未遂運未通；\n如今絲綸常在手，\n隻恐魚水不相逢。",
     "story": "姜子牙渭水釣魚（姜太公釣魚，願者上鉤）",
-    "explanation": "此籤以「長江垂釣」比喻目標在前但水闊難渡，眼下時運未通、推進不易。雖「絲綸在手」代表主動權仍在自己，但恐因時機…3459 tokens truncated…etation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
+    "explanation": "此籤以「長江垂釣」比喻目標在前但水闊難渡，眼下時運未通、推進不易。雖「絲綸在手」代表主動權仍在自己，但恐因時…3461 tokens truncated…etation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
   },
   {
     "n": 39,
