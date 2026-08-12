@@ -167,278 +167,12 @@ globalThis.LOTS=[
     "explanation": "æ­¤ç±¤ç¤ºæ„ã€ŒèˆŠæ€¨æœªè§£ã€èˆŠç¿’æœªæ”¹ã€æ˜¯ç•¶å‰é˜»æ»¯çš„æ ¹æºï¼Œä½†ç¦æ‚£å°šæœªçœŸæ­£è‡¨èº«ï¼Œä»æœ‰å¯è½‰åœœç©ºé–“ã€‚åªè¦è¬¹æ…è¡Œäº‹ã€ä¿®æ­£éå¤±ä¸¦ç©ç¦è¡Œå–„ï¼Œå¾…é—œéµæ™‚æ©Ÿï¼ˆé¾è›‡äº¤æœƒï¼‰åˆ°ä¾†ï¼Œä¾¿èƒ½åŒ–è§£è¡çªã€å›æ­¸å’Œåˆã€‚",
     "jiazi": "ä¸™ç”³",
     "englishTranslation": "Old grudges remain unresolved,\nMisfortune will not befall my family;\nI must be cautious and do blessings,\nWhen dragons and snakes meet, harmony will come.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The situation is balanced or still developing; stay steady, observe carefully, and avoid forcing a result."
-  },
-  {
-    "n": 18,
-    "grade": "ä¸­å‰",
-    "poem": "å›å•ä¸­é–“æ­¤è¨€å› ï¼Œ\nçœ‹çœ‹ç¥¿é¦¬æ‹±å‰ç¨‹ï¼›\nè‹¥å¾—è²´äººå¤šå¾—åˆ©ï¼Œ\nå’Œåˆè‡ªæœ‰å…©åˆ†æ˜ã€‚",
-    "story": "ç§¦å”å¯¶æ•‘ææ·µ",
-    "explanation": "æ­¤ç±¤ä¸»å› ç·£å·²æ˜ã€é‹å‹¢æ¼¸é–‹ï¼Œå‰ç¨‹æœ‰ã€Œç¥¿é¦¬ã€ä¹‹è±¡ï¼Œä»£è¡¨æ©Ÿæœƒã€å¥”æ³¢èˆ‡æˆæœä¸¦é€²ã€‚è‹¥èƒ½å¾—è²´äººææ”œæˆ–èˆ‡äººå’Œåˆå”ä½œï¼Œå‰‡ååˆ©é›™æ”¶ã€äº‹äº‹æ›´æ˜“æˆå°±ã€‚",
-    "jiazi": "ä¸™æˆŒ",
-    "englishTranslation": "You ask the reason for this statement?\nLook at the auspicious stars and the stars that illuminate your future;\nIf you gain the help of a noble person, you will reap greater benefits;\nHarmony will naturally prevail.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
-  },
-  {
-    "n": 19,
-    "grade": "ä¸­å¹³",
-    "poem": "å¯Œè²´ç”±å‘½å¤©æ³¨å®šï¼Œå¿ƒé«˜å¿…ç„¶èª¤å›æœŸï¼›\nä¸ç„¶ä¸”å›ä¾èˆŠè·¯ï¼Œé›²é–‹æœˆå‡ºè‡ªåˆ†æ˜ã€‚",
-    "story": "ç´…å­©å…’æˆªä½å»è·¯ï¼ˆå…¼ï¼šç¯„ä¸¹å¦»æœªå‡ºèº«æ®ºä¹å¤«ï¼‰",
-    "explanation": "æ­¤ç±¤ä¸»ç¤ºã€Œå¯Œè²´æœ‰å‘½ã€ä¸å¯å¼·æ±‚ã€ï¼Œè‹¥çœ¼é«˜æ‰‹ä½æˆ–æ€¥æ–¼æ±‚æˆï¼Œå®¹æ˜“éŒ¯éæ‡‰å¾—çš„æ™‚æ©Ÿã€‚ç•¶å‰é›–æœ‰é˜»æ»¯å¦‚é›²é®æœˆï¼Œä½†åªè¦å›æ­¸ç©©å¥åšæ³•ã€è€å¿ƒå®ˆå€™ï¼Œå¾…é›²æ•£æœˆæ˜ï¼Œè‡ªèƒ½è¦‹åˆ†æ›‰ã€‚",
-    "jiazi": "ä¸ä¸‘",
-    "englishTranslation": "Wealth and honor are predetermined by fate; high aspirations will surely lead you astray;\nOtherwise, return to your old path, and the clouds will part and the moon will rise, revealing the truth.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The situation is balanced or still developing; stay steady, observe carefully, and avoid forcing a result."
-  },
-  {
-    "n": 20,
-    "grade": "ä¸­ä¸‹",
-    "poem": "å‰é€”åŠŸåæœªå¾—æ„ï¼Œ\néš»æå‘½å†…æœ‰äº¤åŠ ï¼›\nå…©å®¶å¿…å®šé˜²æå¤±ï¼Œ\nå‹¸å›ä¸”é€€è«å’¨å—Ÿã€‚",
-    "story": "å­«æ‚Ÿç©ºå¤§é¬§å¤©å®®",
-    "explanation": "æ­¤ç±¤ç¤ºæ„ç›®å‰åŠŸåäº‹æ¥­é›£é‚å¿ƒï¼Œé‹å‹¢å¤šæœ‰äº¤éŒ¯é˜»ç¤™ï¼Œè‹¥å¼·è¡Œæ¨é€²æ˜“å¼•ç™¼æ›´å¤§æå¤±ã€‚åˆé ˆé˜²ã€Œå…©å®¶ã€ä¹‹é–“çš„åˆ†æ­§æˆ–å®¶åº­ã€åˆå¤¥çš„è£‚ç—•ï¼Œå®œå…ˆé€€å®ˆæ•´é “ã€æ¸›å°‘è¡çªèˆ‡æ¶ˆè€—ï¼Œå¾…æ™‚è€Œå‹•ã€‚",
-    "jiazi": "ä¸å¯",
-    "englishTranslation": "Your future prospects and achievements are not yet satisfactory;\nI fear there will be misfortune in your destiny;\nBoth families will surely suffer losses;\nI advise you to retreat and not lament.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The present conditions call for caution. Slow down, reduce risk, seek trustworthy help, and wait for greater clarity."
-  },
-  {
-    "n": 21,
-    "grade": "ä¸­å‰",
-    "poem": "åæ–¹ä½›æ³•æœ‰éˆé€šï¼Œ\nå¤§é›£ç¦æ‚£ä¸ç›¸åŒã€‚\nç´…æ—¥ç•¶ç©ºå¸¸ç…§è€€ï¼Œ\né‚„æœ‰è²´äººåˆ°å®¶å ‚ã€‚",
-    "story": "æœ±å£½æ˜Œå°‹æ¯",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œå…ˆé›£å¾Œæ˜“ã€é€¢å‡¶åŒ–å‰ã€ã€‚çœ¼å‰é›–æœ‰é˜»æ»¯æˆ–ç½å„ï¼Œä½†å› ç¦å¾·ã€ä¿¡å¿µèˆ‡è¡Œå–„ä¹‹åŠ›ï¼Œå¯å¾—ç¥æ˜è­·ä½‘ï¼›å¾…æ™‚æ©Ÿè½‰æ˜ï¼Œå¦‚ç´…æ—¥ç•¶ç©ºï¼Œäº¦å°‡æœ‰è²´äººä¸Šé–€ç›¸åŠ©è€Œæ¼¸å…¥ä½³å¢ƒã€‚",
-    "jiazi": "ä¸å·³",
-    "englishTranslation": "The Buddha's teachings are powerful and pervasive;\nDifficulties and calamities are not the same for everyone.\nThe bright sun shines constantly;\nAnd a noble person will come to your home.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
-  },
-  {
-    "n": 22,
-    "grade": "ä¸­å‰",
-    "poem": "å¤ªå…¬å®¶æ¥­å…«åæˆï¼Œ\næœˆå‡ºå…‰è¼å››æµ·æ˜ã€‚\nå‘½å†…è‡ªç„¶é€¢å¤§å‰ï¼Œ\nèŒ…å±‹ä¸­é–“ç™¾äº‹äº¨ã€‚",
-    "story": "å§œå¤ªå…¬å…«åé‡æ–‡ç‹ï¼ˆæ¸­æ°´é‡£é­šï¼‰",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œå¤§å™¨æ™šæˆã€ï¼Œçœ¼å‰æˆ–è¦ºé€²å±•ç·©æ…¢ï¼Œä½†å±¬æ–¼å…ˆè“„ç©ã€å¾Œç™¼é”ä¹‹é‹ã€‚å¾…æ™‚æ©Ÿæˆç†Ÿå¦‚ã€Œæœˆå‡ºå…‰è¼ã€ï¼Œè‡ªç„¶é€¢å‰ï¼ŒåŸæœ¬å¹³æ·¡ä¹‹å¢ƒäº¦èƒ½è½‰äº¨é€šï¼›åˆ‡å¿Œæ€¥èºèºé€²èˆ‡æŠ•æ©Ÿå–å·§ã€‚",
-    "jiazi": "ä¸æœª",
-    "englishTranslation": "Your grandfather's family business was completed at eighty;\nThe moon's radiance illuminates the four seas.\nGreat fortune will naturally come to you;\nEven in your humble abode, everything will prosper.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
-  },
-  {
-    "n": 23,
-    "grade": "ä¸­å¹³",
-    "poem": "æ¬²å»é•·æ±Ÿæ°´é—ŠèŒ«ï¼Œ\nå‰é€”æœªé‚é‹æœªé€šï¼›\nå¦‚ä»Šçµ²ç¶¸å¸¸åœ¨æ‰‹ï¼Œ\néš»æé­šæ°´ä¸ç›¸é€¢ã€‚",
-    "story": "å§œå­ç‰™æ¸­æ°´â€¦3611 tokens truncatedâ€¦",
-    "poem": "æ„ä¸­è‹¥å•ç¥ä»™è·¯ï¼Œ\nå‹¸çˆ¾ä¸”é€€æœ›é«˜æ¨“ã€‚\nå¯¬å¿ƒä¸”å®ˆå¯¬å¿ƒåï¼Œ\nå¿…ç„¶é‡å¾—è²´äººæ‰¶ã€‚",
-    "story": "å­”å¤«å­å°å…’ç­”ï¼ˆå­”å­é‡é …æ©ï¼‰",
-    "explanation": "æ­¤ç±¤ä¸»æ—¨åœ¨ã€Œå®ˆéœå¾…æ™‚ã€ä»¥é€€ç‚ºé€²ã€ã€‚ç•¶å‰ä¸å®œèºé€²èˆ‡å¥½é«˜é¨–é ï¼Œå…ˆé€€ä¸€æ­¥æ²‰æ¾±å¿ƒæ€§ã€ç›¤é»æ¢ä»¶ï¼Œå¾…æ™‚æ©Ÿæˆç†Ÿï¼Œè‡ªæœ‰è²´äººå‡ºæ‰‹ç›¸åŠ©è€Œè½‰é †ã€‚",
-    "jiazi": "åºšè¾°",
-    "englishTranslation": "If you ask about the path to immortality,\nI advise you to look up from a high tower.\nKeep your heart at ease,\nand you will surely encounter a noble person to help you.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The situation is balanced or still developing; stay steady, observe carefully, and avoid forcing a result."
-  },
-  {
-    "n": 40,
-    "grade": "ä¸­å‰",
-    "poem": "å¹³ç”Ÿå¯Œè²´æˆç¥¿ä½ï¼Œ\nå›å®¶é–€æˆ¶å®šå…‰è¼ã€‚\næ­¤ä¸­å¿…å®šç„¡æå¤±ï¼Œ\nå¤«å¦»ç™¾æ­²å–œç›¸éš¨ã€‚",
-    "story": "è–›å¹³è²´æ¢å¯’çª¯",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œå…ˆé›£å¾Œæ˜“ã€æ¼¸å…¥ä½³å¢ƒã€ï¼Œå‰æœŸæˆ–æœ‰æ‹–å»¶æ³¢æŠ˜ï¼Œä½†çµ‚å±€ä¸è‡´æœ‰å¤±ï¼Œåèƒ½å¾—ç¦ç¥¿èˆ‡é–€ç¬¬å…‰å½©ã€‚é‡é»åœ¨å®ˆåˆ†å¿è®“ã€ä»¥å’Œç‚ºè²´ï¼Œå¤«å¦»å®¶é‹å°¤è¦‹é•·ä¹…ä¹‹å–œã€‚",
-    "jiazi": "åºšåˆ",
-    "englishTranslation": "In this life, wealth and high rank will be yours;\nYour family will surely shine.\nThere will be no loss here;\nHusband and wife will live happily together for a hundred years.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
-  },
-  {
-    "n": 41,
-    "grade": "ä¸­å‰",
-    "poem": "ä»Šè¡Œåˆ°æ­¤å¯¦é›£æ¨ï¼Œæ­Œæ­Œæš¢é£²è‡ªå¾˜å¾Šã€‚\né›çŠ¬ç›¸èæ¶ˆæ¯è¿‘ï¼Œå©šå§»å¤™ä¸–çµæˆé›™ã€‚",
-    "story": "æœˆè‹±é†‰é…’èª¤æœƒçµ‚æˆè‰¯ç·£ï¼ˆæˆ–ï¼šåŠ‰å…¨é€²ç“œï¼‰",
-    "explanation": "æ­¤ç±¤ç¤ºæ„ç›®å‰è™•å¢ƒé€²é€€å…©é›£ã€å¿ƒä¸­çŒ¶ç–‘ï¼Œä½†è½‰æ©Ÿå·²åœ¨è¿‘è™•ï¼Œé—œéµåœ¨æ–¼æŠŠæ¡æ™‚æ©Ÿèˆ‡åŒ–è§£å°ç«‹ã€‚æ‰€æ±‚ä¹‹äº‹ä»¥ã€Œå’Œåˆã€é‡ä¿®èˆŠå¥½ã€å› ç·£æˆå°±ã€æœ€ç‚ºæœ‰åˆ©ï¼›è²¡åˆ©èˆ‡åŠŸåå‰‡ä¸å®œèºé€²ï¼Œå®œå¾…æ™‚è€Œå‹•ã€‚",
-    "jiazi": "åºšç”³",
-    "englishTranslation": "Now that I have arrived at this point, it is truly difficult to leave; let us sing and drink freely as we linger.\nNews of marriage is near, a union preordained in a past life.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
-  },
-  {
-    "n": 42,
-    "grade": "ä¸‹ä¸‹",
-    "poem": "ä¸€é‡æ±Ÿæ°´ä¸€é‡å±±ï¼Œ\nèª°çŸ¥æ­¤å»è·¯åˆé›£ã€‚\nä»»ä»–æ”¹æ±‚çµ‚ä¸éï¼Œ\næ˜¯éçµ‚ä¹…æœªå¾—å®‰ã€‚",
-    "story": "å§œå¥³é€å¯’è¡£å“­å€’è¬è£¡é•·åŸ",
-    "explanation": "æ­¤ç±¤ä»¥ã€Œä¸€é‡æ±Ÿæ°´ä¸€é‡å±±ã€ç¤ºæ„å‰è·¯é˜»ç¤™å±¤å±¤ç–Šç–Šï¼ŒçŸ­æœŸå…§é›£ä»¥çªç ´ã€‚å°±ç®—æ›´æ›æ–¹æ³•æˆ–å¦é—¢è¹Šå¾‘ï¼Œä»å¤šå—ç‰½åˆ¶ï¼Œä¸”æ˜“ç”Ÿå£èˆŒæ˜¯éã€é›£å¾—å®‰å¯§ã€‚å®œå®ˆä¸å®œæ”»ï¼Œä»¥é€€ç‚ºé€²ï¼Œç­‰å¾…æ™‚æ©Ÿè½‰åœœã€‚",
-    "jiazi": "åºšæˆŒ",
-    "englishTranslation": "One river, one mountain,\nWho knew the road ahead would be so difficult?\nLet him change his ways, but it will ultimately fail;\nThe troubles will never find peace.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The present conditions call for caution. Slow down, reduce risk, seek trustworthy help, and wait for greater clarity."
-  },
-  {
-    "n": 43,
-    "grade": "ä¸­å¹³",
-    "poem": "ä¸€å¹´ä½œäº‹æ€¥å¦‚é£›ï¼Œå›çˆ¾å¯¬å¿ƒè«é²ç–‘ã€‚\nè²´äººé‚„åœ¨åƒè£¡å¤–ï¼ŒéŸ³ä¿¡æœˆä¸­æ¼¸æ¼¸çŸ¥ã€‚",
-    "story": "è˜‡ç§¦å‡ä¸ç¬¬",
-    "explanation": "æ­¤ç±¤ç¤ºæ„å…ˆå‰è¡Œäº‹éæ€¥è€Œé›£é †é‚ï¼Œç•¶ä¸‹å®œæ”¾å¯¬å¿ƒã€ç©©ä½æ­¥èª¿ï¼Œä¸å¯èºé€²ä¹Ÿä¸å¿…çŒ¶ç–‘ã€‚è²´äººèˆ‡æ©Ÿæœƒå°šåœ¨é æ–¹ï¼Œè‡³æœˆä¸­å‰å¾Œå°‡æœ‰æ¶ˆæ¯èˆ‡è½‰æ©Ÿï¼Œé‹å‹¢æ¼¸è½‰ä½³ã€‚",
-    "jiazi": "è¾›ä¸‘",
-    "englishTranslation": "A year's work flies by,\nSo be at ease and do not hesitate.\nYour benefactor is still a thousand miles away, news will gradually come by the moon.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The situation is balanced or still developing; stay steady, observe carefully, and avoid forcing a result."
-  },
-  {
-    "n": 44,
-    "grade": "ä¸Šå‰",
-    "poem": "å®¢åˆ°å‰é€”å¤šå¾—åˆ©ï¼Œ\nå›çˆ¾ä½•æ•…å…©ç›¸ç–‘ï¼›\né›–æ˜¯ä¸­é–“é€¢é€²é€€ï¼Œ\næœˆå‡ºå…‰è¼å¾—é‹æ™‚ã€‚",
-    "story": "ç›Šæ˜¥ç•™å‚˜",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œå…ˆé›£å¾Œæ˜“ã€å…ˆå‡¶å¾Œå‰ã€ï¼Œçœ¼å‰é›–æœ‰é€²é€€å…©é›£èˆ‡ä¸ç¢ºå®šï¼Œä½†è²´äººèˆ‡æ©Ÿæœƒå…¶å¯¦å·²åœ¨èº«é‚Šã€‚åˆ‡å¿Œå› çŒœç–‘èˆ‡çŒ¶è±«è€ŒéŒ¯å¤±è‰¯æ©Ÿï¼Œå¾…æ™‚æ©Ÿæˆç†Ÿï¼ˆå¦‚æœˆä¸­ã€é‹å‹¢è½‰æ—ºä¹‹æ™‚ï¼‰å³å¯è½‰å±ç‚ºå®‰ã€æ¼¸å…¥ä½³å¢ƒã€‚",
-    "jiazi": "è¾›å¯",
-    "englishTranslation": "A guest's arrival will bring many benefits,\nWhy do you doubt him?\nThough there may be setbacks along the way,\nWhen the moon rises, good fortune will come.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The conditions are generally favorable; proceed with gratitude, integrity, and humility."
-  },
-  {
-    "n": 45,
-    "grade": "ä¸­å‰",
-    "poem": "èŠ±é–‹ä»Šå·²çµæˆæœï¼Œ\nå¯Œè²´æ¦®è¯çµ‚åˆ°è€ï¼›\nå›å­å°äººç›¸æœƒåˆï¼Œ\nè¬äº‹æ¸…å‰è«ç…©æƒ±ã€‚",
-    "story": "å­”å­éç•ªé€¢å°å…’ã€è–›ä»è²´å›ºç™½è™é—œ",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œè‹¦ç›¡ç”˜ä¾†ã€æˆæœå·²ç¾ã€ï¼Œéå¾€è€•è€˜å°‡é€æ­¥è½‰ç‚ºååˆ©èˆ‡å®‰ç©©ï¼Œå±¬å¯å–œä¹‹è±¡ã€‚æƒŸé€”ä¸­ä»å¯èƒ½é‡åˆ°äººäº‹ç£¨åˆèˆ‡é€²åº¦å»¶é²ï¼Œå®œä»¥å’Œç‚ºè²´ã€å®ˆæˆå¾…æ©Ÿï¼Œçµ‚èƒ½æ¸…å‰åœ“æ»¿ã€‚",
-    "jiazi": "è¾›å·³",
-    "englishTranslation": "The flowers have now blossomed and borne fruit,\nWealth and glory will last until old age;\nGentlemen and villains will meet,\nAll things will be peaceful and auspicious, do not be troubled.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
-  },
-  {
-    "n": 46,
-    "grade": "ä¸Šå‰",
-    "poem": "åŠŸåå¾—æ„èˆ‡å›é¡¯ï¼Œ\nå‰é€”å¯Œè²´å–œå®‰ç„¶ï¼›\nè‹¥é‡ä¸€è¼ªæ˜æœˆç…§ï¼Œ\nåäº”åœ˜åœ“å…‰æ»¿å¤©ã€‚",
-    "story": "ç‹„ä»å‚‘ä¸­èˆˆå¤§å”ï¼æ±Ÿä¸­ç«‹æ¬½è³œç‹€å…ƒ",
-    "explanation": "æ­¤ç±¤ä»¥ã€Œæ˜æœˆã€å–»è²´äººèˆ‡æ™‚æ©Ÿï¼Œä¸»åŠŸåé¡¯é”ã€å‰ç¨‹å®‰æ³°ï¼Œå±¬åœ“æ»¿ä¹‹è±¡ã€‚å‡¡äº‹å¤šèƒ½é †é‚ï¼Œä½†åœ¨å¾—æ„ä¹‹æ™‚ä»å®œè¬™éœå®ˆæˆï¼ŒæŠŠæ¡é—œéµæ©Ÿæœƒå‰‡æ›´ä¸Šä¸€å±¤ã€‚",
-    "jiazi": "è¾›æœª",
-    "englishTranslation": "Fame and fortune will be yours,\nA future of wealth and peace awaits;\nIf a bright moon shines,\nThe full moon will illuminate the sky on the fifteenth.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The conditions are generally favorable; proceed with gratitude, integrity, and humility."
-  },
-  {
-    "n": 47,
-    "grade": "ä¸­å¹³",
-    "poem": "å›çˆ¾ä½•é ˆå•è–è¿¹ï¼Œ\nè‡ªå·±å¿ƒä¸­çš†æœ‰ç›Šï¼›\näºä»Šä¸”çœ‹æœˆä¸­æ—¬ï¼Œ\nå…‡äº‹è„«å‡ºåŒ–æˆå‰ã€‚",
-    "story": "æœ±è²·è‡£è² è–ª",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œå…ˆå…‡å¾Œå‰ã€ï¼Œçœ¼å‰é›–æœ‰é˜»æ»¯èˆ‡ä¸é †ï¼Œä½†åªè¦å®ˆä½ä¿¡å¿µã€ç©©ä½æ­¥ä¼ï¼Œè‡³è¾²æ›†æœˆä¸­æ—¬å‰å¾Œå¤šæœ‰è½‰æ©Ÿã€‚ç±¤ä¸­äº¦æé†’æ±‚ç±¤è€…ä¸å¿…éåº¦ä¾è³´å¤–æ±‚ï¼Œé—œéµç­”æ¡ˆèˆ‡å–æ¨å…¶å¯¦å·²åœ¨è‡ªå·±å¿ƒä¸­ã€‚",
-    "jiazi": "è¾›é…‰",
-    "englishTranslation": "Why ask about sacred sites?\nEverything is beneficial within your own heart;\nNow look at the middle of the month,\nMisfortune will turn into good fortune. 48. In this mortal world, things are not always harmonious;\nThe moon is obscured by clouds, its light hazy.\nMy heart yearns to go forth,\nBut I fear my destiny is not yet in your favor.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The situation is balanced or still developing; stay steady, observe carefully, and avoid forcing a result."
-  },
-  {
-    "n": 48,
-    "grade": "ä¸­ä¸‹",
-    "poem": "é™½ä¸–ä½œäº‹æœªå’ŒåŒï¼Œ\né›²é®æœˆè‰²æ­£æœ¦èƒ§ã€‚\nå¿ƒä¸­æ„æ¬²å‰é€”å»ï¼Œ\néš»æå‘½å†…é‹æœªé€šã€‚",
-    "story": "é›²é®æœˆï¼ˆé‹é€”æœªé€šï¼Œå®œå¿å¾…æ™‚ï¼‰",
-    "explanation": "ç›®å‰äººå’Œæœªé½Šã€ç’°å¢ƒä¸æ˜æœ—ï¼Œå¦‚æœˆè¢«é›²é®ï¼Œåšäº‹é›£ä»¥é †é‚ã€‚é›–æœ‰å‰é€²ä¹‹å¿ƒï¼Œä½†å‘½é‹æ™‚æ©Ÿæœªé€šï¼Œç¡¬é—–æ˜“æ‹›æå¤±æˆ–å—äººè’™è”½ã€‚å®œå…ˆé€€ä¸€æ­¥æ±‚å’Œã€æ•´é “å¿ƒæ…‹èˆ‡æ–¹æ³•ï¼Œç­‰å¾…è½‰æ©Ÿå†å‹•ã€‚",
-    "jiazi": "è¾›äº¥",
-    "englishTranslation": "In this mortal world, matters are not yet harmonious;\nClouds veil the moon in hazy light.\nThe heart wishes to journey onward,\nYet fortune has not opened the way.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The present conditions call for caution. Slow down, reduce risk, seek trustworthy help, and wait for greater clarity."
-  },
-  {
-    "n": 49,
-    "grade": "ä¸­å¹³",
-    "poem": "è¨€èªé›–å¤šä¸å¯å¾ï¼Œ\né¢¨é›²éœè™•æœªè¡Œé¾ã€‚\næš—ä¸­çµ‚å¾—æ˜æ¶ˆæ¯ï¼Œ\nå›çˆ¾ä½•é ˆå•é‡é‡ã€‚",
-    "story": "ä¼å­èƒ¥éæ˜­é—œ",
-    "explanation": "æ­¤ç±¤ç¤ºæ„å¤–ç•Œæ„è¦‹é›œæ²“å¤šè®Šï¼Œä¸å®œç›²å¾çœ¾èªªï¼›ç•¶ä¸‹æ™‚æ©Ÿæœªç†Ÿï¼Œå¼·è¡Œæ¨é€²åæ˜“å—é˜»ã€‚åªè¦å®ˆå®šæœ¬å¿ƒã€è€å¿ƒå¸ƒå±€ï¼Œæš—è™•çµ‚æœƒå‡ºç¾æ˜ç¢ºè¨Šæ¯èˆ‡è½‰æ©Ÿï¼Œæ¯‹é ˆåè¦†è¿½å•è€Œè‡ªäº‚é™£è…³ã€‚",
-    "jiazi": "å£¬å­",
-    "englishTranslation": "Though many words may be spoken, they should not be heeded;\nIn stillness, the dragon has not yet moved.\nThe truth will eventually come from the shadows;\nWhy should you ask so many questions?",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The situation is balanced or still developing; stay steady, observe carefully, and avoid forcing a result."
-  },
-  {
-    "n": 50,
-    "grade": "ä¸­å‰",
-    "poem": "ä½›å‰ç™¼èª“ç„¡ç•°å¿ƒï¼Œä¸”çœ‹å‰é€”å¾—å¥½éŸ³ï¼›\næ­¤ç‰©åŸä¾†æœ¬æ˜¯éµï¼Œä¹Ÿèƒ½è®ŠåŒ–å¾—æˆé‡‘ã€‚",
-    "story": "å°å…’è·¯é‡æƒ¡é¬¼",
-    "explanation": "æ­¤ç±¤ä¸»æ—¨åœ¨ã€Œå®ˆå¿—ä¸ç§»ã€ä»¥æ™ºåŒ–é›£ã€ï¼šåªè¦å°ç›®æ¨™èª å¿ƒä¸äºŒã€æŒçºŒè€•è€˜ï¼Œçœ¼å‰é›–ä¼¼ä¸åˆ©äº¦å¯è½‰å‰ã€‚ç¾æ³å¦‚éµæœªæˆå™¨ï¼Œç¶“ç”±è€å¿ƒèˆ‡æ–¹æ³•é›éŠï¼Œçµ‚èƒ½æœ‰æˆï¼Œå±¬å…ˆé›£å¾Œæ˜“ã€å…ˆå¹³å¾Œæ—ºä¹‹è±¡ã€‚",
-    "jiazi": "å£¬å¯…",
-    "englishTranslation": "I swore before the Buddha that my heart would not waver; let us see if good news comes from the future;\nThis thing, originally iron, can be transformed into gold.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
-  },
-  {
-    "n": 51,
-    "grade": "ä¸­å¹³",
-    "poem": "æ±è¥¿å—åŒ—ä¸å ªè¡Œï¼Œå‰é€”æ­¤äº‹æ­£å¯ç•¶ã€‚\nå‹¸å›æŠŠå®šè«ç…©æƒ±ï¼Œå®¶é–€è‡ªæœ‰ä¿å®‰åº·ã€‚",
-    "story": "è¶™åŒ¡èƒ¤å›°æ²³æ±",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œå››æ–¹å—é˜»ã€ï¼Œç•¶å‰ä¸åˆ©æ–¼é è¡Œã€è½‰æ›è·‘é“æˆ–å¼·è¡Œçªç ´ï¼Œå®œä»¥ä¿å®ˆç©©å®šç‚ºä¸Šã€‚å®ˆä½æœ¬åˆ†ã€å®‰å®šå¿ƒç¥ï¼Œè‡ªå¯æ¸›å°‘æ³¢æŠ˜ï¼›ä»¥å®¶åº­èˆ‡å¥åº·ç‚ºé‡ï¼Œå¾…æ™‚é‹è½‰æ—ºå†åœ–é€²å–ã€‚",
-    "jiazi": "å£¬è¾°",
-    "englishTranslation": "Traveling east, west, north, and south is impossible; this journey ahead is just right.\nI advise you to hold on firmly and not worry; your family will be safe and sound.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The situation is balanced or still developing; stay steady, observe carefully, and avoid forcing a result."
-  },
-  {
-    "n": 52,
-    "grade": "ä¸­å¹³",
-    "poem": "åŠŸåäº‹æ¥­æœ¬ç”±å¤©ï¼Œ\nä¸é ˆæŒ‚å¿µæ„æ‡¸æ‡¸ã€‚\nè‹¥å•ä¸­é–“é²èˆ‡é€Ÿï¼Œ\né¢¨é›²éš›æœƒåœ¨çœ¼å‰ã€‚",
-    "story": "é„­å…ƒå’Œå«–é˜¿ä»™",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œæˆæ•—æœ‰æ™‚ã€æ©Ÿç·£åœ¨å‰ã€ï¼ŒåŠŸåäº‹æ¥­é›–æœ‰å¤©æ™‚å®šæ•¸ï¼Œä½†äººè‹¥éåº¦ç„¦æ…®å¼·æ±‚æˆ–æ”¾ç¸±æ‡ˆæ€ ï¼Œåæ˜“å¤±æ©Ÿã€‚çœ¼å‰å°‡æœ‰é¢¨é›²è®ŠåŒ–èˆ‡é—œéµæ©Ÿæœƒï¼Œèƒ½å¦æˆäº‹å–æ±ºæ–¼å®ˆæ­£ã€ç¯€åˆ¶èˆ‡æŠŠæ¡æ™‚æ©Ÿçš„èƒ½åŠ›ã€‚",
-    "jiazi": "å£¬åˆ",
-    "englishTranslation": "Fame and fortune are determined by Heaven;\nThere is no need to be anxious.\nIf you ask whether it will be soon or late,\nThe opportune moment will arrive before your eyes.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The situation is balanced or still developing; stay steady, observe carefully, and avoid forcing a result."
-  },
-  {
-    "n": 53,
-    "grade": "ä¸Šå‰",
-    "poem": "çœ‹å›ä¾†å•å¿ƒä¸­äº‹ï¼Œç©å–„ä¹‹å®¶æ…¶æœ‰é¤˜ã€‚\né‹äº¨è²¡å­é›™é›™è‡³ï¼ŒæŒ‡æ—¥å–œæ°£æº¢é–€é—¾ã€‚",
-    "story": "è˜‡ç§¦ä¸ç¬¬",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œå…ˆæ†‚å¾Œå–œã€ï¼Œçœ¼å‰é›–æœ‰ç…©æƒ±æˆ–é˜»æ»¯ï¼Œä½†åªè¦å®ˆæ­£è¡Œå–„ã€è€å¿ƒç´¯ç©ï¼Œå¾ˆå¿«è½‰å…¥äº¨é€šã€‚å¾Œå‹¢æœ‰è²´äººæ‰¶æŒï¼Œè²¡é‹èˆ‡å®¶é‹åŒæ—ºï¼Œå–œäº‹å¯æœ›åœ¨è¿‘æœŸæ‡‰é©—ã€‚",
-    "jiazi": "å£¬ç”³",
-    "englishTranslation": "Seeing you ask about your heart's desire, a family that has accumulated good deeds will have abundant blessings.\nGood fortune will come, wealth and children will arrive together; soon, joy will fill your doorway.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The conditions are generally favorable; proceed with gratitude, integrity, and humility."
-  },
-  {
-    "n": 54,
-    "grade": "ä¸­å‰",
-    "poem": "å­¤ç‡ˆå¯‚å¯‚å¤œæ²‰æ²‰ï¼Œè¬äº‹æ¸…å‰è¬äº‹æˆã€‚\nè‹¥é€¢é™°ä¸­æœ‰å–„æœï¼Œç‡’å¾—å¥½é¦™é”ç¥æ˜ã€‚",
-    "story": "å‘‚ä»™æ•é»ƒæ¢æœªç†Ÿ",
-    "explanation": "æ­¤ç±¤å…ˆè‹¦å¾Œç”˜ï¼Œçœ¼å‰é›–è¦ºå­¤å¯‚é²æ»¯ï¼Œä½†åªè¦å¿ƒæ­£è¡Œæ­£ã€æš—ä¸­è¡Œå–„ç©å¾·ï¼Œæ‰€æ±‚ä¹‹äº‹çµ‚èƒ½è½‰æ¸…å‰è€Œæˆã€‚é‡é»åœ¨ã€Œå› æœã€èˆ‡ã€Œèª æ•¬ã€ï¼šä¸å®œæŠ•æ©Ÿæ€¥é€²ï¼Œæ‡‰ä»¥æ­æ•¬ä¹‹å¿ƒä¿®ç¦ï¼Œæ–¹å¾—ç¥æ˜è­·ä½‘ã€é †åˆ©åœ“æ»¿ã€‚",
-    "jiazi": "å£¬æˆŒ",
-    "englishTranslation": "A solitary lamp shines in the deep night, all things are auspicious and successful.\nIf good deeds are found in the darkness, burn fine incense to reach the gods.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
-  },
-  {
-    "n": 55,
-    "grade": "ä¸­ä¸‹",
-    "poem": "é ˆçŸ¥é€²é€€ç¸½è™›è¨€ï¼Œ\nçœ‹çœ‹ç™¼æš—æœªå¿…å…¨ã€‚\nç ç‰æ·±è—é‚„æœªè®Šï¼Œ\nå¿ƒä¸­ä½†å¾—æ‰å¾’ç„¶ã€‚",
-    "story": "éƒ­è¯é†‰é…’èª¤ä½³æœŸ",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œæ™‚é‹æœªåˆ°ã€è¨€æ‰¿é›£æ†‘ã€ï¼Œçœ¼å‰é€²é€€ä¹‹èªªå¤šæœ‰è™›æµ®ï¼Œç’°å¢ƒäº¦æ™¦æš—æœªæ˜ï¼Œä¸å®œè²¿ç„¶æŠ¼æ³¨æˆ–å¼·è¡Œæ¨é€²ã€‚é›–æœ‰çœŸæå¯¦å­¸èˆ‡æ©Ÿæœƒï¼ˆå¦‚ç ç‰æ·±è—ï¼‰ï¼Œä½†éœ€ç­‰å¾…æ™‚æ©Ÿæˆç†Ÿï¼›è‹¥åªæ˜¯å¿ƒä¸­å¦„æƒ³ã€å¼·æ±‚æ·å¾‘ï¼Œçµ‚å°‡å¾’å‹ç„¡åŠŸã€‚",
-    "jiazi": "ç™¸ä¸‘",
-    "englishTranslation": "Know that advancement and retreat are all empty words,\nEven if things appear dark, they are not necessarily complete.\nPearls and jade hidden deep remain unchanged,\nBut if you only have them in your heart, it's all in vain.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The present conditions call for caution. Slow down, reduce risk, seek trustworthy help, and wait for greater clarity."
-  },
-  {
-    "n": 56,
-    "grade": "ä¸­ä¸‹",
-    "poem": "ç—…ä¸­è‹¥å¾—è‹¦å¿ƒå‹ï¼Œ\nåˆ°åº•å®Œå…¨ç¸½æœªé­ã€‚\nå»å¾Œä¸é ˆå›é ­å•ï¼Œ\nå¿ƒä¸­äº‹å‹™ç›¡æ¶ˆç£¨ã€‚",
-    "story": "ç¯„å°‘ä¼¯æ³›èˆŸäº”æ¹–",
-    "explanation": "æ­¤ç±¤ä»¥ã€Œç—…ä¸­æ“å‹ã€å–»ç¤ºç•¶å‰å‹‰å¼·ç¡¬æ’åªæœƒèº«å¿ƒä¿±ç–²ï¼Œæˆæ•ˆä»é›£å¦‚é¡˜ã€‚å‡¡äº‹å®œæš«æ”¶é‹’èŠ’ã€é †å‹¢è€Œç‚ºï¼Œéå»ä¹‹äº‹ä¸å¿…åè¦†è¿½ç©¶ï¼Œæ”¾ä¸‹ç‰½æ›æ–¹èƒ½æ¸›å°‘å…§è€—ã€ç­‰å¾…è½‰æ©Ÿã€‚",
-    "jiazi": "ç™¸å¯",
-    "englishTranslation": "If you suffer mental anguish during illness,\nYou will never truly be cured.\nAfter you leave, there's no need to look back and ask questions,\nAll the troubles in your heart will be worn away.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The present conditions call for caution. Slow down, reduce risk, seek trustworthy help, and wait for greater clarity."
-  },
-  {
-    "n": 57,
-    "grade": "ä¸­å‰",
-    "poem": "å‹¸å›æŠŠå®šå¿ƒè«è™›ï¼Œ\nå‰é€”æ¸…å‰å¾—é‹æ™‚ï¼›\nåˆ°åº•ä¸­é–“ç„¡å¤§äº‹ï¼Œ\nåˆé‡ç¥ä»™å®ˆå®‰å±…ã€‚",
-    "story": "å­«è‡é¾æ¶“åŒå¸«é¬¼è°·å­ï¼ˆå­«è‡å¿è¾±å¾—åŠ©ï¼Œé¾æ¶“æ€¥åŠŸè‡ªæ•—ï¼‰",
-    "explanation": "æ­¤ç±¤ä¸»æ—¨åœ¨ã€Œå¿ƒå®šå‰‡å‰ã€ï¼šå…ˆæŠŠå¿ƒå®‰ä½ï¼Œå‹¿ç–‘å‹¿èºï¼Œé‹å‹¢è‡ªæœƒæ¼¸æ¼¸è½‰æ¸…ã€‚éç¨‹ä¸­é›–æœªå¿…æœ‰é©šå¤©å¤§äº‹èˆ‡å¿«é€Ÿæš´èµ·ï¼Œä½†èƒ½å¹³ç©©é †é‚ã€å¾—äººç›¸åŠ©æˆ–ç¥æ˜è­·ä½‘ï¼Œå®ˆæœ¬åˆ†å³å¯è¦‹å¥½çµæœã€‚",
-    "jiazi": "ç™¸å·³",
-    "englishTranslation": "I advise you to keep your mind focused and not be vain,\nThe future is auspicious and your luck will be good;\nIn the end, there will be no major events,\nAnd you will meet a deity guarding your peaceful abode.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
-  },
-  {
-    "n": 58,
-    "grade": "ä¸­ä¸‹",
-    "poem": "è›‡èº«æ„æ¬²è®Šæˆé¾ï¼Œéš»æå‘½å†…é‹æœªé€šã€‚\nä¹…ç—…ä¸”ä½œå¯¬å¿ƒåï¼Œè¨€èªé›–å¤šä¸å¯å¾ã€‚",
-    "story": "æ¼¢é«˜ç¥–æ–¬ç™½è›‡",
-    "explanation": "æ­¤ç±¤ä¸»ã€Œå¿—å¤§è€Œé‹æœªé€šã€ï¼šå¿ƒä¸­æƒ³çªç ´ã€èºå‡ï¼Œä½†æ™‚æ©Ÿèˆ‡æ ¹åŸºæœªåˆ°ï¼Œå¼·æ±‚åæ˜“å—é˜»ã€‚åˆç¤ºã€Œä¹…ç—…å®œå¯¬å¿ƒã€èˆ‡ã€Œçœ¾è¨€ä¸å¯ç›¡ä¿¡ã€ï¼Œå®œæ²‰ä½æ°£ã€é¤Šå‹¢ä¿®ç¦ï¼Œå¾…é‹é–‹å†é€²ã€‚",
-    "jiazi": "ç™¸æœª",
-    "englishTranslation": "A snake's body desires to become a dragon, but its destiny is not yet in motion.\nIf you are chronically ill, sit comfortably and do not heed much advice.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The present conditions call for caution. Slow down, reduce risk, seek trustworthy help, and wait for greater clarity."
-  },
-  {
-    "n": 59,
-    "grade": "ä¸­å‰",
-    "poem": "æœ‰å¿ƒä½œç¦è«é²ç–‘ï¼Œ\næ±‚åæ¸…å‰æ­£ç•¶æ™‚ï¼›\næ­¤äº‹å¿…èƒ½æˆæœƒåˆï¼Œ\nè²¡å¯¶è‡ªç„¶å–œç›¸éš¨ã€‚",
-    "story": "è‘£æ°¸èˆ‡ä¸ƒä»™å¥³",
-    "explanation": "æ­¤ç±¤ä¸»æ—¨åœ¨ã€Œæœ‰å¿ƒè¡Œå–„ã€æŠŠæ¡æ™‚æ©Ÿã€æ­£é“æ±‚æˆã€ã€‚ç›®å‰æ­£é€¢å¯é€²å¯å–ä¹‹æ™‚ï¼Œè‹¥èƒ½æœæ–·è¡Œå‹•ã€ä»¥æ­£å¿µç¶“ç‡Ÿï¼Œæ‰€æ±‚ä¹‹äº‹çµ‚èƒ½æœƒåˆåœ“æ»¿ï¼Œè²¡åˆ©äº¦å°‡éš¨ä¹‹è€Œä¾†ï¼Œä½†è²¡é‹å±¬ç©©é€²ï¼Œå¿Œæ€¥åŠŸè¿‘åˆ©ã€‚",
-    "jiazi": "ç™¸é…‰",
-    "englishTranslation": "If you have the will to do good deeds, do not hesitate,\nSeeking fame and fortune is the right time;\nThis matter will surely be accomplished,\nAnd wealth will naturally follow.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. A constructive outcome is possible when you remain patient, sincere, and attentive to timing."
-  },
-  {
-    "n": 60,
-    "grade": "ä¸­å¹³",
-    "poem": "æœˆå‡ºå…‰è¼æœ¬æ¸…å‰ï¼Œ\næµ®é›²ç¸½æ˜¯è”½è”­è‰²ï¼›\næˆ¶å†…ç”¨å¿ƒå†ä½œç¦ï¼Œ\nç•¶å®˜åˆ†ç†ä¾¿æœ‰ç›Šã€‚",
-    "story": "è–›å‰›è¸¢æ­»å¤ªå­é©šå´©è–é§•",
-    "explanation": "æ­¤ç±¤ç‚ºã€Œæœˆæ˜è€Œé›²è”½ã€ä¹‹è±¡ï¼šæœ¬è³ªä¸Šæ¢ä»¶ä¸å·®ï¼Œä½†çœ¼å‰å—å¤–åœ¨å¹²æ“¾æˆ–ä¸€æ™‚è¿·æƒ‘è€Œé›£ä»¥æ–½å±•ã€‚åªè¦å›åˆ°æ­£é“ã€åœ¨å®¶ä¿®å¾·è¡Œå–„ã€åœ¨è·å®ˆåˆ†å…¬æ­£è™•ç†ï¼Œæµ®é›²è‡ªæ•£ï¼Œé‹å‹¢å¯ç”±å¹³è½‰å°å‰ã€‚",
-    "jiazi": "ç™¸äº¥",
-    "englishTranslation": "The moon rises brightly, bringing good fortune;\nFloating clouds always cast a shadow.\nIf you diligently perform good deeds within your household,\nYou will benefit from serving as an official and handling affairs properly.",
-    "englishInterpretation": "Read this lot as guidance for reflection rather than a fixed prediction. The situation is balanced or still developing; stay steady, observe carefully, and avoid forcing a result."
-  }
-];
+    "englisó^<¶‰Ëkºwµç}¹œÑ¡”İ…ä±q¹]¡•¸Ñ¡”µ½½¸É¥Í•Ì°½½™½ÉÑÕ¹”İ¥±°½µ”¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”½¹‘¥Ñ¥½¹Ì…É”•¹•É…±±ä™…Ù½É…‰±”ìÁÉ½••İ¥Ñ É…Ñ¥ÑÕ‘”°¥¹Ñ•É¥Ñä°…¹¡Õµ¥±¥Ñä¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ĞÔ°4(€€€€‰É…‘”ˆè€‹’â·–B$ˆ°4(€€€€‰Á½•´ˆè€‹¢*Ç¦Z/’î+–ŞËÖCš"Cšzs¾ò1q»–¾3¢ÊÓšš»¢>¿Ö–"Ã¢¾òmq»–Bo–¶C–Â?’êënãšr–B#¾ò1q»¢B³’ê/šâ–B'¢:¯§šÇˆ°4(€€€€‰ÍÑ½Éäˆè€‹–¶S–¶C¦;V«¦‹–Â?–K¢Zo’î¢ÊÓ–nëf÷¢f;¦^pˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’âï3¢.›n‡Rc’úš"Cšzs–ŞË>û7¾ò3¦;–ú¢W¢c–Â¦Cš¶—¢ö'
+ë–B7–"§¢"–º'¦§¾ò3–Æ³–>¿–Zs’æ/¢Æ‡š¦S’â·’î7–>¿¢÷¦–"Ã’êë’ê/£–B#¢"¦Ë–ê›–îÛ¦Ë¾ò3–ºs’î—–J3
+ë¢ÊÓ–º#š"C–úš¦¾ò3Ö¢÷šâ–B'–rOšîÿˆ°4(€€€€‰©¥…é¤ˆè€‹¢úo–ŞÌˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰Q¡”™±½İ•ÉÌ¡…Ù”¹½Ü‰±½ÍÍ½µ•…¹‰½É¹”™ÉÕ¥Ğ±q¹]•…±Ñ …¹±½Éäİ¥±°±…ÍĞÕ¹Ñ¥°½±…”íq¹•¹Ñ±•µ•¸…¹Ù¥±±…¥¹Ìİ¥±°µ••Ğ±q¹±°Ñ¡¥¹Ìİ¥±°‰”Á•…•™Õ°…¹…ÕÍÁ¥¥½ÕÌ°‘¼¹½Ğ‰”ÑÉ½Õ‰±•¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸½¹ÍÑÉÕÑ¥Ù”½ÕÑ½µ”¥ÌÁ½ÍÍ¥‰±”İ¡•¸å½ÔÉ•µ…¥¸Á…Ñ¥•¹Ğ°Í¥¹•É”°…¹…ÑÑ•¹Ñ¥Ù”Ñ¼Ñ¥µ¥¹œ¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ĞØ°4(€€€€‰É…‘”ˆè€‹’â+–B$ˆ°4(€€€€‰Á½•´ˆè€‹–*–B7–ú_š?¢"–Bo¦†¿¾ò1q»–&7¦S–¾3¢ÊÓ–Zs–º'Û¾òmq»¢.—¦’â¢ò«šb;šr#Ÿ¾ò1q»–6’êS–rc–rO–'šîÿ–’§ˆ°4(€€€€‰ÍÑ½Éäˆè€‹.’î–
+G’â·¢"#–’Ÿ–RC¾ò?šÆ’â·®/š²÷¢Îs.–ˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’î—3šb;šr#7–Zï¢ÊÓ’êë¢"šfš¦¾ò3’âï–*–B7¦†¿¦S–&7¢/–º'šÎÃ¾ò3–Æ³–rOšîÿ’æ/¢Æ‡–‡’ê/–’k¢÷¦‚¦¾ò3’ö–r£–ú_š?’æ/šf’î7–ºs¢²g¦s–º#š"C¾ò3š*+š>‡¦^s¦6×š¦šr–&šnÓ’â+’â–Æ“ˆ°4(€€€€‰©¥…é¤ˆè€‹¢úošr¨ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰…µ”…¹™½ÉÑÕ¹”İ¥±°‰”å½ÕÉÌ±q¹™ÕÑÕÉ”½˜İ•…±Ñ …¹Á•…”…İ…¥ÑÌíq¹%˜„‰É¥¡Ğµ½½¸Í¡¥¹•Ì±q¹Q¡”™Õ±°µ½½¸İ¥±°¥±±Õµ¥¹…Ñ”Ñ¡”Í­ä½¸Ñ¡”™¥™Ñ••¹Ñ ¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”½¹‘¥Ñ¥½¹Ì…É”•¹•É…±±ä™…Ù½É…‰±”ìÁÉ½••İ¥Ñ É…Ñ¥ÑÕ‘”°¥¹Ñ•É¥Ñä°…¹¡Õµ¥±¥Ñä¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ĞÜ°4(€€€€‰É…‘”ˆè€‹’â·–æÌˆ°4(€€€€‰Á½•´ˆè€‹–Bo"û’öW¦‚#–V?¢[¢şç¾ò1q»¢«–ŞÇ–ş’â·jšr'n+¾òmq»’ê;’î+’âSr/šr#’â·š^³¾ò1q»–’ê/¢¯–ë–2[š"C–B'ˆ°4(€€€€‰ÍÑ½Éäˆè€‹šrÇ¢Êß¢¢Êƒ¢Z¨ˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’âï3–#––ú3–B'7¾ò3ró–&7¦n[šr'¦bïšî¿¢"’â7¦‚¾ò3’ö–>«¢š–º#’ö?’ş‡–ş×¦§’ö?š¶—’òC¾ò3¢Ï¢úËšnšr#’â·š^³–&7–ú3–’kšr'¢ö'š¦Æ“’â·’ê›š>C¦KšÆÆ“¢’â7–ş¦;–ê›’úw¢ÎÓ–’[šÆ¾ò3¦^s¦6×¶Sš†#¢"–>[š6£–Û–¾›–ŞË–r£¢«–ŞÇ–ş’â·ˆ°4(€€€€‰©¥…é¤ˆè€‹¢úo¦$ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰]¡ä…Í¬…‰½ÕĞÍ…É•Í¥Ñ•Ìıq¹Ù•ÉåÑ¡¥¹œ¥Ì‰•¹•™¥¥…°İ¥Ñ¡¥¸å½ÕÈ½İ¸¡•…ÉĞíq¹9½Ü±½½¬…ĞÑ¡”µ¥‘‘±”½˜Ñ¡”µ½¹Ñ ±q¹5¥Í™½ÉÑÕ¹”İ¥±°ÑÕÉ¸¥¹Ñ¼½½™½ÉÑÕ¹”¸€Ğà¸%¸Ñ¡¥Ìµ½ÉÑ…°İ½É±°Ñ¡¥¹Ì…É”¹½Ğ…±İ…åÌ¡…Éµ½¹¥½ÕÌíq¹Q¡”µ½½¸¥Ì½‰ÍÕÉ•‰ä±½Õ‘Ì°¥ÑÌ±¥¡Ğ¡…éä¹q¹5ä¡•…ÉĞå•…É¹ÌÑ¼¼™½ÉÑ ±q¹	ÕĞ$™•…Èµä‘•ÍÑ¥¹ä¥Ì¹½Ğå•Ğ¥¸å½ÕÈ™…Ù½È¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”Í¥ÑÕ…Ñ¥½¸¥Ì‰…±…¹•½ÈÍÑ¥±°‘•Ù•±½Á¥¹œìÍÑ…äÍÑ•…‘ä°½‰Í•ÉÙ”…É•™Õ±±ä°…¹…Ù½¥™½É¥¹œ„É•ÍÕ±Ğ¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€Ğà°4(€€€€‰É…‘”ˆè€‹’â·’â,ˆ°4(€€€€‰Á½•´ˆè€‹¦f÷’â[’ös’ê/šr«–J3–B3¾ò1q»¦nË¦»šr#¢&Ëš¶šr›¢Ÿ	q»–ş’â·š?š²Ë–&7¦S–:ï¾ò1q»¦jïšC–F÷–¦/šr«¦kˆ°4(€€€€‰ÍÑ½Éäˆè€‹¦nË¦»šr#¾ò#¦/¦Sšr«¦k¾ò3–ºs–ş7–úšf¾ò$ˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹n»–&7’êë–J3šr«¦ö+JÃ–Š’â7šb;šr_¾ò3–ššr#¢Š¯¦nË¦»¾ò3–k’ê/¦n’î—¦‚¦¦n[šr'–&7¦Ë’æ/–ş¾ò3’ö–F÷¦/šfš¦šr«¦k¾ò3†³¦^[šbOš.ošB7–’Çš"[–>_’êë¢Jg¢R÷–ºs–#¦’âš¶—šÆ–J3šVÓ¦‚O–şš/¢"šZçšÎW¾ò3¶'–ú¢ö'š¦–7–.Wˆ°4(€€€€‰©¥…é¤ˆè€‹¢úo’ê”ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰%¸Ñ¡¥Ìµ½ÉÑ…°İ½É±°µ…ÑÑ•ÉÌ…É”¹½Ğå•Ğ¡…Éµ½¹¥½ÕÌíq¹±½Õ‘ÌÙ•¥°Ñ¡”µ½½¸¥¸¡…éä±¥¡Ğ¹q¹Q¡”¡•…ÉĞİ¥Í¡•ÌÑ¼©½ÕÉ¹•ä½¹İ…É±q¹e•Ğ™½ÉÑÕ¹”¡…Ì¹½Ğ½Á•¹•Ñ¡”İ…ä¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”ÁÉ•Í•¹Ğ½¹‘¥Ñ¥½¹Ì…±°™½È…ÕÑ¥½¸¸M±½Ü‘½İ¸°É•‘Õ”É¥Í¬°Í••¬ÑÉÕÍÑİ½ÉÑ¡ä¡•±À°…¹İ…¥Ğ™½ÈÉ•…Ñ•È±…É¥Ñä¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€Ğä°4(€€€€‰É…‘”ˆè€‹’â·–æÌˆ°4(€€€€‰Á½•´ˆè€‹¢¢¢ª{¦n[–’k’â7–>¿–ú{¾ò1q»¦Š£¦nË¦vs¢fWšr«¢†3¦ú7	q»šj_’â·Ö–ú_šb;šÚ#š¿¾ò1q»–Bo"û’öW¦‚#–V?¦7¦7ˆ°4(€€€€‰ÍÑ½Éäˆè€‹’ò7–¶C¢—¦;šb·¦^pˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’ëš?–’[V3š?¢š/¦nsšÊO–’k¢º+¾ò3’â7–ºsnË–ú{rû¢ª«¾òoVÛ’â/šfš¦šr«¾ò3–òß¢†3š:£¦Ë–>7šbO–>_¦bï–>«¢š–º#–ºkšr³–ş¢C–ş–â–Æ¾ò3šj_¢fWÖšr–ë>ûšb;Šë¢¢+š¿¢"¢ö'š¦¾ò3š¾/¦‚#–>7¢š¢ş÷–V?¢3¢«’ê¦f¢Ïˆ°4(€€€€‰©¥…é¤ˆè€‹–³–¶@ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰Q¡½Õ µ…¹äİ½É‘Ìµ…ä‰”ÍÁ½­•¸°Ñ¡•äÍ¡½Õ±¹½Ğ‰”¡••‘•íq¹%¸ÍÑ¥±±¹•ÍÌ°Ñ¡”‘É…½¸¡…Ì¹½Ğå•Ğµ½Ù•¹q¹Q¡”ÑÉÕÑ İ¥±°•Ù•¹ÑÕ…±±ä½µ”™É½´Ñ¡”Í¡…‘½İÌíq¹]¡äÍ¡½Õ±å½Ô…Í¬Í¼µ…¹äÅÕ•ÍÑ¥½¹Ìüˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”Í¥ÑÕ…Ñ¥½¸¥Ì‰…±…¹•½ÈÍÑ¥±°‘•Ù•±½Á¥¹œìÍÑ…äÍÑ•…‘ä°½‰Í•ÉÙ”…É•™Õ±±ä°…¹…Ù½¥™½É¥¹œ„É•ÍÕ±Ğ¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ÔÀ°4(€€€€‰É…‘”ˆè€‹’â·–B$ˆ°4(€€€€‰Á½•´ˆè€‹’öo–&7fó¢ªO‡VÃ–ş¾ò3’âSr/–&7¦S–ú_––÷¦~Ï¾òmq»š¶“&§–:’úšr³šb¿¦B×¾ò3’æ¢÷¢º+–2[–ú_š"C¦Gˆ°4(€€€€‰ÍÑ½Éäˆè€‹–Â?–K¢Ş¿¦š‡¦²ğˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’âïš^£–r£3–º#–ş_’â7ï’î—šfë–2[¦n7¾òk–>«¢š–Â7n»š¢g¢ªƒ–ş’â7’ê3š2ê3¢W¢c¾ò3ró–&7¦n[’òó’â7–"§’ê›–>¿¢ö'–B'>ûšÎ–š¦B×šr«š"C–f£¾ò3ÚORÇ¢C–ş¢"šZçšÎW¦6o¦6+¾ò3Ö¢÷šr'š"C¾ò3–Æ³–#¦n–ú3šbO–#–æÏ–ú3š^ë’æ/¢Æ‡ˆ°4(€€€€‰©¥…é¤ˆè€‹–³–¾ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰$Íİ½É”‰•™½É”Ñ¡”	Õ‘‘¡„Ñ¡…Ğµä¡•…ÉĞİ½Õ±¹½Ğİ…Ù•Èì±•ĞÕÌÍ•”¥˜½½¹•İÌ½µ•Ì™É½´Ñ¡”™ÕÑÕÉ”íq¹Q¡¥ÌÑ¡¥¹œ°½É¥¥¹…±±ä¥É½¸°…¸‰”ÑÉ…¹Í™½Éµ•¥¹Ñ¼½±¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸½¹ÍÑÉÕÑ¥Ù”½ÕÑ½µ”¥ÌÁ½ÍÍ¥‰±”İ¡•¸å½ÔÉ•µ…¥¸Á…Ñ¥•¹Ğ°Í¥¹•É”°…¹…ÑÑ•¹Ñ¥Ù”Ñ¼Ñ¥µ¥¹œ¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ÔÄ°4(€€€€‰É…‘”ˆè€‹’â·–æÌˆ°4(€€€€‰Á½•´ˆè€‹švÇ¢–ÿ–6_–2_’â7–‚«¢†3¾ò3–&7¦Sš¶“’ê/š¶–>¿VÛ	q»–.ã–Boš*+–ºk¢:¯§šÇ¾ò3–ºÛ¦Z¢«šr'’şw–º'–êßˆ°4(€€€€‰ÍÑ½Éäˆè€‹¢Úg–2‡¢“–nÃšÊÏšvÄˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’âï3–nošZç–>_¦bï7¾ò3VÛ–&7’â7–"§šZó¦ƒ¢†3¢ö'š>o¢ŞG¦Oš"[–òß¢†3ª‚Ó¾ò3–ºs’î—’şw–º#¦§–ºk
+ë’â+–º#’ö?šr³–"–º'–ºk–ş–{¾ò3¢«–>¿šâo–ÂGšÎ‹š*c¾òo’î—–ºÛ–ê·¢"–—–êß
+ë¦7¾ò3–úšf¦/¢ö'š^ë–7–r[¦Ë–>[ˆ°4(€€€€‰©¥…é¤ˆè€‹–³¢úÀˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰QÉ…Ù•±¥¹œ•…ÍĞ°İ•ÍĞ°¹½ÉÑ °…¹Í½ÕÑ ¥Ì¥µÁ½ÍÍ¥‰±”ìÑ¡¥Ì©½ÕÉ¹•ä…¡•…¥Ì©ÕÍĞÉ¥¡Ğ¹q¹$…‘Ù¥Í”å½ÔÑ¼¡½±½¸™¥Éµ±ä…¹¹½Ğİ½ÉÉäìå½ÕÈ™…µ¥±äİ¥±°‰”Í…™”…¹Í½Õ¹¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”Í¥ÑÕ…Ñ¥½¸¥Ì‰…±…¹•½ÈÍÑ¥±°‘•Ù•±½Á¥¹œìÍÑ…äÍÑ•…‘ä°½‰Í•ÉÙ”…É•™Õ±±ä°…¹…Ù½¥™½É¥¹œ„É•ÍÕ±Ğ¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ÔÈ°4(€€€€‰É…‘”ˆè€‹’â·–æÌˆ°4(€€€€‰Á½•´ˆè€‹–*–B7’ê/š–·šr³RÇ–’§¾ò1q»’â7¦‚#š2–ş×š?šãšã	q»¢.—–V?’â·¦ZO¦Ë¢"¦¾ò1q»¦Š£¦nË¦jošr–r£ró–&7ˆ°4(€€€€‰ÍÑ½Éäˆè€‹¦·––J3–®[¦bÿ’îdˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’âï3š"CšV_šr'šfš¦Ş–r£–&77¾ò3–*–B7’ê/š–·¦n[šr'–’§šf–ºkšVã¾ò3’ö’êë¢.—¦;–ê››š»–òßšÆš"[šRûâÇš#šƒ¾ò3–>7šbO–’Çš¦ró–&7–Âšr'¦Š£¦nË¢º+–2[¢"¦^s¦6×š¦šr¾ò3¢÷–B›š"C’ê/–>[šÆëšZó–º#š¶¾–"Û¢"š*+š>‡šfš¦j¢÷–*oˆ°4(€€€€‰©¥…é¤ˆè€‹–³–6 ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰…µ”…¹™½ÉÑÕ¹”…É”‘•Ñ•Éµ¥¹•‰ä!•…Ù•¸íq¹Q¡•É”¥Ì¹¼¹••Ñ¼‰”…¹á¥½ÕÌ¹q¹%˜å½Ô…Í¬İ¡•Ñ¡•È¥Ğİ¥±°‰”Í½½¸½È±…Ñ”±q¹Q¡”½ÁÁ½ÉÑÕ¹”µ½µ•¹Ğİ¥±°…ÉÉ¥Ù”‰•™½É”å½ÕÈ•å•Ì¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”Í¥ÑÕ…Ñ¥½¸¥Ì‰…±…¹•½ÈÍÑ¥±°‘•Ù•±½Á¥¹œìÍÑ…äÍÑ•…‘ä°½‰Í•ÉÙ”…É•™Õ±±ä°…¹…Ù½¥™½É¥¹œ„É•ÍÕ±Ğ¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ÔÌ°4(€€€€‰É…‘”ˆè€‹’â+–B$ˆ°4(€€€€‰Á½•´ˆè€‹r/–Bo’ú–V?–ş’â·’ê/¾ò3¦7–Z’æ/–ºÛšÛšr'¦’c	q»¦/’ê£¢Ê‡–¶C¦ng¦ng¢Ï¾ò3š2š^—–ZsšÂšê‹¦Z¦^ûˆ°4(€€€€‰ÍÑ½Éäˆè€‹¢b›’â7²°ˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’âï3–#š–ú3–Zs7¾ò3ró–&7¦n[šr'§šÇš"[¦bïšî¿¾ò3’ö–>«¢š–º#š¶¢†3–Z¢C–şÒ¿¦7¾ò3–ú#–ş¯¢ö'–—’ê£¦k–ú3–.‹šr'¢ÊÓ’êëš&Ûš2¾ò3¢Ê‡¦/¢"–ºÛ¦/–B3š^ë¾ò3–Zs’ê/–>¿šro–r£¢şGšrš'¦¦_ˆ°4(€€€€‰©¥…é¤ˆè€‹–³RÌˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰M••¥¹œå½Ô…Í¬…‰½ÕĞå½ÕÈ¡•…ÉĞÌ‘•Í¥É”°„™…µ¥±äÑ¡…Ğ¡…Ì…ÕµÕ±…Ñ•½½‘••‘Ìİ¥±°¡…Ù”…‰Õ¹‘…¹Ğ‰±•ÍÍ¥¹Ì¹q¹½½™½ÉÑÕ¹”İ¥±°½µ”°İ•…±Ñ …¹¡¥±‘É•¸İ¥±°…ÉÉ¥Ù”Ñ½•Ñ¡•ÈìÍ½½¸°©½äİ¥±°™¥±°å½ÕÈ‘½½Éİ…ä¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”½¹‘¥Ñ¥½¹Ì…É”•¹•É…±±ä™…Ù½É…‰±”ìÁÉ½••İ¥Ñ É…Ñ¥ÑÕ‘”°¥¹Ñ•É¥Ñä°…¹¡Õµ¥±¥Ñä¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ÔĞ°4(€€€€‰É…‘”ˆè€‹’â·–B$ˆ°4(€€€€‰Á½•´ˆè€‹–¶“#–¾–¾–’sšÊ'šÊ'¾ò3¢B³’ê/šâ–B'¢B³’ê/š"C	q»¢.—¦‹¦fÃ’â·šr'–Zšzs¾ò3K–ú_––÷¦šg¦S–{šb;ˆ°4(€€€€‰ÍÑ½Éäˆè€‹–F’îgšzW¦îšŠšr«|ˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“–#¢.›–ú3Rc¾ò3ró–&7¦n[¢šë–¶“–¾¦Ëšî¿¾ò3’ö–>«¢š–şš¶¢†3š¶šj_’â·¢†3–Z¦7–úß¾ò3š&šÆ’æ/’ê/Ö¢÷¢ö'šâ–B'¢3š"C¦7¦î{–r£3–nƒšzs7¢"3¢ªƒšV³7¾òk’â7–ºsš*Wš¦š—¦Ë¾ò3š'’î—š·šV³’æ/–ş’ş»š?¾ò3šZç–ú_–{šb;¢¶ß’öG¦‚–"§–rOšîÿˆ°4(€€€€‰©¥…é¤ˆè€‹–³š"0ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰Í½±¥Ñ…Éä±…µÀÍ¡¥¹•Ì¥¸Ñ¡”‘••À¹¥¡Ğ°…±°Ñ¡¥¹Ì…É”…ÕÍÁ¥¥½ÕÌ…¹ÍÕ•ÍÍ™Õ°¹q¹%˜½½‘••‘Ì…É”™½Õ¹¥¸Ñ¡”‘…É­¹•ÍÌ°‰ÕÉ¸™¥¹”¥¹•¹Í”Ñ¼É•… Ñ¡”½‘Ì¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸½¹ÍÑÉÕÑ¥Ù”½ÕÑ½µ”¥ÌÁ½ÍÍ¥‰±”İ¡•¸å½ÔÉ•µ…¥¸Á…Ñ¥•¹Ğ°Í¥¹•É”°…¹…ÑÑ•¹Ñ¥Ù”Ñ¼Ñ¥µ¥¹œ¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ÔÔ°4(€€€€‰É…‘”ˆè€‹’â·’â,ˆ°4(€€€€‰Á½•´ˆè€‹¦‚#~—¦Ë¦â÷¢fo¢¢¾ò1q»r/r/fóšj_šr«–ş–£	q»>ƒ:'šŞÇ¢^?¦
+šr«¢º+¾ò1q»–ş’â·’ö–ú_šz'–úKÛˆ°4(€€€€‰ÍÑ½Éäˆè€‹¦·¢>¿¦'¦K¢ª“’öÏšr|ˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’âï3šf¦/šr«–"Ã¢¢š&ÿ¦nšG7¾ò3ró–&7¦Ë¦’æ/¢ª«–’kšr'¢fošÖ»¾ò3JÃ–Š’ê›šf›šj_šr«šb;¾ò3’â7–ºs¢ÊÿÛš*óšÎ£š"[–òß¢†3š:£¦Ë¦n[šr'ršvC–¾›–¶ã¢"š¦šr¾ò#–š>ƒ:'šŞÇ¢^?¾ò'¾ò3’ö¦r¶'–úšfš¦š"C¾òo¢.—–>«šb¿–ş’â·–ššÏ–òßšÆš6ß–úG¾ò3Ö–Â–úK–.{‡–*ˆ°4(€€€€‰©¥…é¤ˆè€‹fã’âDˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰-¹½ÜÑ¡…Ğ…‘Ù…¹•µ•¹Ğ…¹É•ÑÉ•…Ğ…É”…±°•µÁÑäİ½É‘Ì±q¹Ù•¸¥˜Ñ¡¥¹Ì…ÁÁ•…È‘…É¬°Ñ¡•ä…É”¹½Ğ¹••ÍÍ…É¥±ä½µÁ±•Ñ”¹q¹A•…É±Ì…¹©…‘”¡¥‘‘•¸‘••ÀÉ•µ…¥¸Õ¹¡…¹•±q¹	ÕĞ¥˜å½Ô½¹±ä¡…Ù”Ñ¡•´¥¸å½ÕÈ¡•…ÉĞ°¥ĞÌ…±°¥¸Ù…¥¸¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”ÁÉ•Í•¹Ğ½¹‘¥Ñ¥½¹Ì…±°™½È…ÕÑ¥½¸¸M±½Ü‘½İ¸°É•‘Õ”É¥Í¬°Í••¬ÑÉÕÍÑİ½ÉÑ¡ä¡•±À°…¹İ…¥Ğ™½ÈÉ•…Ñ•È±…É¥Ñä¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ÔØ°4(€€€€‰É…‘”ˆè€‹’â·’â,ˆ°4(€€€€‰Á½•´ˆè€‹^’â·¢.—–ú_¢.›–ş–.{¾ò1q»–"Ã–êW–º3–£â÷šr«¦·	q»–:ï–ú3’â7¦‚#–n{¦‚·–V?¾ò1q»–ş’â·’ê/–.gn‡šÚ#£ˆ°4(€€€€‰ÍÑ½Éäˆè€‹¾–ÂG’ò¿šÎo¢"’êSšæXˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’î—3^’â·šN7–.{7–Zï’ëVÛ–&7–.'–òß†³šJC–>«šr¢ê¯–ş’şÇZË¾ò3š"CšV#’î7¦n–š¦†c–‡’ê/–ºsšj¯šRÛ¦.K¢*K¦‚–.‹¢3
+ë¾ò3¦;–:ï’æ/’ê/’â7–ş–>7¢š¢ş÷¦Û¾ò3šRû’â/&÷š:ošZç¢÷šâo–ÂG–Ÿ¢_¶'–ú¢ö'š¦ˆ°4(€€€€‰©¥…é¤ˆè€‹fã–6¼ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰%˜å½ÔÍÕ™™•Èµ•¹Ñ…°…¹Õ¥Í ‘ÕÉ¥¹œ¥±±¹•ÍÌ±q¹e½Ôİ¥±°¹•Ù•ÈÑÉÕ±ä‰”ÕÉ•¹q¹™Ñ•Èå½Ô±•…Ù”°Ñ¡•É”Ì¹¼¹••Ñ¼±½½¬‰…¬…¹…Í¬ÅÕ•ÍÑ¥½¹Ì±q¹±°Ñ¡”ÑÉ½Õ‰±•Ì¥¸å½ÕÈ¡•…ÉĞİ¥±°‰”İ½É¸…İ…ä¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”ÁÉ•Í•¹Ğ½¹‘¥Ñ¥½¹Ì…±°™½È…ÕÑ¥½¸¸M±½Ü‘½İ¸°É•‘Õ”É¥Í¬°Í••¬ÑÉÕÍÑİ½ÉÑ¡ä¡•±À°…¹İ…¥Ğ™½ÈÉ•…Ñ•È±…É¥Ñä¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ÔÜ°4(€€€€‰É…‘”ˆè€‹’â·–B$ˆ°4(€€€€‰Á½•´ˆè€‹–.ã–Boš*+–ºk–ş¢:¯¢fo¾ò1q»–&7¦Sšâ–B'–ú_¦/šf¾òmq»–"Ã–êW’â·¦ZO‡–’Ÿ’ê/¾ò1q»–>#¦–{’îg–º#–º'–Æˆ°4(€€€€‰ÍÑ½Éäˆè€‹–¶¯¢?¦úCšÚO–B3–â¯¦²ó¢Âß–¶C¾ò#–¶¯¢?–ş7¢úÇ–ú_–*§¾ò3¦úCšÚOš—–*¢«šV_¾ò$ˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’âïš^£–r£3–ş–ºk–&–B'7¾òk–#š*+–ş–º'’ö?¾ò3–.ÿZG–.ÿ¢ê¾ò3¦/–.‹¢«šršòãšòã¢ö'šâ¦;¢/’â·¦n[šr«–şšr'¦¦k–’§–’Ÿ’ê/¢"–ş¯¦šjÓ¢Öß¾ò3’ö¢÷–æÏ¦§¦‚¦–ú_’êënã–*§š"[–{šb;¢¶ß’öG¾ò3–º#šr³–"–6Ï–>¿¢š/––÷ÖCšzsˆ°4(€€€€‰©¥…é¤ˆè€‹fã–ŞÌˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰$…‘Ù¥Í”å½ÔÑ¼­••Àå½ÕÈµ¥¹™½ÕÍ•…¹¹½Ğ‰”Ù…¥¸±q¹Q¡”™ÕÑÕÉ”¥Ì…ÕÍÁ¥¥½ÕÌ…¹å½ÕÈ±Õ¬İ¥±°‰”½½íq¹%¸Ñ¡”•¹°Ñ¡•É”İ¥±°‰”¹¼µ…©½È•Ù•¹ÑÌ±q¹¹å½Ôİ¥±°µ••Ğ„‘•¥ÑäÕ…É‘¥¹œå½ÕÈÁ•…•™Õ°…‰½‘”¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸½¹ÍÑÉÕÑ¥Ù”½ÕÑ½µ”¥ÌÁ½ÍÍ¥‰±”İ¡•¸å½ÔÉ•µ…¥¸Á…Ñ¥•¹Ğ°Í¥¹•É”°…¹…ÑÑ•¹Ñ¥Ù”Ñ¼Ñ¥µ¥¹œ¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€Ôà°4(€€€€‰É…‘”ˆè€‹’â·’â,ˆ°4(€€€€‰Á½•´ˆè€‹¢n¢ê¯š?š²Ë¢º+š"C¦ú7¾ò3¦jïšC–F÷–¦/šr«¦k	q»’æ^’âS’ös–¾³–ş–vC¾ò3¢¢¢ª{¦n[–’k’â7–>¿–ú{ˆ°4(€€€€‰ÍÑ½Éäˆè€‹šò‹¦®c–[šZ³f÷¢nˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’âï3–ş_–’Ÿ¢3¦/šr«¦k7¾òk–ş’â·šÏª‚Ó¢ê7–6¾ò3’öšfš¦¢"š‚ç–~ëšr«–"Ã¾ò3–òßšÆ–>7šbO–>_¦bï–>#’ë3’æ^–ºs–¾³–ş7¢"3rû¢¢’â7–>¿n‡’ş‡7¾ò3–ºsšÊ'’ö?šÂ¦’+–.‹’ş»š?¾ò3–ú¦/¦Z/–7¦Ëˆ°4(€€€€‰©¥…é¤ˆè€‹fãšr¨ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰Í¹…­”Ì‰½‘ä‘•Í¥É•ÌÑ¼‰•½µ”„‘É…½¸°‰ÕĞ¥ÑÌ‘•ÍÑ¥¹ä¥Ì¹½Ğå•Ğ¥¸µ½Ñ¥½¸¹q¹%˜å½Ô…É”¡É½¹¥…±±ä¥±°°Í¥Ğ½µ™½ÉÑ…‰±ä…¹‘¼¹½Ğ¡••µÕ …‘Ù¥”¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”ÁÉ•Í•¹Ğ½¹‘¥Ñ¥½¹Ì…±°™½È…ÕÑ¥½¸¸M±½Ü‘½İ¸°É•‘Õ”É¥Í¬°Í••¬ÑÉÕÍÑİ½ÉÑ¡ä¡•±À°…¹İ…¥Ğ™½ÈÉ•…Ñ•È±…É¥Ñä¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€Ôä°4(€€€€‰É…‘”ˆè€‹’â·–B$ˆ°4(€€€€‰Á½•´ˆè€‹šr'–ş’ösš?¢:¯¦ËZG¾ò1q»šÆ–B7šâ–B'š¶VÛšf¾òmq»š¶“’ê/–ş¢÷š"Cšr–B#¾ò1q»¢Ê‡–¾Û¢«Û–Zsnã¦j£ˆ°4(€€€€‰ÍÑ½Éäˆè€‹¢FšÂã¢"’â’îg––Ìˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“’âïš^£–r£3šr'–ş¢†3–Zš*+š>‡šfš¦š¶¦OšÆš"C7n»–&7š¶¦‹–>¿¦Ë–>¿–>[’æ/šf¾ò3¢.—¢÷šzsšZß¢†3–.W’î—š¶–ş×ÚO¾ò3š&šÆ’æ/’ê/Ö¢÷šr–B#–rOšîÿ¾ò3¢Ê‡–"§’ê›–Â¦j£’æ/¢3’ú¾ò3’ö¢Ê‡¦/–Æ³¦§¦Ë¾ò3–ş3š—–*¢şG–"§ˆ°4(€€€€‰©¥…é¤ˆè€‹fã¦$ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰%˜å½Ô¡…Ù”Ñ¡”İ¥±°Ñ¼‘¼½½‘••‘Ì°‘¼¹½Ğ¡•Í¥Ñ…Ñ”±q¹M••­¥¹œ™…µ”…¹™½ÉÑÕ¹”¥ÌÑ¡”É¥¡ĞÑ¥µ”íq¹Q¡¥Ìµ…ÑÑ•Èİ¥±°ÍÕÉ•±ä‰”…½µÁ±¥Í¡•±q¹¹İ•…±Ñ İ¥±°¹…ÑÕÉ…±±ä™½±±½Ü¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸½¹ÍÑÉÕÑ¥Ù”½ÕÑ½µ”¥ÌÁ½ÍÍ¥‰±”İ¡•¸å½ÔÉ•µ…¥¸Á…Ñ¥•¹Ğ°Í¥¹•É”°…¹…ÑÑ•¹Ñ¥Ù”Ñ¼Ñ¥µ¥¹œ¸ˆ4(€ô°4(€ì4(€€€€‰¸ˆè€ØÀ°4(€€€€‰É…‘”ˆè€‹’â·–æÌˆ°4(€€€€‰Á½•´ˆè€‹šr#–ë–'¢òwšr³šâ–B'¾ò1q»šÖ»¦nËâ÷šb¿¢R÷¢R·¢&Ë¾òmq»š"Û–R£–ş–7’ösš?¾ò1q»VÛ–ºc–"B’úÿšr'n+ˆ°4(€€€€‰ÍÑ½Éäˆè€‹¢Zo–&o¢â‹š¶ï–’«–¶C¦¦k–Ò§¢[¦Tˆ°4(€€€€‰•áÁ±…¹…Ñ¥½¸ˆè€‹š¶“Æ“
+ë3šr#šb;¢3¦nË¢R÷7’æ/¢Æ‡¾òkšr³¢Î«’â+šŠw’îÛ’â7–Ş»¾ò3’öró–&7–>_–’[–r£–æËšNûš"[’âšf¢şßšG¢3¦n’î—šZ÷–ÆW–>«¢š–n{–"Ãš¶¦O–r£–ºÛ’ş»–úß¢†3–Z–r£¢ß–º#–"–³š¶¢fWB¾ò3šÖ»¦nË¢«šV¾ò3¦/–.‹–>¿RÇ–æÏ¢ö'–Â?–B'ˆ°4(€€€€‰©¥…é¤ˆè€‹fã’ê”ˆ°4(€€€€‰•¹±¥Í¡QÉ…¹Í±…Ñ¥½¸ˆè€‰Q¡”µ½½¸É¥Í•Ì‰É¥¡Ñ±ä°‰É¥¹¥¹œ½½™½ÉÑÕ¹”íq¹±½…Ñ¥¹œ±½Õ‘Ì…±İ…åÌ…ÍĞ„Í¡…‘½Ü¹q¹%˜å½Ô‘¥±¥•¹Ñ±äÁ•É™½É´½½‘••‘Ìİ¥Ñ¡¥¸å½ÕÈ¡½ÕÍ•¡½±±q¹e½Ôİ¥±°‰•¹•™¥Ğ™É½´Í•ÉÙ¥¹œ…Ì…¸½™™¥¥…°…¹¡…¹‘±¥¹œ…™™…¥ÉÌÁÉ½Á•É±ä¸ˆ°4(€€€€‰•¹±¥Í¡%¹Ñ•ÉÁÉ•Ñ…Ñ¥½¸ˆè€‰I•…Ñ¡¥Ì±½Ğ…ÌÕ¥‘…¹”™½ÈÉ•™±•Ñ¥½¸É…Ñ¡•ÈÑ¡…¸„™¥á•ÁÉ•‘¥Ñ¥½¸¸Q¡”Í¥ÑÕ…Ñ¥½¸¥Ì‰…±…¹•½ÈÍÑ¥±°‘•Ù•±½Á¥¹œìÍÑ…äÍÑ•…‘ä°½‰Í•ÉÙ”…É•™Õ±±ä°…¹…Ù½¥™½É¥¹œ„É•ÍÕ±Ğ¸ˆ4(€ô4)tì4
