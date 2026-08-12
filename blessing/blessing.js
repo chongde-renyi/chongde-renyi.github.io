@@ -16,11 +16,15 @@ const screens=[...document.querySelectorAll(".screen")];
 const show=id=>screens.forEach(s=>s.classList.toggle("active",s.id===id));
 document.querySelectorAll(".choices button").forEach(btn=>btn.addEventListener("click",()=>{
   const name=btn.dataset.name;
+  const portraitClass=[...btn.querySelector(".portrait").classList].find(c=>/^p\d$/.test(c));
   show("drawing");
   window.setTimeout(()=>{
     const item=teachings[Math.floor(Math.random()*teachings.length)];
     document.querySelector("#chosen-name").textContent=name+" 慈悲指引";
-    document.querySelector("#seal").textContent=name.slice(0,1);
+    const resultPortrait=document.querySelector("#seal");
+    resultPortrait.textContent="";
+    resultPortrait.className="seal result-portrait "+portraitClass;
+    resultPortrait.setAttribute("aria-label",name+"畫像");
     document.querySelector("#quote").textContent="「"+item.q+"」";
     document.querySelector("#guidance").textContent=item.g;
     show("result");
