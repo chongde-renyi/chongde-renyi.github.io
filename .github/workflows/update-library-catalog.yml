@@ -1,0 +1,31 @@
+name: Update library catalogue
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "books/ebooks/*.pdf"
+      - "books/teachings/*.pdf"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  catalogue:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pypdf
+      - run: python .github/scripts/build_catalog.py
+      - name: Commit updated catalogue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add library/catalog.json
+          git diff --cached --quiet || git commit -m "Update library catalogue"
+          git push
