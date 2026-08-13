@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>翻頁閱讀｜崇德仁義藏經閣</title>
+  <link rel="stylesheet" href="../hemei-50th/reader.css?v=3">
+  <script type="module" src="reader.js?v=1"></script>
+</head>
+<body>
+  <header class="reader-header">
+    <a href="../../library/">← 返回藏經閣</a>
+    <div><strong id="bookTitle">聖訓典藏</strong><small>崇德仁義藏經閣</small></div>
+    <a id="downloadLink" download>下載 PDF</a>
+  </header>
+  <main class="reader-main">
+    <button class="page-arrow" id="prev" aria-label="上一頁">‹</button>
+    <section class="book-shell" id="book"><canvas id="pageCanvas"></canvas><div class="loading" id="loading">載入中…</div></section>
+    <button class="page-arrow" id="next" aria-label="下一頁">›</button>
+  </main>
+  <footer class="reader-footer">
+    <div class="controls">
+      <button id="first">回首頁</button>
+      <span>第 <input id="pageInput" type="number" min="1" value="1" aria-label="頁碼"> / <b id="pageCount">—</b> 頁</span>
+      <button id="fullscreen">全螢幕</button>
+      <div class="zoom-controls" role="group" aria-label="頁面縮放">
+        <button id="zoomOut" aria-label="縮小">−</button><span id="zoomLevel">100%</span><button id="zoomIn" aria-label="放大">＋</button><button id="zoomReset">符合頁面</button>
+      </div>
+    </div>
+    <p>可使用左右箭頭翻頁，並可放大、縮小或下載原始 PDF。</p>
+  </footer>
+</body>
+</html>
