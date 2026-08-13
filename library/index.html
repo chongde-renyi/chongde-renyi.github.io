@@ -21,7 +21,7 @@
   </main>
   <footer><strong>崇德仁義藏經閣</strong><span>典藏 · 研讀 · 傳承</span></footer>
   <script>
-    const newTeachings=[
+    const fallbackTeachings=[
       ['hudao-tianxian','護道天仙結緣訓',39,'結緣訓珍貴訓文數位典藏。'],
       ['hanxin-daxian','韓信大仙結緣訓',22,'結緣訓珍貴訓文數位典藏。'],
       ['buxi-pusa-parents','不休息菩薩父母結緣訓（玄翎菩薩、承恩大帝）',21,'不休息菩薩父母之珍貴結緣訓數位典藏。'],
@@ -36,11 +36,22 @@
       ['chongde-origin','崇德佛堂由來',8,'南海古佛慈悲指示訓，八頁珍貴訓文影像典藏。']
     ];
     const videoCard=document.querySelector('.card[data-type="video"]');
-    newTeachings.forEach(([slug,title,pages,description,type='teaching'])=>{
+    function addCatalogueCard(slug,title,pages,description,type='teaching',folder='teachings'){
       const category=type==='ebook'?'ebook':'teaching';
       const categoryLabel=category==='ebook'?'電子書':'聖訓';
-      videoCard.insertAdjacentHTML('beforebegin',`<article class="card" data-type="${category}"><small>翻頁${categoryLabel} · ${pages}頁</small><h3>${title}</h3><p>${description}</p><div class="card-actions"><a class="primary" href="../books/teachings/index.html?file=${slug}.pdf&amp;title=${encodeURIComponent(title)}">翻頁閱讀</a><a href="../books/teachings/${slug}.pdf" download>下載 PDF</a></div></article>`);
-    });
+      const downloadFile=`../books/${folder}/${slug}.pdf`;
+      const readerFile=`../${folder}/${slug}.pdf`;
+      videoCard.insertAdjacentHTML('beforebegin',`<article class="card auto-catalog-card" data-type="${category}"><small>翻頁${categoryLabel} · ${pages||'—'}頁</small><h3>${title}</h3><p>${description}</p><div class="card-actions"><a class="primary" href="../books/teachings/index.html?file=${encodeURIComponent(readerFile)}&amp;title=${encodeURIComponent(title)}">翻頁閱讀</a><a href="${downloadFile}" download>下載 PDF</a></div></article>`);
+    }
+    fallbackTeachings.forEach(item=>addCatalogueCard(...item));
+    fetch('catalog.json',{cache:'no-store'}).then(response=>response.ok?response.json():Promise.reject()).then(items=>{
+      document.querySelectorAll('.auto-catalog-card').forEach(card=>card.remove());
+      items.forEach(item=>{
+        const parts=item.file.split('/');
+        const folder=parts.at(-2),slug=parts.at(-1).replace(/\.pdf$/i,'');
+        addCatalogueCard(slug,item.title,item.pages,item.description,item.category,folder);
+      });
+    }).catch(()=>{});
     document.querySelectorAll('.filters button').forEach(button=>button.addEventListener('click',()=>{
       document.querySelectorAll('.filters button').forEach(item=>item.classList.remove('active'));
       button.classList.add('active');
