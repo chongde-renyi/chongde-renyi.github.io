@@ -11,3 +11,18 @@
 /* Main site: heritage green with navy accents */
 :root{--navy:#142e4b;--navy2:#0b1f35;--blue:#315a7e}.site-header{border-bottom-color:rgba(20,46,75,.18)}.brand-mark{background:linear-gradient(145deg,var(--green),var(--navy))}.hero{background:linear-gradient(135deg,var(--navy2) 0%,var(--navy) 42%,var(--green) 100%)}.hero::after{content:"";position:absolute;inset:auto -12% -42% 35%;height:70%;background:radial-gradient(ellipse,rgba(49,90,126,.5),transparent 65%);pointer-events:none}.button-light{color:var(--navy)}.portal-card.renyi{border-top:4px solid var(--navy)}.portal-card.renyi strong{color:var(--navy)}.portal-card.library{background:linear-gradient(140deg,var(--navy),var(--green))}.article-card{border-top:3px solid var(--navy)}.library-section{background:linear-gradient(130deg,var(--navy2),var(--green2))}.cards article:nth-child(even){border-top-color:var(--navy)}.timeline time{background:linear-gradient(145deg,var(--navy),var(--green))}.publication{border-top:3px solid var(--navy)}.green-button{background:var(--navy);border-color:var(--navy)}footer{background:linear-gradient(110deg,var(--navy2),var(--green2))}
 
+
+/* Integrated preview: lotus lamp brand */
+.brand-lotus-lamp{width:58px;height:58px;flex:none;filter:drop-shadow(0 3px 4px rgba(20,46,75,.14))}
+.life-section{max-width:none;padding:105px 24px;background:var(--paper)}
+.life-section>.section-heading{max-width:720px}
+.life-timeline{position:relative;max-width:1000px;margin:auto}
+.life-timeline:before{content:"";position:absolute;left:152px;top:0;bottom:0;width:1px;background:linear-gradient(var(--gold),var(--line) 12%,var(--line) 88%,var(--gold))}
+.life-era{display:grid;grid-template-columns:120px 1fr;gap:64px;position:relative;margin-bottom:22px}
+.life-year{text-align:right;color:var(--navy);font-size:17px;font-weight:700;padding-top:19px}
+.life-events{position:relative;padding:19px 26px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);box-shadow:0 10px 30px rgba(35,54,45,.055)}
+.life-events:before{content:"";position:absolute;left:-43px;top:25px;width:11px;height:11px;border:3px solid var(--paper);border-radius:50%;background:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.life-events ul{margin:0;padding-left:1.25em}.life-events li+li{margin-top:7px}.life-events strong{color:var(--green)}
+.life-era.milestone .life-events{background:linear-gradient(120deg,#fffdf8,#f7f2e8);border-color:#d6bf92}.life-era.milestone .life-year{color:#9b6e2e}
+@media(max-width:760px){.brand-lotus-lamp{width:50px;height:50px}.life-section{padding:75px 18px}.life-timeline:before{left:14px}.life-era{grid-template-columns:1fr;gap:5px;padding-left:34px}.life-year{text-align:left;padding:0;color:#9b6e2e}.life-events{padding:18px 19px}.life-events:before{left:-26px;top:23px}}
+
