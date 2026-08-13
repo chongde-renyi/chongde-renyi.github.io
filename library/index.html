@@ -36,7 +36,11 @@
       ['chongde-origin','崇德佛堂由來',8,'南海古佛慈悲指示訓，八頁珍貴訓文影像典藏。']
     ];
     const videoCard=document.querySelector('.card[data-type="video"]');
-    newTeachings.forEach(([slug,title,pages,description])=>videoCard.insertAdjacentHTML('beforebegin',`<article class="card" data-type="teaching"><small>翻頁聖訓 · ${pages}頁</small><h3>${title}</h3><p>${description}</p><div class="card-actions"><a class="primary" href="../books/teachings/index.html?file=${slug}.pdf&amp;title=${encodeURIComponent(title)}">翻頁閱讀</a><a href="../books/teachings/${slug}.pdf" download>下載 PDF</a></div></article>`));
+    newTeachings.forEach(([slug,title,pages,description,type='teaching'])=>{
+      const category=type==='ebook'?'ebook':'teaching';
+      const categoryLabel=category==='ebook'?'電子書':'聖訓';
+      videoCard.insertAdjacentHTML('beforebegin',`<article class="card" data-type="${category}"><small>翻頁${categoryLabel} · ${pages}頁</small><h3>${title}</h3><p>${description}</p><div class="card-actions"><a class="primary" href="../books/teachings/index.html?file=${slug}.pdf&amp;title=${encodeURIComponent(title)}">翻頁閱讀</a><a href="../books/teachings/${slug}.pdf" download>下載 PDF</a></div></article>`);
+    });
     document.querySelectorAll('.filters button').forEach(button=>button.addEventListener('click',()=>{
       document.querySelectorAll('.filters button').forEach(item=>item.classList.remove('active'));
       button.classList.add('active');
