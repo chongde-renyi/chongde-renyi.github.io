@@ -8,11 +8,11 @@ document.title=`${title}｜翻頁閱讀`;
 document.querySelector('#bookTitle').textContent=title;
 document.querySelector('#downloadLink').href=file;
 
-const canvas=document.querySelector('#pageCanvas');
+const canvas=document.querySelector('#page');
 const ctx=canvas.getContext('2d');
 const book=document.querySelector('#book');
 const loading=document.querySelector('#loading');
-const pageInput=document.querySelector('#pageInput');
+const pageInput=document.querySelector('#pageNumber');
 let pdf=null,current=1,zoom=1,renderTask=null,touchX=0;
 
 async function renderPage(pageNo,center=true){
