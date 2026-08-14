@@ -2,10 +2,14 @@
 <html lang="zh-Hant">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="仁義大仙結緣訓全文典藏"><title>仁義大仙結緣訓｜崇德仁義</title><link rel="stylesheet" href="../styles.css"></head>
 <body>
-  <header class="site-header"><div class="nav-wrap"><a class="brand" href="../index.html"><span class="brand-mark">仁</span><span><strong>崇德仁義</strong><small>紀念 · 傳承 · 典藏</small></span></a><nav><a href="../index.html">返回首頁</a><a class="active" href="#document">訓文全文</a></nav></div></header>
+  <header class="site-header"><div class="nav-wrap"><a class="brand" href="../index.html"><span class="brand-mark">仁</span><span><strong>崇德仁義</strong><small>紀念 · 傳承 · 典藏</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">選單</button><nav id="site-nav"><a href="../index.html">返回首頁</a><a class="active" href="#document">訓文全文</a></nav></div></header>
   <main>
     <section class="teaching-hero"><p class="kicker">珍貴訓文典藏</p><h1>仁義大仙結緣訓</h1><p>中華民國九十三年歲次甲申十月二十七日 · 天佑宮</p><blockquote>仁孝傳家天恩沾，善與人同不輕言；<br>義守忠盡為吾志，才德淺薄天恩懸。</blockquote></section>
     <section class="document-wrap" id="document"><div class="document-intro"><h2>訓文全文</h2><p>以下為共享資料夾中的原始文件，可直接閱讀、捲動及列印。</p><a class="text-link" href="https://docs.google.com/document/d/1QbdbxMLPXcE09_gmTu6Vd53WxPS0yLLqVt0iRiJVhzI/edit" target="_blank" rel="noopener">在 Google 文件開啟 ↗</a></div><iframe class="document-frame" src="https://docs.google.com/document/d/1QbdbxMLPXcE09_gmTu6Vd53WxPS0yLLqVt0iRiJVhzI/preview" title="仁義大仙結緣訓全文" loading="lazy"></iframe></section>
   </main>
   <footer><div><strong>崇德仁義</strong><p>傳承仁義精神 · 留存珍貴記憶</p></div><a href="../index.html">返回首頁</a></footer>
-</body></html>
+<script>
+const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#site-nav');
+menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
+nav?.addEventListener('click',()=>{nav.classList.remove('open');menu?.setAttribute('aria-expanded','false')});
+</script></body></html>
