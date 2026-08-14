@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6f1d1b">
+  <meta name="description" content="六十甲子籤線上文化體驗：籤筒動畫、三聖筊確認、中英文切換與籤意參考。">
+  <title>六十甲子籤｜60 Jiazi Fortune Lots</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="home-link" href="../" data-i18n="home">← 返回首頁</a>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">籤</span>
+        <div>
+          <strong data-i18n="siteTitle">六十甲子籤</strong>
+          <small data-i18n="siteSubtitle">靜心 · 誠問 · 三聖筊定籤</small>
+        </div>
+      </div>
+      <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+    </header>
+
+    <main>
+      <section class="screen active intro-screen" id="intro" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <p class="eyebrow" data-i18n="introEyebrow">六十甲子籤</p>
+          <h1 id="intro-title" data-i18n="introTitle">心中默念所求，誠心求一籤</h1>
+          <p class="lead" data-i18n="introLead">不必輸入任何問題。請先靜下心來，在心中專注於一件想請示的事，再按下「誠心求籤」。</p>
+        </div>
+
+        <div class="shaker-stage">
+          <div class="ambient-halo" aria-hidden="true"></div>
+          <div class="fortune-shaker" id="fortune-shaker" aria-label="六十甲子籤籤筒">
+            <div class="stick-bundle" aria-hidden="true">
+              <i class="fortune-stick s1"></i><i class="fortune-stick s2"></i><i class="fortune-stick s3"></i>
+              <i class="fortune-stick s4"></i><i class="fortune-stick s5"></i><i class="fortune-stick s6"></i>
+              <i class="fortune-stick s7"></i><i class="fortune-stick s8"></i><i class="fortune-stick s9"></i>
+              <i class="fortune-stick s10"></i><i class="fortune-stick s11"></i><i class="fortune-stick s12"></i>
+              <i class="fortune-stick s13"></i>
+              <i class="fortune-stick chosen-stick"><b id="selected-stick"></b></i>
+            </div>
+            <div class="cylinder-rim"></div>
+            <div class="cylinder-body">
+              <div class="wood-light"></div>
+              <div class="gold-frame"><span>六十<br>甲子籤</span></div>
+            </div>
+            <div class="cylinder-base"></div>
+          </div>
+          <div class="draw-shadow" aria-hidden="true"></div>
+        </div>
+
+        <div class="draw-controls">
+          <button class="primary-btn draw-btn" id="begin-btn" type="button" data-i18n="begin">誠心求籤</button>
+          <p class="draw-status" id="draw-status" data-i18n="drawingHint">請保持心念安定，讓籤筒自然落籤。</p>
+          <p class="ritual-note" data-i18n="ritualNote">一事一問 · 心誠則靈 · 籤意僅供參考</p>
+        </div>
+      </section>
+
+      <section class="screen center-screen" id="confirm" aria-live="polite">
+        <p class="eyebrow" data-i18n="confirmEyebrow">擲筊確認</p>
+        <h2 data-i18n="confirmTitle">已抽得一支籤</h2>
+        <div class="drawn-lot" id="drawn-number">第 01 籤 · 甲子</div>
+        <p class="muted confirm-lead" data-i18n="confirmLead">請親自點擊「擲筊確認」。連續三個聖筊，此籤才正式成立。</p>
+
+        <div class="sheng-progress" id="sheng-progress" aria-label="confirmation progress">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="progress-text" id="progress-text">已得 0 / 3 個聖筊</p>
+
+        <div class="jiaobei-floor">
+          <div class="jiaobei-stage" aria-label="jiaobei result">
+            <div class="jiao-piece left" id="jiaobei-left"><b></b></div>
+            <div class="jiao-piece right" id="jiaobei-right"><b></b></div>
+          </div>
+        </div>
+        <h3 class="jiaobei-result" id="jiaobei-result"></h3>
+        <p class="jiaobei-desc" id="jiaobei-desc"></p>
+
+        <div class="button-row">
+          <button class="primary-btn" id="toss-btn" type="button">擲筊確認</button>
+          <button class="secondary-btn" id="redraw-btn" type="button" hidden>此籤未得允，重新求籤</button>
+        </div>
+      </section>
+
+      <section class="screen" id="result" aria-live="polite">
+        <div class="result-heading">
+          <div>
+            <p class="eyebrow" data-i18n="resultEyebrow">本次籤示</p>
+            <h2><span id="result-number">第 01 籤</span> <span class="ganzhi" id="result-ganzhi">甲子</span></h2>
+          </div>
+          <span class="grade-badge" id="grade-badge">上吉</span>
+        </div>
+
+        <div class="result-grid">
+          <article class="poem-card">
+            <h3 data-i18n="poem">原始籤文</h3>
+            <div class="poem-lines" id="poem-lines"></div>
+          </article>
+
+          <div class="interpretation-column">
+            <article class="text-card meaning-card">
+              <h3 data-i18n="fullMeaning">完整籤意</h3>
+              <p id="meaning-text"></p>
+            </article>
+            <article class="text-card accent-card">
+              <h3 data-i18n="reference">解說參考</h3>
+              <p id="reference-text"></p>
+            </article>
+          </div>
+        </div>
+
+        <section class="category-section">
+          <div class="section-title-row">
+            <div>
+              <h3 data-i18n="categoryReading">各方面參考</h3>
+              <p class="section-note" data-i18n="categoryNote">請依自己心中所問之事對照</p>
+            </div>
+          </div>
+          <div class="category-grid" id="category-grid"></div>
+        </section>
+
+        <div class="result-actions">
+          <button class="primary-btn" id="again-btn" type="button">重新求籤</button>
+          <button class="secondary-btn" id="copy-btn" type="button">複製結果</button>
+        </div>
+
+        <div class="notes">
+          <p id="source-note"></p>
+          <p id="disclaimer"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">崇德仁義 · 六十甲子籤文化體驗</footer>
+  </div>
+</body>
+</html>
