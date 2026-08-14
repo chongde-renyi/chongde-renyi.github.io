@@ -380,511 +380,320 @@ h4 {
   letter-spacing: .04em;
 }
 
-/* ================================
-   籤筒
-================================ */
+/* =========================================
+   六十甲子籤筒
+   籤在筒裡面，不是在筒身後面
+========================================= */
 
 .ambient-halo {
   position: absolute;
-
-  width: 390px;
-  height: 390px;
-
+  width: 330px;
+  height: 330px;
   border-radius: 50%;
-
   background:
     radial-gradient(
       circle,
-      rgba(179, 138, 62, .11),
+      rgba(179, 138, 62, .12),
       rgba(179, 138, 62, 0) 68%
     );
-
-  z-index: 0;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
+/* 整個籤筒大小 */
 .fortune-shaker {
-  width: 310px;
-  height: 430px;
-
   position: relative;
-
-  z-index: 2;
-
-  transform-origin: 50% 82%;
+  width: 260px;
+  height: 365px;
+  transform-origin: 50% 88%;
 }
 
-/* ================================
-   籤枝
-================================ */
-
+/* =========================
+   籤枝：放在筒口內
+========================= */
 .stick-bundle {
   position: absolute;
-
   left: 50%;
-  top: 12px;
-
-  width: 250px;
-  height: 235px;
-
+  top: 26px;
+  width: 230px;
+  height: 210px;
   transform: translateX(-50%);
-
-  /*
-    籤枝放在筒身後面
-  */
-  z-index: 2;
+  z-index: 4;
+  pointer-events: none;
 }
 
 .fortune-stick {
-  --r: 0deg;
-
   position: absolute;
-
   left: 50%;
   bottom: 0;
-
-  width: 13px;
-  height: 205px;
-
-  margin-left: -6px;
-
-  border:
-    1px solid #b98b49;
-
-  border-radius:
-    7px 7px 4px 4px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #e8c98d,
-      #f4dca7 50%,
-      #d8b270
-    );
-
-  box-shadow:
-    0 3px 8px
-    rgba(79, 48, 27, .12);
-
-  transform-origin:
-    50% 100%;
-
-  transform:
-    translateX(var(--x, 0px))
-    rotate(var(--r));
-
-  transition:
-    transform .55s
-    cubic-bezier(.22, .8, .2, 1);
+  width: 11px;
+  height: 195px;
+  border: 1.5px solid #b58a49;
+  border-radius: 7px 7px 3px 3px;
+  background: #ead3a4;
+  transform-origin: 50% 100%;
+  box-shadow: none;
 }
 
 .fortune-stick::after {
   content: "";
-
   position: absolute;
-
-  top: 18px;
-  left: 3px;
-  right: 3px;
-
+  top: 17px;
+  left: 2px;
+  right: 2px;
   height: 1px;
-
-  background:
-    rgba(111, 29, 27, .42);
+  background: rgba(111, 29, 27, .55);
 }
 
-/* 籤的位置 */
+/* 每支籤的位置 */
 
 .fortune-stick.s1 {
-  --x: -92px;
-  --r: -18deg;
-  height: 180px;
+  transform: translateX(-99px) rotate(-15deg);
+  height: 170px;
 }
 
 .fortune-stick.s2 {
-  --x: -72px;
-  --r: -12deg;
-  height: 205px;
+  transform: translateX(-82px) rotate(-10deg);
+  height: 193px;
 }
 
 .fortune-stick.s3 {
-  --x: -52px;
-  --r: -8deg;
-  height: 188px;
+  transform: translateX(-65px) rotate(-7deg);
+  height: 180px;
 }
 
 .fortune-stick.s4 {
-  --x: -33px;
-  --r: -5deg;
-  height: 220px;
+  transform: translateX(-49px) rotate(-4deg);
+  height: 208px;
 }
 
 .fortune-stick.s5 {
-  --x: -17px;
-  --r: -2deg;
-  height: 195px;
+  transform: translateX(-32px) rotate(-2deg);
+  height: 184px;
 }
 
 .fortune-stick.s6 {
-  --x: 0px;
-  --r: 0deg;
-  height: 228px;
+  transform: translateX(-16px) rotate(-1deg);
+  height: 215px;
 }
 
 .fortune-stick.s7 {
-  --x: 18px;
-  --r: 3deg;
-  height: 196px;
+  transform: translateX(0) rotate(1deg);
+  height: 198px;
 }
 
 .fortune-stick.s8 {
-  --x: 36px;
-  --r: 6deg;
-  height: 217px;
+  transform: translateX(17px) rotate(2deg);
+  height: 218px;
 }
 
 .fortune-stick.s9 {
-  --x: 54px;
-  --r: 9deg;
-  height: 190px;
+  transform: translateX(34px) rotate(4deg);
+  height: 188px;
 }
 
 .fortune-stick.s10 {
-  --x: 73px;
-  --r: 13deg;
-  height: 207px;
+  transform: translateX(50px) rotate(6deg);
+  height: 204px;
 }
 
 .fortune-stick.s11 {
-  --x: -7px;
-  --r: -1deg;
-  height: 212px;
+  transform: translateX(66px) rotate(9deg);
+  height: 181px;
 }
 
 .fortune-stick.s12 {
-  --x: 28px;
-  --r: 4deg;
-  height: 203px;
+  transform: translateX(81px) rotate(12deg);
+  height: 197px;
 }
 
 .fortune-stick.s13 {
-  --x: -42px;
-  --r: -7deg;
-  height: 200px;
+  transform: translateX(97px) rotate(15deg);
+  height: 174px;
 }
 
-/* 抽中的籤 */
-
-.fortune-stick.chosen-stick {
-  --x: 3px;
-  --r: 1deg;
-
+/* 被抽中的籤 */
+.chosen-stick {
+  z-index: 5;
   height: 218px;
-
-  width: 17px;
-
-  margin-left: -8px;
-
-  z-index: 3;
-
-  background:
-    linear-gradient(
-      90deg,
-      #f0cf8d,
-      #ffe5aa 52%,
-      #d8ad60
-    );
+  width: 14px;
+  transform: translateX(-7px) rotate(0deg);
+  border-color: #9e7133;
+  background: #f0d9a7;
+  transition: transform .8s cubic-bezier(.22, .75, .16, 1);
 }
 
-.fortune-stick.chosen-stick b {
+.chosen-stick b {
   position: absolute;
-
-  top: 28px;
+  top: 29px;
   left: 50%;
-
-  transform:
-    translateX(-50%);
-
+  transform: translateX(-50%);
   writing-mode: vertical-rl;
-
+  white-space: nowrap;
   color: var(--red-dark);
-
   font-size: 11px;
   line-height: 1;
-
-  white-space: nowrap;
+  font-weight: 700;
+  letter-spacing: .04em;
 }
 
-/* ================================
-   籤筒實心筒身
-   這裡會遮住筒內的籤
-================================ */
-
+/* =========================
+   籤筒本體
+   重點：
+   - 上方留開口
+   - 只用前壁遮住籤的下半部
+   - 這樣看起來就是「在筒裡」
+========================= */
 .cylinder-body {
   position: absolute;
-
-  left: 50%;
-  bottom: 42px;
-
-  width: 238px;
-  height: 270px;
-
-  transform:
-    translateX(-50%);
-
-  /*
-    5 高於籤枝 2
-    所以籤不會穿透看到
-  */
-  z-index: 5;
-
-  overflow: hidden;
-
-  border:
-    4px solid var(--red);
-
-  border-top: 0;
-
-  border-radius:
-    20px 20px 54px 54px;
-
-  background: #fbf5e9;
-
-  box-shadow:
-    0 18px 38px
-    rgba(79, 48, 27, .10);
+  left: 25px;
+  right: 25px;
+  top: 157px;
+  height: 185px;
+  z-index: 6;
+  background: transparent;
+  border: 0;
+  overflow: visible;
 }
 
-.wood-light {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-
-      transparent 0 24%,
-      rgba(179, 138, 62, .05)
-      24% 25%,
-
-      transparent 25% 49%,
-      rgba(179, 138, 62, .05)
-      49% 50%,
-
-      transparent 50% 74%,
-      rgba(179, 138, 62, .05)
-      74% 75%,
-
-      transparent 75% 100%
-    );
-
-  pointer-events: none;
-}
-
-/* 籤筒上緣 */
-
-.cylinder-rim {
-  position: absolute;
-
-  left: 50%;
-  bottom: 294px;
-
-  width: 262px;
-  height: 42px;
-
-  transform:
-    translateX(-50%);
-
-  z-index: 7;
-
-  border:
-    4px solid var(--red);
-
-  border-radius: 50%;
-
-  background: #fbf5e9;
-
-  box-shadow:
-    0 8px 16px
-    rgba(79, 48, 27, .10);
-}
-
-.cylinder-rim::after {
+/* 前面的筒壁，負責擋住籤的下半部 */
+.cylinder-body::before {
   content: "";
-
   position: absolute;
-
-  left: 17px;
-  right: 17px;
-  top: 9px;
-  bottom: 9px;
-
-  border:
-    2px solid
-    rgba(111, 29, 27, .48);
-
-  border-radius: 50%;
-
-  background: #f1e4cf;
+  left: 0;
+  right: 0;
+  top: 16px;
+  bottom: 0;
+  background: #f8f1e5;
+  border: 2px solid var(--red-dark);
+  border-top: 0;
+  border-radius: 0 0 42px 42px;
+  z-index: 1;
 }
 
-/* 籤筒底 */
-
-.cylinder-base {
-  position: absolute;
-
-  left: 50%;
-  bottom: 27px;
-
-  width: 214px;
-  height: 34px;
-
-  transform:
-    translateX(-50%);
-
-  z-index: 8;
-
-  border:
-    4px solid var(--red);
-
-  border-radius: 50%;
-
-  background: #fbf5e9;
+/* 不使用木紋 */
+.wood-light {
+  display: none;
 }
 
-/* 籤筒中間文字 */
-
+/* =========================
+   六十甲子籤文字牌
+========================= */
 .gold-frame {
   position: absolute;
-
-  left: 50%;
-  top: 72px;
-
-  width: 82px;
-  min-height: 130px;
-
-  transform:
-    translateX(-50%);
-
-  border:
-    1px solid var(--gold);
-
+  inset: 48px 78px 30px;
+  border: 1px solid var(--gold);
   display: grid;
   place-items: center;
-
-  background:
-    rgba(255, 253, 248, .7);
+  background: transparent;
+  color: var(--red-dark);
+  z-index: 2;
 }
 
 .gold-frame span {
   writing-mode: vertical-rl;
   text-orientation: upright;
-
-  color: var(--red-dark);
-
+  letter-spacing: .1em;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 19px;
+}
 
-  letter-spacing: .13em;
+/* =========================
+   籤筒口
+========================= */
+.cylinder-rim {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 142px;
+  height: 34px;
+  z-index: 8;
+  border: 2px solid var(--red-dark);
+  border-radius: 50%;
+  background: #f8f1e5;
+}
+
+.cylinder-rim::after {
+  content: "";
+  position: absolute;
+  inset: 7px 13px;
+  border: 1px solid rgba(111, 29, 27, .42);
+  border-radius: 50%;
+}
+
+/* =========================
+   籤筒底部
+========================= */
+.cylinder-base {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  top: 326px;
+  height: 26px;
+  z-index: 8;
+  border: 2px solid var(--red-dark);
+  border-radius: 50%;
+  background: #f8f1e5;
 }
 
 .draw-shadow {
   position: absolute;
-
-  bottom: 62px;
-
-  width: 260px;
-  height: 30px;
-
-  border-radius: 50%;
-
+  width: 210px;
+  height: 20px;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
   background:
-    rgba(79, 48, 27, .11);
-
-  filter: blur(11px);
-
-  z-index: 0;
+    radial-gradient(
+      ellipse,
+      rgba(66, 41, 28, .16),
+      rgba(66, 41, 28, 0) 70%
+    );
+  filter: blur(2px);
 }
 
-/* ================================
-   籤筒動畫
-================================ */
-
+/* =========================================
+   籤筒搖動動畫
+========================================= */
 .fortune-shaker.is-shaking {
-  animation:
-    shakerShake
-    .16s
-    ease-in-out
-    0s
-    8
-    alternate;
+  animation: outlineShaker .16s ease-in-out infinite alternate;
 }
 
-.fortune-shaker.is-shaking
-.fortune-stick {
-  animation:
-    stickRattle
-    .15s
-    ease-in-out
-    0s
-    9
-    alternate;
+.fortune-shaker.is-shaking .fortune-stick {
+  animation: outlineStick .18s ease-in-out infinite alternate;
 }
 
-.fortune-shaker.is-shaking
-.fortune-stick:nth-child(2n) {
-  animation-delay: .03s;
+.fortune-shaker.is-shaking .fortune-stick:nth-child(2n) {
+  animation-delay: -.07s;
 }
 
-.fortune-shaker.is-shaking
-.fortune-stick:nth-child(3n) {
-  animation-delay: .06s;
+.fortune-shaker.is-shaking .fortune-stick:nth-child(3n) {
+  animation-delay: -.12s;
 }
 
-/* 抽中的籤升起 */
-
-.fortune-shaker.lot-rising
-.chosen-stick {
-  transform:
-    translateX(var(--x, 3px))
-    translateY(-118px)
-    rotate(0deg);
+.fortune-shaker.lot-rising .chosen-stick {
+  transform: translateX(-7px) translateY(-105px) rotate(0deg);
 }
 
-@keyframes shakerShake {
-  0% {
-    transform:
-      translateX(-9px)
-      rotate(-2.4deg);
+@keyframes outlineShaker {
+  from {
+    transform: translateX(-5px) rotate(-1.2deg);
   }
-
-  100% {
-    transform:
-      translateX(9px)
-      rotate(2.4deg);
+  to {
+    transform: translateX(5px) rotate(1.2deg);
   }
 }
 
-@keyframes stickRattle {
-  0% {
-    transform:
-      translateX(var(--x, 0px))
-      translateY(0)
-      rotate(
-        calc(var(--r) - 2deg)
-      );
+@keyframes outlineStick {
+  from {
+    margin-bottom: -2px;
   }
-
-  100% {
-    transform:
-      translateX(var(--x, 0px))
-      translateY(-7px)
-      rotate(
-        calc(var(--r) + 2deg)
-      );
+  to {
+    margin-bottom: 5px;
   }
 }
-
 /* ================================
    擲筊確認
 ================================ */
