@@ -201,3 +201,238 @@ body[data-lang="en"] .poem-lines p { letter-spacing:0; font-size:clamp(18px,2.4v
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; }
 }
+
+/* === Fortune shaker: simple outlined version === */
+.intro-screen.active {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
+  grid-template-areas:
+    "copy shaker"
+    "copy controls";
+  align-items: center;
+  column-gap: clamp(42px, 7vw, 100px);
+  row-gap: 18px;
+  min-height: calc(100vh - 190px);
+}
+.intro-copy { grid-area: copy; align-self: center; }
+.shaker-stage {
+  grid-area: shaker;
+  position: relative;
+  width: min(390px, 100%);
+  height: 430px;
+  margin: 0 auto;
+  display: grid;
+  place-items: end center;
+}
+.ambient-halo {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(179,138,62,.12), rgba(179,138,62,0) 68%);
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.fortune-shaker {
+  position: relative;
+  width: 260px;
+  height: 365px;
+  transform-origin: 50% 88%;
+}
+.stick-bundle {
+  position: absolute;
+  left: 50%;
+  top: 14px;
+  width: 230px;
+  height: 220px;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+.fortune-stick {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 11px;
+  height: 195px;
+  border: 1.5px solid #b58a49;
+  border-radius: 7px 7px 3px 3px;
+  background: #ead3a4;
+  transform-origin: 50% 100%;
+  box-shadow: none;
+}
+.fortune-stick::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 2px;
+  right: 2px;
+  height: 1px;
+  background: rgba(111,29,27,.55);
+}
+.fortune-stick.s1  { transform: translateX(-99px) rotate(-15deg); height: 170px; }
+.fortune-stick.s2  { transform: translateX(-82px) rotate(-10deg); height: 193px; }
+.fortune-stick.s3  { transform: translateX(-65px) rotate(-7deg); height: 180px; }
+.fortune-stick.s4  { transform: translateX(-49px) rotate(-4deg); height: 208px; }
+.fortune-stick.s5  { transform: translateX(-32px) rotate(-2deg); height: 184px; }
+.fortune-stick.s6  { transform: translateX(-16px) rotate(-1deg); height: 215px; }
+.fortune-stick.s7  { transform: translateX(0) rotate(1deg); height: 198px; }
+.fortune-stick.s8  { transform: translateX(17px) rotate(2deg); height: 218px; }
+.fortune-stick.s9  { transform: translateX(34px) rotate(4deg); height: 188px; }
+.fortune-stick.s10 { transform: translateX(50px) rotate(6deg); height: 204px; }
+.fortune-stick.s11 { transform: translateX(66px) rotate(9deg); height: 181px; }
+.fortune-stick.s12 { transform: translateX(81px) rotate(12deg); height: 197px; }
+.fortune-stick.s13 { transform: translateX(97px) rotate(15deg); height: 174px; }
+.chosen-stick {
+  z-index: 3;
+  height: 218px;
+  width: 14px;
+  transform: translateX(-7px) rotate(0deg);
+  border-color: #9e7133;
+  background: #f0d9a7;
+  transition: transform .8s cubic-bezier(.22,.75,.16,1);
+}
+.chosen-stick b {
+  position: absolute;
+  top: 29px;
+  left: 50%;
+  transform: translateX(-50%);
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  color: var(--red-dark);
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.cylinder-body {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  top: 157px;
+  height: 185px;
+  z-index: 5;
+  background: #f8f1e5;
+  border: 2px solid var(--red-dark);
+  border-top: 0;
+  border-radius: 0 0 42px 42px;
+  overflow: hidden;
+}
+.wood-light { display: none; }
+.gold-frame {
+  position: absolute;
+  inset: 33px 78px 32px;
+  border: 1px solid var(--gold);
+  display: grid;
+  place-items: center;
+  background: transparent;
+  color: var(--red-dark);
+}
+.gold-frame span {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: .1em;
+  font-weight: 700;
+  font-size: 19px;
+}
+.cylinder-rim {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 142px;
+  height: 34px;
+  z-index: 7;
+  border: 2px solid var(--red-dark);
+  border-radius: 50%;
+  background: #f8f1e5;
+}
+.cylinder-rim::after {
+  content: "";
+  position: absolute;
+  inset: 7px 13px;
+  border: 1px solid rgba(111,29,27,.42);
+  border-radius: 50%;
+}
+.cylinder-base {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  top: 326px;
+  height: 26px;
+  z-index: 8;
+  border: 2px solid var(--red-dark);
+  border-radius: 50%;
+  background: #f8f1e5;
+}
+.draw-shadow {
+  position: absolute;
+  width: 210px;
+  height: 20px;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(66,41,28,.16), rgba(66,41,28,0) 70%);
+  filter: blur(2px);
+}
+.draw-controls {
+  grid-area: controls;
+  width: min(330px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+.draw-btn { width: 100%; }
+.draw-status {
+  min-height: 24px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  opacity: .55;
+  transition: opacity .2s ease;
+}
+.draw-status.visible { opacity: 1; }
+.ritual-note {
+  margin: 9px 0 0;
+  color: #8b7c71;
+  font-size: 12px;
+  letter-spacing: .04em;
+}
+
+/* Shaking: move the whole holder and give the sticks slightly different motion. */
+.fortune-shaker.is-shaking { animation: outlineShaker .16s ease-in-out infinite alternate; }
+.fortune-shaker.is-shaking .fortune-stick { animation: outlineStick .18s ease-in-out infinite alternate; }
+.fortune-shaker.is-shaking .fortune-stick:nth-child(2n) { animation-delay: -.07s; }
+.fortune-shaker.is-shaking .fortune-stick:nth-child(3n) { animation-delay: -.12s; }
+.fortune-shaker.lot-rising .chosen-stick {
+  transform: translateX(-7px) translateY(-105px) rotate(0deg);
+}
+@keyframes outlineShaker {
+  from { transform: translateX(-5px) rotate(-1.2deg); }
+  to   { transform: translateX(5px) rotate(1.2deg); }
+}
+@keyframes outlineStick {
+  from { margin-bottom: -2px; }
+  to   { margin-bottom: 5px; }
+}
+
+@media (max-width: 850px) {
+  .intro-screen.active {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "shaker"
+      "controls";
+    row-gap: 8px;
+    min-height: auto;
+    padding-top: 38px;
+  }
+  .intro-copy { text-align: center; }
+  .intro-copy .lead { margin-left: auto; margin-right: auto; }
+  .shaker-stage { height: 385px; transform: scale(.92); transform-origin: center bottom; }
+}
+
+@media (max-width: 480px) {
+  .shaker-stage { width: 100%; height: 360px; transform: scale(.84); }
+  .draw-controls { margin-top: -18px; }
+}
