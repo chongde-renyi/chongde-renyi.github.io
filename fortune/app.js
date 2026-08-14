@@ -1,5 +1,6 @@
 import { FORTUNES } from './fortunes.js';
 import { drawFortune, tossJiaobei, createConfirmationState, applyJiaobeiResult } from './logic.js';
+import { chooseDownloadFormat } from './download.js';
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => [...document.querySelectorAll(sel)];
@@ -37,9 +38,11 @@ const strings = {
     categoryReading: '各方面參考',
     categoryNote: '請依自己心中所問之事對照',
     again: '重新求籤',
-    copy: '複製結果',
-    copied: '已複製',
-    source: '原始籤文依通行六十甲子籤版本整理；英文意譯與本頁解說為方便理解所編寫。',
+    download: '下載結果卡片',
+    preparing: '正在製作卡片…',
+    downloaded: '已產生下載',
+    downloadError: '下載失敗，請再試一次',
+    source: '原始籤文依台灣通行六十甲子籤版本整理；英文意譯與本頁解說為方便理解所編寫。',
     disclaimer: '解籤內容僅供文化體驗、靜心與自我反思參考，不應取代醫療、法律、財務或其他專業判斷。',
     grade: { very_good:'上吉', good:'吉', neutral:'平', caution:'宜慎', difficult:'守待' },
     categories: { career:'事業', finance:'財運', love:'感情', health:'健康', travel:'出行', legal:'訴訟／爭議', family:'家庭', general:'整體' },
@@ -78,8 +81,10 @@ const strings = {
     categoryReading: 'Life-area Reference',
     categoryNote: 'Compare these notes with the question you held in mind',
     again: 'Draw again',
-    copy: 'Copy result',
-    copied: 'Copied',
+    download: 'Download result card',
+    preparing: 'Preparing card…',
+    downloaded: 'Download ready',
+    downloadError: 'Download failed. Please try again.',
     source: 'Traditional text follows a commonly used Taiwanese 60-Jiazi set. English renderings and explanatory notes are editorial aids for understanding.',
     disclaimer: 'For cultural experience and personal reflection only. It is not a substitute for medical, legal, financial, or other professional advice.',
     grade: { very_good:'Highly Favorable', good:'Favorable', neutral:'Balanced', caution:'Proceed Carefully', difficult:'Pause & Protect' },
@@ -165,7 +170,7 @@ function applyLanguage() {
   $('[data-i18n="categoryReading"]').textContent = t().categoryReading;
   $('[data-i18n="categoryNote"]').textContent = t().categoryNote;
   $('#again-btn').textContent = t().again;
-  $('#copy-btn').textContent = t().copy;
+  $('#download-btn').textContent = t().download;
   $('#source-note').textContent = t().source;
   $('#disclaimer').textContent = t().disclaimer;
 
@@ -320,42 +325,128 @@ function renderResult() {
       <h4>${t().categories[key]}</h4>
       <p>${profile[key]}</p>
     </article>`).join('');
+
+  renderDownloadCard();
 }
 
-function buildCopyText() {
+function renderDownloadCard() {
+  if (!currentFortune) return;
   const isZh = lang === 'zh';
-  const poem = (isZh ? currentFortune.poemZh : currentFortune.poemEn).join('\n');
-  const number = isZh ? `第 ${currentFortune.id} 籤 · ${currentFortune.ganzhi}` : `Lot ${currentFortune.id} · ${currentFortune.ganzhi}`;
-  return `${t().siteTitle}
-${number}
-${t().grade[currentFortune.grade]}
+  const poem = isZh ? currentFortune.poemZh : currentFortune.poemEn;
+  const profile = categoryProfiles[lang][currentFortune.grade];
+  const order = ['career','finance','love','health','travel','legal','family'];
+  const number = isZh
+    ? `第 ${String(currentFortune.id).padStart(2,'0')} 籤`
+    : `Lot ${String(currentFortune.id).padStart(2,'0')}`;
 
-${t().poem}
-${poem}
-
-${t().fullMeaning}
-${fullMeaningText(currentFortune)}
-
-${t().reference}
-${referenceText(currentFortune)}
-
-${t().disclaimer}`;
+  $('#download-card').innerHTML = `
+    <div class="dc-top">
+      <div>
+        <p class="dc-kicker">${t().siteTitle}</p>
+        <h2 class="dc-title">${number}<span class="dc-meta">${currentFortune.ganzhi}</span></h2>
+      </div>
+      <span class="dc-grade">${t().grade[currentFortune.grade]}</span>
+    </div>
+    <section class="dc-section dc-poem">
+      <h3>${t().poem}</h3>
+      ${poem.map(line => `<p>${line}</p>`).join('')}
+    </section>
+    <section class="dc-section">
+      <h3>${t().fullMeaning}</h3>
+      <p class="dc-text">${fullMeaningText(currentFortune)}</p>
+    </section>
+    <section class="dc-section">
+      <h3>${t().reference}</h3>
+      <p class="dc-text">${referenceText(currentFortune)}</p>
+    </section>
+    <section class="dc-section">
+      <h3>${t().categoryReading}</h3>
+      <div class="dc-categories">
+        ${order.map(key => `
+          <div class="dc-item">
+            <strong>${t().categories[key]}</strong>
+            <p>${profile[key]}</p>
+          </div>`).join('')}
+      </div>
+    </section>
+    <div class="dc-foot">${t().disclaimer}</div>`;
 }
 
-async function copyResult() {
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1200);
+}
+
+function canvasToBlob(canvas, type = 'image/png', quality = 1) {
+  return new Promise((resolve, reject) => {
+    canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('Canvas export failed')), type, quality);
+  });
+}
+
+async function downloadResultCard() {
+  if (!currentFortune) return;
+  const button = $('#download-btn');
+  const originalText = t().download;
+  button.disabled = true;
+  button.textContent = t().preparing;
+
   try {
-    await navigator.clipboard.writeText(buildCopyText());
-    const btn = $('#copy-btn');
-    const original = t().copy;
-    btn.textContent = t().copied;
-    setTimeout(() => btn.textContent = original, 1400);
-  } catch {
-    const ta = document.createElement('textarea');
-    ta.value = buildCopyText();
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    ta.remove();
+    renderDownloadCard();
+    if (document.fonts?.ready) await document.fonts.ready;
+    if (!window.html2canvas) throw new Error('html2canvas is unavailable');
+
+    const card = $('#download-card');
+    const canvas = await window.html2canvas(card, {
+      backgroundColor: '#fffaf0',
+      scale: 2,
+      useCORS: true,
+      logging: false
+    });
+
+    const format = chooseDownloadFormat({
+      userAgent: navigator.userAgent,
+      viewportWidth: window.innerWidth,
+      maxTouchPoints: navigator.maxTouchPoints || 0
+    });
+    const baseName = isNaN(currentFortune.id)
+      ? 'fortune-lot'
+      : `fortune-lot-${String(currentFortune.id).padStart(2,'0')}-${currentFortune.ganzhi}`;
+
+    if (format === 'png') {
+      const blob = await canvasToBlob(canvas, 'image/png', 1);
+      downloadBlob(blob, `${baseName}.png`);
+    } else {
+      const jsPDF = window.jspdf?.jsPDF;
+      if (!jsPDF) throw new Error('jsPDF is unavailable');
+      const pageWidth = 760;
+      const pageHeight = Math.round(pageWidth * canvas.height / canvas.width);
+      const pdf = new jsPDF({
+        orientation: pageHeight >= pageWidth ? 'portrait' : 'landscape',
+        unit: 'px',
+        format: [pageWidth, pageHeight],
+        hotfixes: ['px_scaling']
+      });
+      const image = canvas.toDataURL('image/jpeg', 0.96);
+      pdf.addImage(image, 'JPEG', 0, 0, pageWidth, pageHeight, undefined, 'FAST');
+      pdf.save(`${baseName}.pdf`);
+    }
+
+    button.textContent = t().downloaded;
+    setTimeout(() => {
+      button.disabled = false;
+      button.textContent = t().download;
+    }, 1400);
+  } catch (error) {
+    console.error(error);
+    button.disabled = false;
+    button.textContent = t().downloadError;
+    setTimeout(() => button.textContent = originalText, 1800);
   }
 }
 
@@ -378,7 +469,7 @@ $('#again-btn').addEventListener('click', () => {
   resetShaker();
   showScreen('intro');
 });
-$('#copy-btn').addEventListener('click', copyResult);
+$('#download-btn').addEventListener('click', downloadResultCard);
 
 applyLanguage();
 resetShaker();
