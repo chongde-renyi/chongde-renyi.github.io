@@ -39,7 +39,7 @@ const strings = {
     again: '重新求籤',
     copy: '複製結果',
     copied: '已複製',
-    source: '原始籤文依台灣通行六十甲子籤版本整理；英文意譯與本頁解說為方便理解所編寫。',
+    source: '原始籤文依通行六十甲子籤版本整理；英文意譯與本頁解說為方便理解所編寫。',
     disclaimer: '解籤內容僅供文化體驗、靜心與自我反思參考，不應取代醫療、法律、財務或其他專業判斷。',
     grade: { very_good:'上吉', good:'吉', neutral:'平', caution:'宜慎', difficult:'守待' },
     categories: { career:'事業', finance:'財運', love:'感情', health:'健康', travel:'出行', legal:'訴訟／爭議', family:'家庭', general:'整體' },
