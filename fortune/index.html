@@ -7,6 +7,8 @@
   <meta name="description" content="六十甲子籤線上文化體驗：籤筒動畫、三聖筊確認、中英文切換與籤意參考。">
   <title>六十甲子籤｜60 Jiazi Fortune Lots</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
   <script type="module" src="app.js"></script>
 </head>
 <body>
@@ -28,7 +30,7 @@
         <div class="intro-copy">
           <p class="eyebrow" data-i18n="introEyebrow">六十甲子籤</p>
           <h1 id="intro-title" data-i18n="introTitle">心中默念所求，誠心求一籤</h1>
-          <p class="lead" data-i18n="introLead">不必輸入任何問題。請先靜下心來，在心中專注於一件想請示的事，再按下「誠心求籤」。</p>
+          <p class="lead" data-i18n="introLead">請先靜下心來，在心中專注於一件想請示的事，再按下「誠心求籤」。</p>
         </div>
 
         <div class="shaker-stage">
@@ -45,7 +47,7 @@
             <div class="cylinder-rim"></div>
             <div class="cylinder-body">
               <div class="wood-light"></div>
-              <div class="gold-frame"><span>六十<br>甲子籤</span></div>
+              <div class="gold-frame"><span>六十甲子籤</span></div>
             </div>
             <div class="cylinder-base"></div>
           </div>
@@ -124,12 +126,15 @@
 
         <div class="result-actions">
           <button class="primary-btn" id="again-btn" type="button">重新求籤</button>
-          <button class="secondary-btn" id="copy-btn" type="button">複製結果</button>
+          <button class="secondary-btn" id="download-btn" type="button">下載結果卡片</button>
         </div>
 
         <div class="notes">
           <p id="source-note"></p>
           <p id="disclaimer"></p>
+        </div>
+        <div class="download-card-host" aria-hidden="true">
+          <article class="download-card" id="download-card"></article>
         </div>
       </section>
     </main>
