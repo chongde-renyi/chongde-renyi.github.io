@@ -428,11 +428,11 @@ h4 {
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 11px;
+  width: 13px;
   height: 195px;
   border: 1.5px solid #b58a49;
   border-radius: 7px 7px 3px 3px;
-  background: #ead3a4;
+  background: linear-gradient(180deg, #f4dfae, #e2bd7c);
   transform-origin: 50% 100%;
   box-shadow: none;
 }
@@ -450,68 +450,68 @@ h4 {
 /* 每支籤的位置 */
 
 .fortune-stick.s1 {
-  transform: translateX(-99px) rotate(-15deg);
-  height: 170px;
-}
-
-.fortune-stick.s2 {
-  transform: translateX(-82px) rotate(-10deg);
-  height: 193px;
-}
-
-.fortune-stick.s3 {
-  transform: translateX(-65px) rotate(-7deg);
+  transform: translateX(-71px) rotate(-13deg);
   height: 180px;
 }
 
+.fortune-stick.s2 {
+  transform: translateX(-59px) rotate(-9deg);
+  height: 198px;
+}
+
+.fortune-stick.s3 {
+  transform: translateX(-47px) rotate(-6deg);
+  height: 188px;
+}
+
 .fortune-stick.s4 {
-  transform: translateX(-49px) rotate(-4deg);
-  height: 208px;
+  transform: translateX(-35px) rotate(-4deg);
+  height: 210px;
 }
 
 .fortune-stick.s5 {
-  transform: translateX(-32px) rotate(-2deg);
-  height: 184px;
+  transform: translateX(-23px) rotate(-2deg);
+  height: 192px;
 }
 
 .fortune-stick.s6 {
-  transform: translateX(-16px) rotate(-1deg);
-  height: 215px;
+  transform: translateX(-12px) rotate(-1deg);
+  height: 216px;
 }
 
 .fortune-stick.s7 {
   transform: translateX(0) rotate(1deg);
-  height: 198px;
+  height: 202px;
 }
 
 .fortune-stick.s8 {
-  transform: translateX(17px) rotate(2deg);
-  height: 218px;
+  transform: translateX(12px) rotate(2deg);
+  height: 219px;
 }
 
 .fortune-stick.s9 {
-  transform: translateX(34px) rotate(4deg);
-  height: 188px;
+  transform: translateX(24px) rotate(4deg);
+  height: 194px;
 }
 
 .fortune-stick.s10 {
-  transform: translateX(50px) rotate(6deg);
-  height: 204px;
+  transform: translateX(36px) rotate(6deg);
+  height: 208px;
 }
 
 .fortune-stick.s11 {
-  transform: translateX(66px) rotate(9deg);
-  height: 181px;
+  transform: translateX(48px) rotate(9deg);
+  height: 189px;
 }
 
 .fortune-stick.s12 {
-  transform: translateX(81px) rotate(12deg);
-  height: 197px;
+  transform: translateX(58px) rotate(13deg);
+  height: 200px;
 }
 
 .fortune-stick.s13 {
-  transform: translateX(97px) rotate(15deg);
-  height: 174px;
+  transform: translateX(71px) rotate(15deg);
+  height: 182px;
 }
 
 /* 被抽中的籤 */
@@ -566,10 +566,11 @@ h4 {
   right: 0;
   top: 16px;
   bottom: 0;
-  background: #f8f1e5;
+  background: linear-gradient(180deg, #f3e2bd 0%, #e7c891 55%, #d1a85f 100%);
   border: 2px solid var(--red-dark);
   border-top: 0;
   border-radius: 0 0 42px 42px;
+  box-shadow: inset 0 3px 10px rgba(111, 29, 27, .12);
   z-index: 1;
 }
 
@@ -612,7 +613,7 @@ h4 {
   z-index: 8;
   border: 2px solid var(--red-dark);
   border-radius: 50%;
-  background: #f8f1e5;
+  background: linear-gradient(180deg, #f8ecd2, #e3c68d);
 }
 
 .cylinder-rim::after {
@@ -635,7 +636,7 @@ h4 {
   z-index: 8;
   border: 2px solid var(--red-dark);
   border-radius: 50%;
-  background: #f8f1e5;
+  background: linear-gradient(180deg, #e3c68d, #c99f57);
 }
 
 .draw-shadow {
