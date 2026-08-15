@@ -381,8 +381,11 @@ h4 {
 }
 
 /* =========================================
-   六十甲子籤筒
-   籤在筒裡面，不是在筒身後面
+   六十甲子籤筒 — SVG 版本
+   五個明確圖層：back-rim / sticks / front-rim /
+   tube-body / bottom。front-rim 與 bottom 的平邊
+   跟 tube-body 共用同一條座標線（見 index.html 的
+   path d 屬性），幾何上不可能露縫，不必再靠 CSS 疊補。
 ========================================= */
 
 .ambient-halo {
@@ -402,249 +405,129 @@ h4 {
   pointer-events: none;
 }
 
-/* 整個籤筒大小 */
-.fortune-shaker {
+.shaker-svg {
   position: relative;
-  width: 260px;
-  height: 365px;
-  transform-origin: 50% 88%;
-}
-
-/* =========================
-   籤枝：放在筒口內
-========================= */
-.stick-bundle {
-  position: absolute;
-  left: 50%;
-  top: 26px;
-  width: 230px;
-  height: 210px;
-  transform: translateX(-50%);
-  z-index: 4;
-  pointer-events: none;
-}
-
-.fortune-stick {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 13px;
-  height: 195px;
-  border: 1.5px solid #b58a49;
-  border-radius: 7px 7px 3px 3px;
-  background: linear-gradient(180deg, #f4dfae, #e2bd7c);
-  transform-origin: 50% 100%;
-  box-shadow: none;
-}
-
-.fortune-stick::after {
-  content: "";
-  position: absolute;
-  top: 17px;
-  left: 2px;
-  right: 2px;
-  height: 1px;
-  background: rgba(111, 29, 27, .55);
-}
-
-/* 每支籤的位置 */
-
-.fortune-stick.s1 {
-  transform: translateX(-71px) rotate(-13deg);
-  height: 180px;
-}
-
-.fortune-stick.s2 {
-  transform: translateX(-59px) rotate(-9deg);
-  height: 198px;
-}
-
-.fortune-stick.s3 {
-  transform: translateX(-47px) rotate(-6deg);
-  height: 188px;
-}
-
-.fortune-stick.s4 {
-  transform: translateX(-35px) rotate(-4deg);
-  height: 210px;
-}
-
-.fortune-stick.s5 {
-  transform: translateX(-23px) rotate(-2deg);
-  height: 192px;
-}
-
-.fortune-stick.s6 {
-  transform: translateX(-12px) rotate(-1deg);
-  height: 216px;
-}
-
-.fortune-stick.s7 {
-  transform: translateX(0) rotate(1deg);
-  height: 202px;
-}
-
-.fortune-stick.s8 {
-  transform: translateX(12px) rotate(2deg);
-  height: 219px;
-}
-
-.fortune-stick.s9 {
-  transform: translateX(24px) rotate(4deg);
-  height: 194px;
-}
-
-.fortune-stick.s10 {
-  transform: translateX(36px) rotate(6deg);
-  height: 208px;
-}
-
-.fortune-stick.s11 {
-  transform: translateX(48px) rotate(9deg);
-  height: 189px;
-}
-
-.fortune-stick.s12 {
-  transform: translateX(58px) rotate(13deg);
-  height: 200px;
-}
-
-.fortune-stick.s13 {
-  transform: translateX(71px) rotate(15deg);
-  height: 182px;
-}
-
-/* 被抽中的籤 */
-.chosen-stick {
-  z-index: 5;
-  height: 218px;
-  width: 14px;
-  transform: translateX(-7px) rotate(0deg);
-  border-color: #9e7133;
-  background: #f0d9a7;
-  transition: transform .8s cubic-bezier(.22, .75, .16, 1);
-}
-
-.chosen-stick b {
-  position: absolute;
-  top: 29px;
-  left: 50%;
-  transform: translateX(-50%);
-  writing-mode: vertical-rl;
-  white-space: nowrap;
-  color: var(--red-dark);
-  font-size: 11px;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: .04em;
-}
-
-/* =========================
-   籤筒本體
-   重點：
-   - 上方留開口
-   - 只用前壁遮住籤的下半部
-   - 這樣看起來就是「在筒裡」
-========================= */
-.cylinder-body {
-  position: absolute;
-  left: 25px;
-  right: 25px;
-  top: 157px;
-  height: 185px;
-  z-index: 6;
-  background: transparent;
-  border: 0;
+  width: 220px;
+  height: 420px;
   overflow: visible;
 }
 
-/* 前面的筒壁，負責擋住籤的下半部 */
-.cylinder-body::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 16px;
-  bottom: 0;
-  background: linear-gradient(180deg, #f3e2bd 0%, #e7c891 55%, #d1a85f 100%);
-  border: 2px solid var(--red-dark);
-  border-top: 0;
-  border-radius: 0 0 42px 42px;
-  box-shadow: inset 0 3px 10px rgba(111, 29, 27, .12);
-  z-index: 1;
+/* =========================
+   筒口：back-rim 在籤之後，front-rim 在籤與筒身之後畫，
+   讓弧線蓋住筒身的直角上緣，兩者共用同一個漸層跟筒身統一
+========================= */
+.rim-shape {
+  fill: url(#bodyGrad);
+  stroke: var(--red-dark);
+  stroke-width: 2;
 }
 
-/* 不使用木紋 */
-.wood-light {
-  display: none;
+#front-rim {
+  filter: drop-shadow(0 2px 2px rgba(58, 30, 12, .25));
+}
+
+/* =========================
+   竹籤
+   三層 g 各司其職，彼此不衝突：
+   .stick-slot   — 靜態基本角度／位置（SVG transform 屬性）
+   .stick-wobble — 搖籤時的小幅晃動（CSS animation）
+   .fortune-stick — 抽中的籤上升＋樣式變化（CSS transition）
+========================= */
+.stick-body {
+  fill: url(#stickGrad);
+  stroke: #8a5f2c;
+  stroke-width: 1;
+}
+
+.stick-tie {
+  fill: rgba(111, 29, 27, .55);
+}
+
+.fortune-stick.chosen-stick {
+  transition: transform .8s cubic-bezier(.22, .75, .16, 1);
+}
+
+.fortune-shaker.lot-rising .fortune-stick.chosen-stick {
+  transform: translateY(-95px);
+}
+
+/* 被抽中的籤：升起前跟其他籤完全一樣，
+   只有真正抽出（lot-revealed）之後才變成有光澤的「已抽出的籤」 */
+.fortune-shaker.lot-revealed .chosen-stick .stick-body {
+  fill: url(#chosenGrad);
+  stroke: #7c5222;
+}
+
+/* 籤號文字：預設隱藏，抽出完成前絕對不能看到 */
+.stick-label {
+  fill: var(--red-dark);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.fortune-shaker.lot-revealed .stick-label {
+  opacity: 1;
+}
+
+/* =========================
+   籤筒本體：直紋 + 兩道竹節 + 開口處內陰影
+========================= */
+.tube-fill {
+  fill: url(#bodyGrad);
+}
+
+.tube-outline {
+  fill: none;
+  stroke: var(--red-dark);
+  stroke-width: 2;
+}
+
+.grain-overlay,
+.top-shade {
+  pointer-events: none;
+}
+
+.node-band {
+  fill: rgba(58, 30, 12, .32);
 }
 
 /* =========================
    六十甲子籤文字牌
 ========================= */
-.gold-frame {
-  position: absolute;
-  inset: 48px 78px 30px;
-  border: 1px solid var(--gold);
-  display: grid;
-  place-items: center;
-  background: transparent;
-  color: var(--red-dark);
-  z-index: 2;
+.gold-frame-rect {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1;
 }
 
-.gold-frame span {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  letter-spacing: .1em;
+.gold-frame-text {
+  fill: var(--red-dark);
+  font-size: 16px;
   font-weight: 700;
-  font-size: 19px;
+  letter-spacing: .03em;
+  text-orientation: upright;
 }
 
 /* =========================
-   籤筒口
+   籤筒底部：跟筒身同寬、同一條分割線，
+   當作圓柱底部的透視弧面
 ========================= */
-.cylinder-rim {
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  top: 142px;
-  height: 34px;
-  z-index: 8;
-  border: 2px solid var(--red-dark);
-  border-radius: 50%;
-  background: linear-gradient(180deg, #f8ecd2, #e3c68d);
-}
-
-.cylinder-rim::after {
-  content: "";
-  position: absolute;
-  inset: 7px 13px;
-  border: 1px solid rgba(111, 29, 27, .42);
-  border-radius: 50%;
-}
-
-/* =========================
-   籤筒底部
-========================= */
-.cylinder-base {
-  position: absolute;
-  left: 15px;
-  right: 15px;
-  top: 326px;
-  height: 26px;
-  z-index: 8;
-  border: 2px solid var(--red-dark);
-  border-radius: 50%;
-  background: linear-gradient(180deg, #e3c68d, #c99f57);
+.bottom-shape {
+  fill: url(#bodyGrad);
+  stroke: var(--red-dark);
+  stroke-width: 2;
+  filter: brightness(.9);
 }
 
 .draw-shadow {
   position: absolute;
-  width: 210px;
-  height: 20px;
+  width: 130px;
+  height: 16px;
   left: 50%;
-  bottom: 12px;
+  bottom: 10px;
   transform: translateX(-50%);
   background:
     radial-gradient(
@@ -660,39 +543,39 @@ h4 {
 ========================================= */
 .fortune-shaker.is-shaking {
   animation: outlineShaker .16s ease-in-out infinite alternate;
+  transform-box: view-box;
+  transform-origin: 110px 386px;
 }
 
-.fortune-shaker.is-shaking .fortune-stick {
+.fortune-shaker.is-shaking .stick-wobble {
   animation: outlineStick .18s ease-in-out infinite alternate;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
 }
 
-.fortune-shaker.is-shaking .fortune-stick:nth-child(2n) {
+.fortune-shaker.is-shaking .stick-slot:nth-child(2n) .stick-wobble {
   animation-delay: -.07s;
 }
 
-.fortune-shaker.is-shaking .fortune-stick:nth-child(3n) {
+.fortune-shaker.is-shaking .stick-slot:nth-child(3n) .stick-wobble {
   animation-delay: -.12s;
-}
-
-.fortune-shaker.lot-rising .chosen-stick {
-  transform: translateX(-7px) translateY(-105px) rotate(0deg);
 }
 
 @keyframes outlineShaker {
   from {
-    transform: translateX(-5px) rotate(-1.2deg);
+    transform: translate(-5px, 0) rotate(-1.2deg);
   }
   to {
-    transform: translateX(5px) rotate(1.2deg);
+    transform: translate(5px, 0) rotate(1.2deg);
   }
 }
 
 @keyframes outlineStick {
   from {
-    margin-bottom: -2px;
+    transform: translateY(-1px) rotate(-.6deg);
   }
   to {
-    margin-bottom: 5px;
+    transform: translateY(2px) rotate(.6deg);
   }
 }
 /* ================================
@@ -1601,31 +1484,9 @@ h4 {
     min-height: 445px;
   }
 
-  .fortune-shaker {
+  .shaker-svg {
     transform:
       scale(.88);
-  }
-
-  .fortune-shaker.is-shaking {
-    animation-name:
-      shakerShakeMobile;
-  }
-
-  @keyframes shakerShakeMobile {
-
-    0% {
-      transform:
-        scale(.88)
-        translateX(-8px)
-        rotate(-2.2deg);
-    }
-
-    100% {
-      transform:
-        scale(.88)
-        translateX(8px)
-        rotate(2.2deg);
-    }
   }
 
   .category-grid {

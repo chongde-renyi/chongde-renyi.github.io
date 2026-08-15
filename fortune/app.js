@@ -190,7 +190,7 @@ function renderConfirmHeader() {
 
 function resetShaker() {
   const shaker = $('#fortune-shaker');
-  shaker.classList.remove('is-shaking', 'lot-rising');
+  shaker.classList.remove('is-shaking', 'lot-rising', 'lot-revealed');
   $('#selected-stick').textContent = '';
   $('#draw-status').classList.remove('visible');
   $('#begin-btn').disabled = false;
@@ -203,6 +203,8 @@ function beginDraw() {
   isDrawing = true;
   confirmation = createConfirmationState();
   resetJiaobeiVisual();
+  // random result is decided now, but must stay off-screen until the
+  // chosen stick has visibly risen clear of the bundle (see lot-revealed below)
   currentFortune = drawFortune(FORTUNES, Math.random, lastFortuneId);
   lastFortuneId = currentFortune.id;
 
@@ -210,17 +212,21 @@ function beginDraw() {
   const button = $('#begin-btn');
   button.disabled = true;
   button.textContent = t().drawing;
-  $('#selected-stick').textContent = lang === 'zh' ? `第${currentFortune.id}籤` : `#${currentFortune.id}`;
+  $('#selected-stick').textContent = '';
   $('#draw-status').classList.add('visible');
-  shaker.classList.remove('lot-rising');
+  shaker.classList.remove('lot-rising', 'lot-revealed');
   void shaker.offsetWidth;
   shaker.classList.add('is-shaking');
 
   setTimeout(() => shaker.classList.add('lot-rising'), 1050);
   setTimeout(() => {
+    $('#selected-stick').textContent = lang === 'zh' ? `第${currentFortune.id}籤` : `#${currentFortune.id}`;
+    shaker.classList.add('lot-revealed');
+  }, 1850);
+  setTimeout(() => {
     renderConfirmHeader();
     renderJiaobeiStatus();
-    shaker.classList.remove('is-shaking', 'lot-rising');
+    shaker.classList.remove('is-shaking', 'lot-rising', 'lot-revealed');
     isDrawing = false;
     button.disabled = false;
     button.textContent = t().begin;

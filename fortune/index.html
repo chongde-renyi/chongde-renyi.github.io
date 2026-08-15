@@ -35,22 +35,158 @@
 
         <div class="shaker-stage">
           <div class="ambient-halo" aria-hidden="true"></div>
-          <div class="fortune-shaker" id="fortune-shaker" aria-label="六十甲子籤籤筒">
-            <div class="stick-bundle" aria-hidden="true">
-              <i class="fortune-stick s1"></i><i class="fortune-stick s2"></i><i class="fortune-stick s3"></i>
-              <i class="fortune-stick s4"></i><i class="fortune-stick s5"></i><i class="fortune-stick s6"></i>
-              <i class="fortune-stick s7"></i><i class="fortune-stick s8"></i><i class="fortune-stick s9"></i>
-              <i class="fortune-stick s10"></i><i class="fortune-stick s11"></i><i class="fortune-stick s12"></i>
-              <i class="fortune-stick s13"></i>
-              <i class="fortune-stick chosen-stick"><b id="selected-stick"></b></i>
-            </div>
-            <div class="cylinder-rim"></div>
-            <div class="cylinder-body">
-              <div class="wood-light"></div>
-              <div class="gold-frame"><span>六十甲子籤</span></div>
-            </div>
-            <div class="cylinder-base"></div>
-          </div>
+
+          <svg class="shaker-svg" viewBox="0 0 220 420" role="img" aria-label="六十甲子籤籤筒">
+            <defs>
+              <linearGradient id="bodyGrad" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0%" stop-color="#7a5326"/>
+                <stop offset="12%" stop-color="#e8c98a"/>
+                <stop offset="30%" stop-color="#cf9f57"/>
+                <stop offset="70%" stop-color="#c28f49"/>
+                <stop offset="88%" stop-color="#e8c98a"/>
+                <stop offset="100%" stop-color="#7a5326"/>
+              </linearGradient>
+              <linearGradient id="stickGrad" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0%" stop-color="#a97d3f"/>
+                <stop offset="22%" stop-color="#f3dca0"/>
+                <stop offset="50%" stop-color="#fbedc7"/>
+                <stop offset="78%" stop-color="#f0d59c"/>
+                <stop offset="100%" stop-color="#a97d3f"/>
+              </linearGradient>
+              <linearGradient id="chosenGrad" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0%" stop-color="#b8823c"/>
+                <stop offset="25%" stop-color="#fbe7b0"/>
+                <stop offset="50%" stop-color="#fff6dd"/>
+                <stop offset="75%" stop-color="#f6dfab"/>
+                <stop offset="100%" stop-color="#b8823c"/>
+              </linearGradient>
+              <linearGradient id="topShadeGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1e1008" stop-opacity=".5"/>
+                <stop offset="100%" stop-color="#1e1008" stop-opacity="0"/>
+              </linearGradient>
+              <pattern id="grainPattern" width="4" height="4" patternUnits="userSpaceOnUse">
+                <rect width="2" height="4" fill="rgba(255,255,255,.05)"/>
+                <rect x="2" width="2" height="4" fill="rgba(0,0,0,.04)"/>
+              </pattern>
+            </defs>
+
+            <g id="fortune-shaker" class="fortune-shaker">
+              <!-- back-rim：筒口後半橢圓弧，在籤之後 -->
+              <path id="back-rim" class="rim-shape"
+                d="M58,150 A52,9 0 0 1 162,150 Z"/>
+
+              <!-- sticks：所有竹籤，各自獨立的 slot / wobble / stick 三層方便動畫疊加 -->
+              <g id="sticks">
+                <g class="stick-slot" transform="translate(79,190) rotate(-6)">
+                  <g class="stick-wobble"><g class="fortune-stick s1">
+                    <rect class="stick-body" x="-5.5" y="-148" width="11" height="148" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-131" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(86,190) rotate(-7)">
+                  <g class="stick-wobble"><g class="fortune-stick s2">
+                    <rect class="stick-body" x="-5.5" y="-173" width="11" height="173" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-156" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(91,190) rotate(-3.5)">
+                  <g class="stick-wobble"><g class="fortune-stick s3">
+                    <rect class="stick-body" x="-5.5" y="-154" width="11" height="154" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-137" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(96,190) rotate(-5)">
+                  <g class="stick-wobble"><g class="fortune-stick s4">
+                    <rect class="stick-body" x="-5.5" y="-181" width="11" height="181" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-164" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(102,190) rotate(-1.5)">
+                  <g class="stick-wobble"><g class="fortune-stick s5">
+                    <rect class="stick-body" x="-5.5" y="-160" width="11" height="160" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-143" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(107,190) rotate(-3)">
+                  <g class="stick-wobble"><g class="fortune-stick s6">
+                    <rect class="stick-body" x="-5.5" y="-186" width="11" height="186" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-169" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(112,190) rotate(0)">
+                  <g class="stick-wobble"><g class="fortune-stick chosen-stick">
+                    <rect class="stick-body" x="-6" y="-188" width="12" height="188" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-171" width="9" height="1"/>
+                    <text id="selected-stick" class="stick-label" x="0" y="-158" text-anchor="middle" transform="rotate(90 0 -158)"></text>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(118,190) rotate(1)">
+                  <g class="stick-wobble"><g class="fortune-stick s7">
+                    <rect class="stick-body" x="-5.5" y="-166" width="11" height="166" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-149" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(122,190) rotate(3)">
+                  <g class="stick-wobble"><g class="fortune-stick s8">
+                    <rect class="stick-body" x="-5.5" y="-183" width="11" height="183" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-166" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(128,190) rotate(1.5)">
+                  <g class="stick-wobble"><g class="fortune-stick s9">
+                    <rect class="stick-body" x="-5.5" y="-161" width="11" height="161" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-144" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(134,190) rotate(4.5)">
+                  <g class="stick-wobble"><g class="fortune-stick s10">
+                    <rect class="stick-body" x="-5.5" y="-177" width="11" height="177" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-160" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(139,190) rotate(3)">
+                  <g class="stick-wobble"><g class="fortune-stick s11">
+                    <rect class="stick-body" x="-5.5" y="-150" width="11" height="150" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-133" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(144,190) rotate(6.5)">
+                  <g class="stick-wobble"><g class="fortune-stick s12">
+                    <rect class="stick-body" x="-5.5" y="-174" width="11" height="174" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-157" width="9" height="1"/>
+                  </g></g>
+                </g>
+                <g class="stick-slot" transform="translate(149,190) rotate(5)">
+                  <g class="stick-wobble"><g class="fortune-stick s13">
+                    <rect class="stick-body" x="-5.5" y="-156" width="11" height="156" rx="5" ry="5"/>
+                    <rect class="stick-tie" x="-4.5" y="-139" width="9" height="1"/>
+                  </g></g>
+                </g>
+              </g>
+
+              <!-- tube-body：完整竹製圓柱筒身，直角頂邊跟 rim 的分割線完全對齊，不會有縫 -->
+              <g id="tube-body">
+                <rect class="tube-fill" x="60" y="150" width="100" height="222"/>
+                <rect class="grain-overlay" x="60" y="150" width="100" height="222" fill="url(#grainPattern)"/>
+                <rect class="node-band" x="60" y="224" width="100" height="3"/>
+                <rect class="node-band" x="60" y="304" width="100" height="3"/>
+                <rect class="top-shade" x="60" y="150" width="100" height="46" fill="url(#topShadeGrad)"/>
+                <rect class="gold-frame-rect" x="95" y="242" width="30" height="86"/>
+                <text class="gold-frame-text" x="110" y="245" writing-mode="vertical-rl" text-anchor="start">六十甲子籤</text>
+                <rect class="tube-outline" x="60" y="150" width="100" height="222"/>
+              </g>
+
+              <!-- front-rim：筒口完整前半橢圓弧，畫在籤與筒身之後，蓋住籤的底部一小段，
+                   跟 tube-body 共用同一條分割線 (y=150, x=58~162)，不會露出縫隙 -->
+              <path id="front-rim" class="rim-shape"
+                d="M58,150 A52,9 0 0 0 162,150 Z"/>
+
+              <!-- bottom：跟筒身同寬、同一條分割線，當作圓柱底部的透視弧面 -->
+              <path id="bottom" class="bottom-shape"
+                d="M60,372 A50,7 0 0 0 160,372 Z"/>
+            </g>
+          </svg>
+
           <div class="draw-shadow" aria-hidden="true"></div>
         </div>
 
