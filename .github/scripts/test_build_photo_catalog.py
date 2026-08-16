@@ -137,6 +137,37 @@ class PhotoCatalogTest(unittest.TestCase):
         self.assertTrue(first.startswith("export const PHOTOS = ["))
         self.assertTrue(first.endswith("];\n"))
 
+    def test_github_workflow_runs_tests_and_updates_only_generated_catalog(self):
+        repository_root = Path(__file__).resolve().parents[2]
+        workflow_path = repository_root / ".github" / "workflows" / "update-photo-catalog.yml"
+        workflow = workflow_path.read_text(encoding="utf-8")
+
+        required_fragments = [
+            'branches: [main]',
+            '- "photos/uploads/**"',
+            '- "photos/catalog.csv"',
+            '- ".github/scripts/build_photo_catalog.py"',
+            '- ".github/scripts/test_build_photo_catalog.py"',
+            'workflow_dispatch:',
+            'contents: write',
+            "github.actor != 'github-actions[bot]'",
+            'uses: actions/checkout@v4',
+            'uses: actions/setup-python@v5',
+            'python-version: "3.12"',
+            'python .github/scripts/test_build_photo_catalog.py -v',
+            'python .github/scripts/build_photo_catalog.py',
+            'git add photos/photos-data.js',
+        ]
+        for fragment in required_fragments:
+            with self.subTest(fragment=fragment):
+                self.assertIn(fragment, workflow)
+
+        self.assertLess(
+            workflow.index('python .github/scripts/test_build_photo_catalog.py -v'),
+            workflow.index('python .github/scripts/build_photo_catalog.py'),
+        )
+        self.assertNotIn('git add -A', workflow)
+
 
 if __name__ == "__main__":
     unittest.main()
