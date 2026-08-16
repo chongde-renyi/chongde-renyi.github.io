@@ -25,4 +25,7 @@
 .life-events ul{margin:0;padding-left:1.25em}.life-events li+li{margin-top:7px}.life-events strong{color:var(--green)}
 .life-era.milestone .life-events{background:linear-gradient(120deg,#fffdf8,#f7f2e8);border-color:#d6bf92}.life-era.milestone .life-year{color:#9b6e2e}
 @media(max-width:760px){.brand-lotus-lamp{width:50px;height:50px}.life-section{padding:75px 18px}.life-timeline:before{left:14px}.life-era{grid-template-columns:1fr;gap:5px;padding-left:34px}.life-year{text-align:left;padding:0;color:#9b6e2e}.life-events{padding:18px 19px}.life-events:before{left:-26px;top:23px}}
+nav{gap:clamp(10px,1.8vw,30px)}
+nav a{font-size:clamp(12px,1.2vw,15px);white-space:nowrap}
+.gallery-more-link{display:table;margin:0 auto 24px;color:var(--green);font-weight:700;text-decoration:none;border-bottom:1px solid var(--gold)}
 
