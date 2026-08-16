@@ -2,6 +2,7 @@ import {
   filterPhotos,
   getAvailableCountries,
 } from './filter-logic.mjs';
+import { PHOTOS } from './photos-data.js';
 
 const photos = [
   { id: 'temple-tw', people: ['仁義大仙'], renyiCategories: ['佛堂'], topics: [], country: '臺灣' },
@@ -80,6 +81,39 @@ test('沒有符合條件時回傳空陣列', () => {
 
 test('國家清單去重並依 zh-Hant 排序', () => {
   assertDeepEqual(getAvailableCountries(photos), ['日本', '印尼', '臺灣']);
+});
+
+test('首批照片資料涵蓋人物、子分類、墨寶與多地區', () => {
+  if (PHOTOS.length < 30) throw new Error(`預期至少 30 張首批照片，實際 ${PHOTOS.length} 張`);
+  if (new Set(PHOTOS.map((photo) => photo.id)).size !== PHOTOS.length) {
+    throw new Error('照片 id 必須唯一');
+  }
+  if (new Set(PHOTOS.map((photo) => photo.downloadName)).size !== PHOTOS.length) {
+    throw new Error('照片下載檔名必須唯一');
+  }
+
+  const people = new Set(PHOTOS.flatMap((photo) => photo.people));
+  const categories = new Set(PHOTOS.flatMap((photo) => photo.renyiCategories));
+  const topics = new Set(PHOTOS.flatMap((photo) => photo.topics));
+  const countries = new Set(PHOTOS.map((photo) => photo.country).filter(Boolean));
+  assertDeepEqual([...people].sort(), ['仁義大仙', '前人老', '老前人'].sort());
+  assertDeepEqual([...categories].sort(), ['佛堂', '家人', '眾道親', '獨照'].sort());
+  if (!topics.has('墨寶')) throw new Error('缺少墨寶資料');
+  for (const country of ['臺灣', '日本', '泰國', '印尼', '中國大陸']) {
+    if (!countries.has(country)) throw new Error(`缺少地區：${country}`);
+  }
+
+  for (const photo of PHOTOS) {
+    if (!photo.src.startsWith('uploads/archive/')) throw new Error(`圖片路徑錯誤：${photo.src}`);
+    for (const field of ['id', 'src', 'downloadName', 'title', 'alt']) {
+      if (typeof photo[field] !== 'string' || !photo[field]) {
+        throw new Error(`${photo.src} 缺少 ${field}`);
+      }
+    }
+    for (const field of ['people', 'renyiCategories', 'topics']) {
+      if (!Array.isArray(photo[field])) throw new Error(`${photo.src} 的 ${field} 不是陣列`);
+    }
+  }
 });
 
 const status = document.querySelector('#test-status');
