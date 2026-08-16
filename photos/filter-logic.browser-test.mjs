@@ -5,13 +5,14 @@ import {
 import { PHOTOS } from './photos-data.js';
 
 const photos = [
-  { id: 'temple-tw', people: ['仁義大仙'], renyiCategories: ['佛堂'], topics: [], country: '臺灣' },
-  { id: 'portrait-jp', people: ['仁義大仙'], renyiCategories: ['獨照'], topics: [], country: '日本' },
-  { id: 'family-id', people: ['仁義大仙'], renyiCategories: ['家人'], topics: [], country: '印尼' },
-  { id: 'elder-tw', people: ['老前人'], renyiCategories: [], topics: [], country: '臺灣' },
-  { id: 'predecessor-jp', people: ['前人老'], renyiCategories: [], topics: [], country: '日本' },
-  { id: 'calligraphy-id', people: [], renyiCategories: [], topics: ['墨寶'], country: '印尼' },
-  { id: 'unknown-place', people: [], renyiCategories: [], topics: [], country: '' },
+  { id: 'temple-tw', people: ['仁義大仙'], renyiCategories: ['佛堂'], topics: [], inkCategories: [], country: '臺灣' },
+  { id: 'portrait-jp', people: ['仁義大仙'], renyiCategories: ['獨照'], topics: [], inkCategories: [], country: '日本' },
+  { id: 'family-id', people: ['仁義大仙'], renyiCategories: ['家人'], topics: [], inkCategories: [], country: '印尼' },
+  { id: 'elder-tw', people: ['老前人'], renyiCategories: [], topics: [], inkCategories: [], country: '臺灣' },
+  { id: 'predecessor-jp', people: ['前人老'], renyiCategories: [], topics: [], inkCategories: [], country: '日本' },
+  { id: 'calligraphy-id', people: [], renyiCategories: [], topics: ['墨寶'], inkCategories: ['對聯'], country: '印尼' },
+  { id: 'other-ink', people: [], renyiCategories: [], topics: ['墨寶'], inkCategories: ['其他'], country: '臺灣' },
+  { id: 'unknown-place', people: [], renyiCategories: [], topics: [], inkCategories: [], country: '' },
 ];
 
 const tests = [];
@@ -20,11 +21,12 @@ function test(name, callback) {
   tests.push({ name, callback });
 }
 
-function filters({ people = [], renyiCategories = [], topics = [], countries = [] } = {}) {
+function filters({ people = [], renyiCategories = [], topics = [], inkCategories = [], countries = [] } = {}) {
   return {
     people: new Set(people),
     renyiCategories: new Set(renyiCategories),
     topics: new Set(topics),
+    inkCategories: new Set(inkCategories),
     countries: new Set(countries),
   };
 }
@@ -59,12 +61,18 @@ test('老前人、前人老與墨寶跨組採 OR', () => {
   assertDeepEqual(ids(filterPhotos(photos, filters({
     people: ['老前人', '前人老'],
     topics: ['墨寶'],
-  }))), ['elder-tw', 'predecessor-jp', 'calligraphy-id']);
+  }))), ['elder-tw', 'predecessor-jp', 'calligraphy-id', 'other-ink']);
+});
+
+test('墨寶第二層只顯示所選分類', () => {
+  assertDeepEqual(ids(filterPhotos(photos, filters({ inkCategories: ['對聯'] }))), [
+    'calligraphy-id',
+  ]);
 });
 
 test('多個國家在地區組內採 OR', () => {
   assertDeepEqual(ids(filterPhotos(photos, filters({ countries: ['臺灣', '日本'] }))), [
-    'temple-tw', 'portrait-jp', 'elder-tw', 'predecessor-jp',
+    'temple-tw', 'portrait-jp', 'elder-tw', 'predecessor-jp', 'other-ink',
   ]);
 });
 
@@ -110,7 +118,8 @@ test('首批照片資料涵蓋人物、子分類、墨寶與多地區', () => {
         throw new Error(`${photo.src} 缺少 ${field}`);
       }
     }
-    for (const field of ['people', 'renyiCategories', 'topics']) {
+    if (typeof photo.link !== 'string') throw new Error(`${photo.src} 的 link 不是字串`);
+    for (const field of ['people', 'renyiCategories', 'topics', 'inkCategories']) {
       if (!Array.isArray(photo[field])) throw new Error(`${photo.src} 的 ${field} 不是陣列`);
     }
   }

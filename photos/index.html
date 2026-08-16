@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="崇德仁義珍貴照片典藏，可依人物、內容與地區篩選及下載。">
   <title>崇德仁義 照片</title>
-  <link rel="stylesheet" href="photos.css?v=2">
-  <script type="module" src="photos.js?v=9"></script>
+  <link rel="stylesheet" href="photos.css?v=4">
+  <script type="module" src="photos.js?v=18"></script>
 </head>
 <body>
   <a class="skip-link" href="#photo-feed">跳至照片</a>
@@ -46,15 +46,35 @@
           <fieldset>
             <legend>人物與內容</legend>
             <label><input type="checkbox" name="people" value="仁義大仙"> 仁義大仙</label>
-            <div class="nested-options" aria-label="仁義大仙分類">
-              <label><input type="checkbox" name="renyiCategories" value="佛堂"> 佛堂</label>
-              <label><input type="checkbox" name="renyiCategories" value="家人"> 家人</label>
-              <label><input type="checkbox" name="renyiCategories" value="眾道親"> 眾道親</label>
-              <label><input type="checkbox" name="renyiCategories" value="獨照"> 獨照</label>
-            </div>
+            <details class="nested-options">
+              <summary>仁義大仙分類</summary>
+              <div class="nested-options-list" aria-label="仁義大仙分類">
+                <label><input type="checkbox" name="renyiCategories" value="佛堂"> 佛堂</label>
+                <label><input type="checkbox" name="renyiCategories" value="家人"> 家人</label>
+                <label><input type="checkbox" name="renyiCategories" value="眾道親"> 眾道親</label>
+                <label><input type="checkbox" name="renyiCategories" value="獨照"> 獨照</label>
+              </div>
+            </details>
             <label><input type="checkbox" name="people" value="老前人"> 老前人</label>
             <label><input type="checkbox" name="people" value="前人老"> 前人老</label>
             <label><input type="checkbox" name="topics" value="墨寶"> 墨寶</label>
+            <details class="nested-options">
+              <summary>墨寶分類</summary>
+              <div class="nested-options-list" aria-label="墨寶分類">
+                <label><input type="checkbox" name="inkCategories" value="朱玖塋贈送之墨寶"> 朱玖塋贈送之墨寶</label>
+                <label><input type="checkbox" name="inkCategories" value="開台尊王借發書"> 開台尊王借發書</label>
+                <label><input type="checkbox" name="inkCategories" value="對聯"> 對聯</label>
+                <label><input type="checkbox" name="inkCategories" value="文章"> 文章</label>
+                <label><input type="checkbox" name="inkCategories" value="佛"> 佛</label>
+                <label><input type="checkbox" name="inkCategories" value="博愛"> 博愛</label>
+                <label><input type="checkbox" name="inkCategories" value="四海一家"> 四海一家</label>
+                <label><input type="checkbox" name="inkCategories" value="慈悲喜捨"> 慈悲喜捨</label>
+                <label><input type="checkbox" name="inkCategories" value="浩然正氣"> 浩然正氣</label>
+                <label><input type="checkbox" name="inkCategories" value="龍馬精神"> 龍馬精神</label>
+                <label><input type="checkbox" name="inkCategories" value="仁者無敵"> 仁者無敵</label>
+                <label><input type="checkbox" name="inkCategories" value="其他"> 其他</label>
+              </div>
+            </details>
           </fieldset>
 
           <fieldset>

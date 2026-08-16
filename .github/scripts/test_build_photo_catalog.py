@@ -11,7 +11,7 @@ from build_photo_catalog import CatalogError, build_catalog, write_catalog
 
 HEADER = [
     "file", "title", "date", "people", "renyiCategories", "topics",
-    "country", "city", "description", "downloadName", "alt",
+    "country", "city", "description", "downloadName", "alt", "link",
 ]
 
 
@@ -55,7 +55,9 @@ class PhotoCatalogTest(unittest.TestCase):
         self.assertEqual(result[0]["people"], [])
         self.assertEqual(result[0]["renyiCategories"], [])
         self.assertEqual(result[0]["topics"], [])
+        self.assertEqual(result[0]["inkCategories"], [])
         self.assertEqual(result[0]["country"], "")
+        self.assertEqual(result[0]["link"], "")
 
     def test_csv_metadata_and_pipe_values_are_converted(self):
         self.add_image("uploads/example.jpg")
@@ -74,6 +76,32 @@ class PhotoCatalogTest(unittest.TestCase):
         self.assertEqual(photo["country"], "臺灣")
         self.assertEqual(photo["city"], "彰化")
         self.assertEqual(photo["downloadName"], "紀念合照.jpg")
+
+    def test_ink_category_is_inferred_from_path_and_title(self):
+        self.add_image("uploads/archive/墨寶/朱玖塋墨寶/對聯1.jpg")
+        self.write_csv([self.row(
+            file="uploads/archive/墨寶/朱玖塋墨寶/對聯1.jpg",
+            title="朱玖塋對聯墨寶", topics="墨寶",
+        )])
+
+        photo = build_catalog(self.root)[0]
+
+        self.assertEqual(photo["inkCategories"], ["朱玖塋贈送之墨寶"])
+
+    def test_optional_photo_link_is_exported(self):
+        self.add_image("uploads/example.jpg")
+        self.write_csv([self.row(link="https://example.org/book")])
+
+        photo = build_catalog(self.root)[0]
+
+        self.assertEqual(photo["link"], "https://example.org/book")
+
+    def test_unsafe_photo_link_is_rejected(self):
+        self.add_image("uploads/example.jpg")
+        self.write_csv([self.row(link="javascript:alert(1)")])
+
+        with self.assertRaisesRegex(CatalogError, r"第 2 列.*link"):
+            build_catalog(self.root)
 
     def test_nested_images_are_sorted_by_relative_path(self):
         for relative in ["uploads/z.webp", "uploads/1995/a.PNG", "uploads/b.jpeg"]:

@@ -1,5 +1,5 @@
-import { PHOTOS } from './photos-data.js?v=4';
-import { filterPhotos, getAvailableCountries } from './filter-logic.mjs';
+import { PHOTOS } from './photos-data.js?v=12';
+import { filterPhotos, getAvailableCountries } from './filter-logic.mjs?v=2';
 
 const filterForm = document.querySelector('#photo-filters');
 const countryFilters = document.querySelector('#country-filters');
@@ -21,6 +21,7 @@ export function readFilters() {
     people: checkedValues('people'),
     renyiCategories: checkedValues('renyiCategories'),
     topics: checkedValues('topics'),
+    inkCategories: checkedValues('inkCategories'),
     countries: checkedValues('countries'),
   };
 }
@@ -53,7 +54,16 @@ function createPhotoCard(photo) {
   const copy = document.createElement('div');
   copy.className = 'photo-copy';
   const title = document.createElement('h3');
-  title.textContent = photo.title;
+  if (photo.link) {
+    const titleLink = document.createElement('a');
+    titleLink.href = photo.link;
+    titleLink.target = '_blank';
+    titleLink.rel = 'noopener noreferrer';
+    titleLink.textContent = photo.title;
+    title.append(titleLink);
+  } else {
+    title.textContent = photo.title;
+  }
 
   const download = document.createElement('a');
   download.className = 'download-button';

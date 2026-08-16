@@ -57,7 +57,10 @@ fieldset { margin:0;padding:18px 0;border:0;border-top:1px solid var(--line); }
 legend { padding:0 0 8px;color:var(--navy);font-weight:700; }
 fieldset label { min-height:38px;display:flex;align-items:center;gap:8px;cursor:pointer; }
 input[type="checkbox"] { width:18px;height:18px;accent-color:var(--green); }
-.nested-options { margin:1px 0 8px 12px;padding-left:16px;border-left:2px solid #d9c497; }
+.nested-options { margin:4px 0 8px 12px;padding-left:14px;border-left:2px solid #d9c497; }
+.nested-options summary { width:max-content;color:var(--muted);font-size:14px;cursor:pointer;user-select:none; }
+.nested-options summary:hover,.nested-options summary:focus-visible { color:var(--green); }
+.nested-options-list { padding-top:6px; }
 .nested-options label { font-size:14px; }
 .country-options:empty::after { content:"尚無地區資料";color:var(--muted);font-size:14px; }
 
@@ -73,6 +76,8 @@ input[type="checkbox"] { width:18px;height:18px;accent-color:var(--green); }
 .image-error[hidden] { display:none; }
 .photo-copy { padding:26px 30px 30px; }
 .photo-copy h3 { margin:0;font-size:clamp(23px,3vw,31px);font-weight:500;line-height:1.45; }
+.photo-copy h3 a { color:inherit;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:5px; }
+.photo-copy h3 a:hover,.photo-copy h3 a:focus-visible { color:var(--green); }
 .photo-date { margin:6px 0;color:var(--muted);font-size:14px; }
 .photo-description { margin:12px 0 16px; }
 .tag-list { display:flex;flex-wrap:wrap;gap:7px;margin:0 0 20px;padding:0;list-style:none; }

@@ -6,13 +6,27 @@ import json
 import sys
 from datetime import datetime
 from pathlib import Path, PurePosixPath
+from urllib.parse import urlparse
 
 
 CSV_FIELDS = [
     "file", "title", "date", "people", "renyiCategories", "topics",
-    "country", "city", "description", "downloadName", "alt",
+    "country", "city", "description", "downloadName", "alt", "link",
 ]
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
+INK_CATEGORY_RULES = [
+    ("朱玖塋贈送之墨寶", ("朱玖塋墨寶",)),
+    ("開台尊王借發書", ("勸化鸞音",)),
+    ("對聯", ("對聯",)),
+    ("文章", ("文章",)),
+    ("佛", ("佛字", "/佛/")),
+    ("博愛", ("博愛",)),
+    ("四海一家", ("四海一家",)),
+    ("慈悲喜捨", ("慈悲喜捨",)),
+    ("浩然正氣", ("浩然正氣",)),
+    ("龍馬精神", ("龍馬精神",)),
+    ("仁者無敵", ("仁者無敵",)),
+]
 ALLOWED_VALUES = {
     "people": {"仁義大仙", "老前人", "前人老"},
     "renyiCategories": {"佛堂", "家人", "眾道親", "獨照"},
@@ -42,9 +56,21 @@ def default_photo(file_path: str) -> dict[str, object]:
         "people": [],
         "renyiCategories": [],
         "topics": [],
+        "inkCategories": [],
         "country": "",
         "city": "",
+        "link": "",
     }
+
+
+def infer_ink_categories(file_path: str, title: str, topics: list[str]) -> list[str]:
+    if "墨寶" not in topics:
+        return []
+    searchable = f"{file_path}/{title}"
+    for category, markers in INK_CATEGORY_RULES:
+        if any(marker in searchable for marker in markers):
+            return [category]
+    return ["其他"]
 
 
 def scan_images(root: Path) -> list[str]:
@@ -119,6 +145,16 @@ def read_metadata(root: Path, image_paths: set[str]) -> dict[str, dict[str, obje
                     )
                 parsed_lists[field] = values
 
+            link = (row.get("link") or "").strip()
+            if link:
+                parsed = urlparse(link)
+                is_web_link = parsed.scheme in {"http", "https"} and bool(parsed.netloc)
+                is_site_link = link.startswith("/") and not link.startswith("//")
+                if not (is_web_link or is_site_link):
+                    raise CatalogError(
+                        f"第 {line_number} 列 link 必須是 https://、http:// 或站內 / 路徑"
+                    )
+
             metadata[file_path] = {
                 "title": row["title"].strip(),
                 "date": date,
@@ -130,6 +166,7 @@ def read_metadata(root: Path, image_paths: set[str]) -> dict[str, dict[str, obje
                 "description": row["description"].strip(),
                 "downloadName": row["downloadName"].strip(),
                 "alt": row["alt"].strip(),
+                "link": link,
             }
     return metadata
 
@@ -142,11 +179,14 @@ def build_catalog(root: Path) -> list[dict[str, object]]:
         photo = default_photo(file_path)
         details = metadata.get(file_path)
         if details:
-            for field in ("date", "people", "renyiCategories", "topics", "country", "city", "description"):
+            for field in ("date", "people", "renyiCategories", "topics", "country", "city", "description", "link"):
                 photo[field] = details[field]
             for field in ("title", "downloadName", "alt"):
                 if details[field]:
                     photo[field] = details[field]
+        photo["inkCategories"] = infer_ink_categories(
+            file_path, str(photo["title"]), list(photo["topics"]),
+        )
         photos.append(photo)
     return photos
 

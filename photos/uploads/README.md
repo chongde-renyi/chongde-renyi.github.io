@@ -14,7 +14,7 @@
 在 `photos/catalog.csv` 中，每張照片使用一列，欄位順序不可更改：
 
 ```csv
-file,title,date,people,renyiCategories,topics,country,city,description,downloadName,alt
+file,title,date,people,renyiCategories,topics,country,city,description,downloadName,alt,link
 ```
 
 - `file` 必須從 `uploads/` 開始，例如 `uploads/1995/group-001.jpg`。
@@ -24,11 +24,12 @@ file,title,date,people,renyiCategories,topics,country,city,description,downloadN
 - 仁義大仙分類可填：`佛堂`、`家人`、`眾道親`、`獨照`。
 - 主題目前可填：`墨寶`。
 - `title`、`downloadName`、`alt` 留空時，系統會使用圖片檔名。
+- `link` 可留空；填入 `https://...`、`http://...` 或站內 `/...` 路徑後，照片標題會成為另開頁面的連結。
 
 完整範例：
 
 ```csv
-uploads/1995/group-001.jpg,道親大合照,1995-08-10,仁義大仙|前人老,眾道親,墨寶,臺灣,彰化,紀念活動大合照,崇德仁義-道親大合照.jpg,仁義大仙與道親活動合照
+uploads/1995/group-001.jpg,道親大合照,1995-08-10,仁義大仙|前人老,眾道親,墨寶,臺灣,彰化,紀念活動大合照,崇德仁義-道親大合照.jpg,仁義大仙與道親活動合照,https://example.org/book
 ```
 
 同一張照片只需上傳一次。完成分類後，使用者選擇仁義大仙、前人老、眾道親、墨寶或臺灣時，都可以看到這張照片。

@@ -15,7 +15,7 @@ from PIL import Image
 
 CSV_FIELDS = [
     "file", "title", "date", "people", "renyiCategories", "topics",
-    "country", "city", "description", "downloadName", "alt",
+    "country", "city", "description", "downloadName", "alt", "link",
 ]
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 COUNTRIES = {
@@ -133,6 +133,7 @@ def make_row(relative_path: str) -> dict[str, str]:
         "description": "",
         "downloadName": f"崇德仁義-{title}-{digest}{suffix}",
         "alt": title,
+        "link": "",
     }
 
 
