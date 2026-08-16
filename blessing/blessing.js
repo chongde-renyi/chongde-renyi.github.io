@@ -2,6 +2,7 @@ import {
   chooseDownloadFormat,
   buildDownloadFilename,
   calculatePdfPageSize,
+  getCardExportOptions,
 } from './download-utils.mjs';
 
 const teachings=[
@@ -206,24 +207,25 @@ async function downloadBlessingCard(){
     renderDownloadCard();
     if(document.fonts?.ready)await document.fonts.ready;
     if(!window.html2canvas)throw new Error("html2canvas is unavailable");
-    const card=document.querySelector("#download-card");
-    const canvas=await window.html2canvas(card,{backgroundColor:"#fffaf0",scale:2,useCORS:true,logging:false});
     const format=chooseDownloadFormat({
       userAgent:navigator.userAgent,
       maxTouchPoints:navigator.maxTouchPoints||0,
       innerWidth:window.innerWidth,
     });
+    const exportOptions=getCardExportOptions(format);
+    const card=document.querySelector("#download-card");
+    const canvas=await window.html2canvas(card,{backgroundColor:"#fffaf0",scale:exportOptions.scale,useCORS:true,logging:false});
     const filename=buildDownloadFilename(currentName,format);
     if(format==="png"){
-      const blob=await canvasToBlob(canvas,"image/png",1);
+      const blob=await canvasToBlob(canvas,exportOptions.canvasMimeType,1);
       downloadBlob(blob,filename);
     }else{
       const jsPDF=window.jspdf?.jsPDF;
       if(!jsPDF)throw new Error("jsPDF is unavailable");
       const {width,height,orientation}=calculatePdfPageSize(canvas.width,canvas.height);
       const pdf=new jsPDF({orientation,unit:"px",format:[width,height],hotfixes:["px_scaling"]});
-      const image=canvas.toDataURL("image/jpeg",0.96);
-      pdf.addImage(image,"JPEG",0,0,width,height,undefined,"FAST");
+      const image=canvas.toDataURL(exportOptions.canvasMimeType);
+      pdf.addImage(image,exportOptions.pdfImageFormat,0,0,width,height,undefined,"FAST");
       pdf.save(filename);
     }
     button.textContent="已產生下載";

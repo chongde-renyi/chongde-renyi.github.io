@@ -21,3 +21,11 @@ export function calculatePdfPageSize(canvasWidth, canvasHeight, pageWidth = 640)
     orientation: height >= pageWidth ? 'portrait' : 'landscape',
   };
 }
+
+export function getCardExportOptions(format) {
+  return {
+    scale: 3,
+    canvasMimeType: 'image/png',
+    pdfImageFormat: format === 'pdf' ? 'PNG' : null,
+  };
+}

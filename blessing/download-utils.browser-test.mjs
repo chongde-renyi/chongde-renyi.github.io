@@ -2,6 +2,7 @@ import {
   chooseDownloadFormat,
   buildDownloadFilename,
   calculatePdfPageSize,
+  getCardExportOptions,
 } from './download-utils.mjs';
 
 const output = document.querySelector('#test-output');
@@ -81,6 +82,19 @@ test('PDF page preserves portrait and landscape aspect ratios', () => {
     width: 640,
     height: 320,
     orientation: 'landscape',
+  });
+});
+
+test('card export keeps portraits sharp without JPEG recompression', () => {
+  deepEqual(getCardExportOptions('png'), {
+    scale: 3,
+    canvasMimeType: 'image/png',
+    pdfImageFormat: null,
+  });
+  deepEqual(getCardExportOptions('pdf'), {
+    scale: 3,
+    canvasMimeType: 'image/png',
+    pdfImageFormat: 'PNG',
   });
 });
 
