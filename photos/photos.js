@@ -29,12 +29,6 @@ function hasSelections(filters) {
   return Object.values(filters).some((values) => values.size > 0);
 }
 
-function createTag(text) {
-  const item = document.createElement('li');
-  item.textContent = text;
-  return item;
-}
-
 function createPhotoCard(photo) {
   const article = document.createElement('article');
   article.className = 'photo-card';
@@ -62,17 +56,10 @@ function createPhotoCard(photo) {
   title.textContent = photo.title;
   const date = document.createElement('p');
   date.className = 'photo-date';
-  date.textContent = photo.date || '日期未詳';
+  date.textContent = photo.date;
   const description = document.createElement('p');
   description.className = 'photo-description';
-  description.textContent = photo.description || '珍貴照片典藏。';
-
-  const tags = document.createElement('ul');
-  tags.className = 'tag-list';
-  const location = [photo.country, photo.city].filter(Boolean).join(' · ');
-  [...photo.people, ...photo.renyiCategories, ...photo.topics, location]
-    .filter(Boolean)
-    .forEach((tag) => tags.append(createTag(tag)));
+  description.textContent = photo.description;
 
   const download = document.createElement('a');
   download.className = 'download-button';
@@ -81,7 +68,12 @@ function createPhotoCard(photo) {
   download.textContent = '下載照片';
   download.setAttribute('aria-label', `下載照片：${photo.title}`);
 
-  copy.append(title, date, description, tags, download);
+  copy.append(title);
+  if (photo.date) copy.append(date);
+  if (photo.description && photo.description !== '原始典藏照片。') {
+    copy.append(description);
+  }
+  copy.append(download);
   article.append(imageWrap, copy);
   return article;
 }

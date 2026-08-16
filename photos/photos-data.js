@@ -37,7 +37,7 @@ export const PHOTOS = [
     "downloadName": "崇德仁義-泰國曼谷活動合照.JPG",
     "title": "泰國曼谷活動合照",
     "date": "",
-    "description": "人物與事件資料待確認。",
+    "description": "",
     "alt": "仁義大仙於泰國曼谷活動合照",
     "people": [
       "仁義大仙"
