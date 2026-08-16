@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="崇德仁義珍貴照片典藏，可依人物、內容與地區篩選及下載。">
+  <title>崇德仁義 照片</title>
+  <link rel="stylesheet" href="photos.css?v=2">
+  <script type="module" src="photos.js?v=2"></script>
+</head>
+<body>
+  <a class="skip-link" href="#photo-feed">跳至照片</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/" aria-label="崇德仁義首頁">
+        <span class="brand-emblem" aria-hidden="true">仁義</span>
+        <span><strong>崇德仁義</strong><small>紀念 · 傳承 · 典藏</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
+      <nav id="site-nav" aria-label="主要導覽">
+        <a href="/">首頁</a>
+        <a href="https://fycd-renyi.github.io/library/">藏經閣</a>
+        <a class="active" href="/photos/" aria-current="page">照片</a>
+        <a href="/fortune/">求籤</a>
+        <a href="/blessing/">仙佛詞語</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="photo-hero">
+      <p class="eyebrow">珍貴影像 · 永續典藏</p>
+      <h1>崇德仁義 <span>照片</span></h1>
+      <p>依人物、內容或地區尋找照片，也可下載原始典藏檔案。</p>
+    </section>
+
+    <section class="photos-layout" aria-labelledby="gallery-title">
+      <details class="filter-panel" open>
+        <summary>篩選照片</summary>
+        <form id="photo-filters">
+          <div class="filter-heading">
+            <h2>分類</h2>
+            <button id="clear-filters" class="clear-button" type="button" disabled>清除篩選</button>
+          </div>
+
+          <fieldset>
+            <legend>人物與內容</legend>
+            <label><input type="checkbox" name="people" value="仁義大仙"> 仁義大仙</label>
+            <div class="nested-options" aria-label="仁義大仙分類">
+              <label><input type="checkbox" name="renyiCategories" value="佛堂"> 佛堂</label>
+              <label><input type="checkbox" name="renyiCategories" value="家人"> 家人</label>
+              <label><input type="checkbox" name="renyiCategories" value="眾道親"> 眾道親</label>
+              <label><input type="checkbox" name="renyiCategories" value="獨照"> 獨照</label>
+            </div>
+            <label><input type="checkbox" name="people" value="老前人"> 老前人</label>
+            <label><input type="checkbox" name="people" value="前人老"> 前人老</label>
+            <label><input type="checkbox" name="topics" value="墨寶"> 墨寶</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>地區</legend>
+            <div id="country-filters" class="country-options"></div>
+          </fieldset>
+        </form>
+      </details>
+
+      <div class="gallery-column">
+        <div class="gallery-heading">
+          <div><p class="eyebrow">照片典藏</p><h2 id="gallery-title">崇德仁義 照片</h2></div>
+          <p id="photo-count" aria-live="polite">載入中</p>
+        </div>
+        <div id="photo-feed" class="photo-feed"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <h3>找不到符合條件的照片</h3>
+          <p>請改選其他分類，或清除目前的篩選條件。</p>
+          <button id="empty-clear-filters" class="download-button" type="button">清除篩選</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>崇德仁義</strong><p>傳承仁義精神 · 留存珍貴記憶</p></div>
+    <p>照片均依原始比例完整呈現</p>
+  </footer>
+</body>
+</html>
