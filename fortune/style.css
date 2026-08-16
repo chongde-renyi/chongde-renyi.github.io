@@ -1464,6 +1464,11 @@ h4 {
 
 @media (max-width: 900px) {
 
+  .gold-frame-text {
+    font-size: 22px;
+    letter-spacing: .01em;
+  }
+
   .site-header {
     grid-template-columns:
       auto 1fr auto;
