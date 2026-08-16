@@ -1,4 +1,4 @@
-import { PHOTOS } from './photos-data.js?v=3';
+import { PHOTOS } from './photos-data.js?v=4';
 import { filterPhotos, getAvailableCountries } from './filter-logic.mjs';
 
 const filterForm = document.querySelector('#photo-filters');
@@ -54,12 +54,6 @@ function createPhotoCard(photo) {
   copy.className = 'photo-copy';
   const title = document.createElement('h3');
   title.textContent = photo.title;
-  const date = document.createElement('p');
-  date.className = 'photo-date';
-  date.textContent = photo.date;
-  const description = document.createElement('p');
-  description.className = 'photo-description';
-  description.textContent = photo.description;
 
   const download = document.createElement('a');
   download.className = 'download-button';
@@ -68,12 +62,7 @@ function createPhotoCard(photo) {
   download.textContent = '下載照片';
   download.setAttribute('aria-label', `下載照片：${photo.title}`);
 
-  copy.append(title);
-  if (photo.date) copy.append(date);
-  if (photo.description && photo.description !== '原始典藏照片。') {
-    copy.append(description);
-  }
-  copy.append(download);
+  copy.append(title, download);
   article.append(imageWrap, copy);
   return article;
 }
