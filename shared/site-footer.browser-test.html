@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>共用頁尾測試</title>
+  <style>html,body{margin:0}</style>
+  <link rel="stylesheet" href="site-footer.css">
+  <script src="site-footer.js" defer></script>
+</head>
+<body>
+  <main><h1>共用頁尾測試</h1></main>
+  <footer><p>舊頁尾</p></footer>
+  <pre id="results">測試執行中</pre>
+  <script>
+    window.addEventListener('load',()=>{
+      const checks=[];
+      const assert=(condition,name)=>{if(!condition)throw new Error(name);checks.push(`PASS ${name}`)};
+      try{
+        const footer=document.querySelector('.site-related-footer');
+        assert(Boolean(footer),'建立共用頁尾');
+        assert(footer.querySelectorAll('.site-related-link').length===5,'只顯示五個相關連結');
+        assert(!footer.textContent.includes('聯絡我們'),'排除聯絡我們');
+        assert(!footer.textContent.includes('藏經閣'),'排除藏經閣');
+        const footerBottom=footer.getBoundingClientRect().bottom+window.scrollY;
+        assert(Math.abs(footerBottom-document.documentElement.scrollHeight)<1,'頁尾位於可見頁面的最底端');
+        document.querySelector('#results').textContent=`${checks.length} 個測試全部通過\n\n${checks.join('\n')}`;
+        document.documentElement.dataset.testStatus='passed';
+      }catch(error){
+        document.querySelector('#results').textContent=`FAIL ${error.message}`;
+        document.documentElement.dataset.testStatus='failed';
+      }
+    });
+  </script>
+</body>
+</html>

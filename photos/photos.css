@@ -29,7 +29,7 @@ button,input { font:inherit; }
 .site-header { position:sticky;top:0;z-index:20;background:rgba(255,253,248,.95);border-bottom:1px solid rgba(20,46,75,.18);backdrop-filter:blur(12px); }
 .nav-wrap { width:min(1120px,100%);height:78px;margin:auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:24px; }
 .brand { min-width:0;display:flex;align-items:center;gap:12px;text-decoration:none;line-height:1.25; }
-.brand-emblem { width:54px;height:54px;flex:none;display:grid;place-items:center;border:1px solid #d5ae5b;border-radius:50%;color:#fff8e6;background:linear-gradient(145deg,var(--green),var(--navy));font-size:14px;letter-spacing:.08em;box-shadow:0 3px 7px rgba(20,46,75,.18); }
+.brand-lotus-lamp { width:58px;height:58px;flex:none;filter:drop-shadow(0 3px 4px rgba(20,46,75,.14)); }
 .brand strong,.brand small { display:block; }
 .brand small { margin-top:3px;color:var(--muted);font-size:11px;letter-spacing:.12em; }
 #site-nav { display:flex;gap:clamp(14px,2vw,28px);white-space:nowrap; }
@@ -100,7 +100,7 @@ footer p { margin:5px 0 0;color:#aebfb8;font-size:13px; }
 
 @media (max-width:760px) {
   .nav-wrap { height:70px;padding:0 18px; }
-  .brand-emblem { width:48px;height:48px; }
+  .brand-lotus-lamp { width:50px;height:50px; }
   .brand small { display:none; }
   .menu-toggle { display:block; }
   #site-nav { display:none;position:absolute;top:70px;left:0;right:0;padding:12px 20px 20px;flex-direction:column;gap:4px;background:var(--paper);border-bottom:1px solid var(--line);white-space:normal; }

@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="崇德仁義珍貴照片典藏，可依人物、內容與地區篩選及下載。">
   <title>崇德仁義 照片</title>
-  <link rel="stylesheet" href="photos.css?v=4">
+  <link rel="stylesheet" href="photos.css?v=5">
   <script type="module" src="photos.js?v=18"></script>
+  <link rel="stylesheet" href="/shared/site-footer.css?v=1">
+  <script src="/shared/site-footer.js?v=1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#photo-feed">跳至照片</a>
   <header class="site-header">
     <div class="nav-wrap">
       <a class="brand" href="/" aria-label="崇德仁義首頁">
-        <span class="brand-emblem" aria-hidden="true">仁義</span>
+        <svg class="brand-lotus-lamp" viewBox="0 0 72 72" aria-hidden="true"><defs><linearGradient id="brandEmblemBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#174d3a"/><stop offset="1" stop-color="#142e4b"/></linearGradient><linearGradient id="brandFlameGold" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#c78f2d"/><stop offset="1" stop-color="#fff0a8"/></linearGradient></defs><circle cx="36" cy="36" r="34" fill="url(#brandEmblemBg)"/><circle cx="36" cy="36" r="32.5" fill="none" stroke="#c79a3b"/><text x="13" y="40" text-anchor="middle" fill="#fff8e6" font-size="13" font-family="serif">仁</text><text x="59" y="40" text-anchor="middle" fill="#fff8e6" font-size="13" font-family="serif">義</text><path d="M36 9c5 6 6 11 1 16 1-4-1-7-3-9-4 5-4 9-1 12 2 2 5 1 7-1 5-6 3-12-4-18z" fill="url(#brandFlameGold)"/><g fill="#d7a94c" stroke="#f1d58b" stroke-width=".8"><path d="M36 48c-7-4-9-10-8-16 5 2 8 6 8 12 0-6 3-10 8-12 1 6-1 12-8 16z"/><path d="M34 50c-9-1-14-5-16-10 6-1 11 1 15 6-2-5-1-10 2-14 4 5 4 11-1 18z"/><path d="M38 50c9-1 14-5 16-10-6-1-11 1-15 6 2-5 1-10-2-14-4 5-4 11 1 18z"/><path d="M36 53c-10 0-17-3-20-8 7-1 13 0 20 5 7-5 13-6 20-5-3 5-10 8-20 8z"/></g><path d="M23 56h26M28 59h16" fill="none" stroke="#e6c878" stroke-width="1.6" stroke-linecap="round"/></svg>
         <span><strong>崇德仁義</strong><small>紀念 · 傳承 · 典藏</small></span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
@@ -30,7 +32,7 @@
   <main>
     <section class="photo-hero">
       <p class="eyebrow">珍貴影像 · 永續典藏</p>
-      <h1>崇德仁義 <span>照片</span></h1>
+      <h1><span>照片</span></h1>
       <p>依人物、內容或地區尋找照片，也可下載原始典藏檔案。</p>
     </section>
 
@@ -86,7 +88,7 @@
 
       <div class="gallery-column">
         <div class="gallery-heading">
-          <div><p class="eyebrow">照片典藏</p><h2 id="gallery-title">崇德仁義 照片</h2></div>
+          <div><p class="eyebrow">照片典藏</p><h2 id="gallery-title">照片</h2></div>
           <p id="photo-count" aria-live="polite">載入中</p>
         </div>
         <div id="photo-feed" class="photo-feed"></div>

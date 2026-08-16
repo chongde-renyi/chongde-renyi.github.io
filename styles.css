@@ -40,6 +40,6 @@ footer{display:block;align-items:initial}
 .related-links a::after{display:none}
 .related-links a:hover,.related-links a:focus-visible{background:rgba(255,255,255,.12);border-color:#d6b97d;color:#fff}
 .footer-note{text-align:center}
-@media(max-width:760px){.related-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}.related-links a{font-size:14px}}
+@media(max-width:760px){.related-links{position:static;inset:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0;background:transparent;border:0;box-shadow:none}.related-links a{font-size:14px}}
 @media(max-width:420px){.related-links{grid-template-columns:1fr}}
 
