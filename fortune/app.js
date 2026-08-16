@@ -12,14 +12,17 @@ const strings = {
     home: '返回首頁',
     introEyebrow: '六十甲子籤',
     introTitle: '心中默念所求，誠心求一籤',
-    introLead: '不必輸入任何問題。請先靜下心來，在心中專注於一件想請示的事，再按下「誠心求籤」。',
+    introLead: '請先靜下心來，在心中專注於一件想請示的事，再按下「誠心求籤」。',
     begin: '誠心求籤',
     drawing: '誠心感應中…',
     drawingHint: '請保持心念安定，讓籤筒自然落籤。',
     ritualNote: '一事一問 · 心誠則靈 · 籤意僅供參考',
-    confirmEyebrow: '擲筊確認',
+    confirmEyebrow: '抽籤結果',
     confirmTitle: '已抽得一支籤',
-    confirmLead: '請親自點擊「擲筊確認」。連續三個聖筊，此籤才正式成立。',
+    confirmLead: '可以直接查看籤詩內容；若想擲筊確認，請在右上角開啟。',
+    jiaobeiToggle: '擲筊確認',
+    jiaobeiLead: '請點擊「擲筊確認」。連續三個聖筊，此籤才正式成立。',
+    viewResult: '查看籤詩內容',
     toss: '擲筊確認',
     tossAgain: '再擲一次',
     redraw: '此籤未得允，重新求籤',
@@ -42,7 +45,7 @@ const strings = {
     preparing: '正在製作卡片…',
     downloaded: '已產生下載',
     downloadError: '下載失敗，請再試一次',
-    source: '原始籤文依台灣通行六十甲子籤版本整理；英文意譯與本頁解說為方便理解所編寫。',
+    source: '原始籤文依通行六十甲子籤版本整理；英文意譯與本頁解說為方便理解所編寫。',
     disclaimer: '解籤內容僅供文化體驗、靜心與自我反思參考，不應取代醫療、法律、財務或其他專業判斷。',
     grade: { very_good:'上吉', good:'吉', neutral:'平', caution:'宜慎', difficult:'守待' },
     categories: { career:'事業', finance:'財運', love:'感情', health:'健康', travel:'出行', legal:'訴訟／爭議', family:'家庭', general:'整體' },
@@ -55,14 +58,17 @@ const strings = {
     home: 'Back to home',
     introEyebrow: '60 Jiazi Fortune Lots',
     introTitle: 'Hold your question in your heart',
-    introLead: 'You do not need to type anything. Settle your mind, focus on one matter, then tap “Draw a Fortune Lot.”',
+    introLead: 'Settle your mind, focus on one matter, then tap “Draw a Fortune Lot.”',
     begin: 'Draw a Fortune Lot',
     drawing: 'Drawing with sincerity…',
     drawingHint: 'Keep your mind calm and let the lot fall naturally.',
     ritualNote: 'One matter at a time · Sincerity first · For reflection',
-    confirmEyebrow: 'Jiaobei Confirmation',
+    confirmEyebrow: 'Your Draw',
     confirmTitle: 'A lot has been drawn',
-    confirmLead: 'Tap “Cast the Jiaobei” yourself each time. The lot is confirmed only after three consecutive Sheng Jiao.',
+    confirmLead: 'You can view the fortune text right away. If you’d like to cast the jiaobei, turn it on in the top-right corner.',
+    jiaobeiToggle: 'Cast the Jiaobei',
+    jiaobeiLead: 'Tap “Cast the Jiaobei” yourself each time. The lot is confirmed only after three consecutive Sheng Jiao.',
+    viewResult: 'View the Fortune',
     toss: 'Cast the Jiaobei',
     tossAgain: 'Cast again',
     redraw: 'Not confirmed — draw another lot',
@@ -85,7 +91,7 @@ const strings = {
     preparing: 'Preparing card…',
     downloaded: 'Download ready',
     downloadError: 'Download failed. Please try again.',
-    source: 'Traditional text follows a commonly used Taiwanese 60-Jiazi set. English renderings and explanatory notes are editorial aids for understanding.',
+    source: 'Traditional text follows a commonly used 60-Jiazi set. English renderings and explanatory notes are editorial aids for understanding.',
     disclaimer: 'For cultural experience and personal reflection only. It is not a substitute for medical, legal, financial, or other professional advice.',
     grade: { very_good:'Highly Favorable', good:'Favorable', neutral:'Balanced', caution:'Proceed Carefully', difficult:'Pause & Protect' },
     categories: { career:'Career', finance:'Finances', love:'Relationships', health:'Health', travel:'Travel', legal:'Legal / Disputes', family:'Family', general:'Overall' },
@@ -162,6 +168,9 @@ function applyLanguage() {
   $('[data-i18n="confirmEyebrow"]').textContent = t().confirmEyebrow;
   $('[data-i18n="confirmTitle"]').textContent = t().confirmTitle;
   $('[data-i18n="confirmLead"]').textContent = t().confirmLead;
+  $('[data-i18n="jiaobeiToggle"]').textContent = t().jiaobeiToggle;
+  $('[data-i18n="jiaobeiLead"]').textContent = t().jiaobeiLead;
+  $('[data-i18n="viewResult"]').textContent = t().viewResult;
   $('#toss-btn').textContent = confirmation.shengCount ? t().tossAgain : t().toss;
   $('[data-i18n="resultEyebrow"]').textContent = t().resultEyebrow;
   $('[data-i18n="poem"]').textContent = t().poem;
@@ -242,6 +251,14 @@ function resetJiaobeiVisual() {
   $('#redraw-btn').hidden = true;
   $('#toss-btn').hidden = false;
   $('#toss-btn').disabled = false;
+  $('#jiaobei-toggle').checked = false;
+  $('#jiaobei-panel').hidden = true;
+}
+
+function skipToResult() {
+  renderConfirmHeader();
+  renderResult();
+  showScreen('result');
 }
 
 function renderJiaobeiStatus(lastResult = null) {
@@ -462,6 +479,10 @@ $('#lang-toggle').addEventListener('click', () => {
   applyLanguage();
 });
 $('#begin-btn').addEventListener('click', beginDraw);
+$('#view-btn').addEventListener('click', skipToResult);
+$('#jiaobei-toggle').addEventListener('change', (e) => {
+  $('#jiaobei-panel').hidden = !e.target.checked;
+});
 $('#toss-btn').addEventListener('click', toss);
 $('#redraw-btn').addEventListener('click', () => {
   showScreen('intro');

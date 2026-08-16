@@ -16,7 +16,14 @@
     <header class="site-header">
       <a class="home-link" href="../" data-i18n="home">← 返回首頁</a>
       <div class="brand">
-        <span class="brand-mark" aria-hidden="true">籤</span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg class="brand-mark-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="11" y1="15" x2="9" y2="4"/>
+            <line x1="16" y1="15" x2="16" y2="3"/>
+            <line x1="21" y1="15" x2="23" y2="4"/>
+            <rect x="8" y="14" width="16" height="13" rx="2.5"/>
+          </svg>
+        </span>
         <div>
           <strong data-i18n="siteTitle">六十甲子籤</strong>
           <small data-i18n="siteSubtitle">靜心 · 誠問 · 三聖筊定籤</small>
@@ -73,117 +80,118 @@
             <g id="fortune-shaker" class="fortune-shaker">
               <!-- back-rim：筒口後半橢圓弧，在籤之後 -->
               <path id="back-rim" class="rim-shape"
-                d="M58,150 A52,9 0 0 1 162,150 Z"/>
+                d="M30,150 A80,9 0 0 1 190,150 Z"/>
 
               <!-- sticks：所有竹籤，各自獨立的 slot / wobble / stick 三層方便動畫疊加 -->
               <g id="sticks">
-                <g class="stick-slot" transform="translate(79,190) rotate(-6)">
+                <g class="stick-slot" transform="translate(63,190) rotate(-6)">
                   <g class="stick-wobble"><g class="fortune-stick s1">
-                    <rect class="stick-body" x="-5.5" y="-148" width="11" height="148" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-131" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-148" width="22" height="148" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-131" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(86,190) rotate(-7)">
+                <g class="stick-slot" transform="translate(74,190) rotate(-7)">
                   <g class="stick-wobble"><g class="fortune-stick s2">
-                    <rect class="stick-body" x="-5.5" y="-173" width="11" height="173" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-156" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-173" width="22" height="173" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-156" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(91,190) rotate(-3.5)">
+                <g class="stick-slot" transform="translate(81,190) rotate(-3.5)">
                   <g class="stick-wobble"><g class="fortune-stick s3">
-                    <rect class="stick-body" x="-5.5" y="-154" width="11" height="154" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-137" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-154" width="22" height="154" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-137" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(96,190) rotate(-5)">
+                <g class="stick-slot" transform="translate(89,190) rotate(-5)">
                   <g class="stick-wobble"><g class="fortune-stick s4">
-                    <rect class="stick-body" x="-5.5" y="-181" width="11" height="181" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-164" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-181" width="22" height="181" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-164" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(102,190) rotate(-1.5)">
+                <g class="stick-slot" transform="translate(98,190) rotate(-1.5)">
                   <g class="stick-wobble"><g class="fortune-stick s5">
-                    <rect class="stick-body" x="-5.5" y="-160" width="11" height="160" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-143" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-160" width="22" height="160" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-143" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(107,190) rotate(-3)">
+                <g class="stick-slot" transform="translate(105,190) rotate(-3)">
                   <g class="stick-wobble"><g class="fortune-stick s6">
-                    <rect class="stick-body" x="-5.5" y="-186" width="11" height="186" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-169" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-186" width="22" height="186" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-169" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(112,190) rotate(0)">
+                <g class="stick-slot" transform="translate(113,190) rotate(0)">
                   <g class="stick-wobble"><g class="fortune-stick chosen-stick">
-                    <rect class="stick-body" x="-6" y="-188" width="12" height="188" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-171" width="9" height="1"/>
-                    <text id="selected-stick" class="stick-label" x="0" y="-158" text-anchor="middle" transform="rotate(90 0 -158)"></text>
+                    <rect class="stick-body" x="-12" y="-188" width="24" height="188" rx="11" ry="11"/>
+                    <rect class="stick-tie" x="-9" y="-171" width="18" height="1"/>
+                    <text id="selected-stick" class="stick-label" x="0" y="-130" text-anchor="middle" transform="rotate(90 0 -130)"></text>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(118,190) rotate(1)">
+                <g class="stick-slot" transform="translate(122,190) rotate(1)">
                   <g class="stick-wobble"><g class="fortune-stick s7">
-                    <rect class="stick-body" x="-5.5" y="-166" width="11" height="166" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-149" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-166" width="22" height="166" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-149" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(122,190) rotate(3)">
+                <g class="stick-slot" transform="translate(128,190) rotate(3)">
                   <g class="stick-wobble"><g class="fortune-stick s8">
-                    <rect class="stick-body" x="-5.5" y="-183" width="11" height="183" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-166" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-183" width="22" height="183" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-166" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(128,190) rotate(1.5)">
+                <g class="stick-slot" transform="translate(137,190) rotate(1.5)">
                   <g class="stick-wobble"><g class="fortune-stick s9">
-                    <rect class="stick-body" x="-5.5" y="-161" width="11" height="161" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-144" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-161" width="22" height="161" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-144" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(134,190) rotate(4.5)">
+                <g class="stick-slot" transform="translate(146,190) rotate(4.5)">
                   <g class="stick-wobble"><g class="fortune-stick s10">
-                    <rect class="stick-body" x="-5.5" y="-177" width="11" height="177" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-160" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-177" width="22" height="177" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-160" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(139,190) rotate(3)">
+                <g class="stick-slot" transform="translate(154,190) rotate(3)">
                   <g class="stick-wobble"><g class="fortune-stick s11">
-                    <rect class="stick-body" x="-5.5" y="-150" width="11" height="150" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-133" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-150" width="22" height="150" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-133" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(144,190) rotate(6.5)">
+                <g class="stick-slot" transform="translate(161,190) rotate(6.5)">
                   <g class="stick-wobble"><g class="fortune-stick s12">
-                    <rect class="stick-body" x="-5.5" y="-174" width="11" height="174" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-157" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-174" width="22" height="174" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-157" width="18" height="1"/>
                   </g></g>
                 </g>
-                <g class="stick-slot" transform="translate(149,190) rotate(5)">
+                <g class="stick-slot" transform="translate(169,190) rotate(5)">
                   <g class="stick-wobble"><g class="fortune-stick s13">
-                    <rect class="stick-body" x="-5.5" y="-156" width="11" height="156" rx="5" ry="5"/>
-                    <rect class="stick-tie" x="-4.5" y="-139" width="9" height="1"/>
+                    <rect class="stick-body" x="-11" y="-156" width="22" height="156" rx="10" ry="10"/>
+                    <rect class="stick-tie" x="-9" y="-139" width="18" height="1"/>
                   </g></g>
                 </g>
               </g>
 
               <!-- tube-body：完整竹製圓柱筒身，直角頂邊跟 rim 的分割線完全對齊，不會有縫 -->
               <g id="tube-body">
-                <rect class="tube-fill" x="60" y="150" width="100" height="222"/>
-                <rect class="grain-overlay" x="60" y="150" width="100" height="222" fill="url(#grainPattern)"/>
-                <rect class="node-band" x="60" y="224" width="100" height="3"/>
-                <rect class="node-band" x="60" y="304" width="100" height="3"/>
-                <rect class="top-shade" x="60" y="150" width="100" height="46" fill="url(#topShadeGrad)"/>
-                <rect class="gold-frame-rect" x="95" y="242" width="30" height="86"/>
-                <text class="gold-frame-text" x="110" y="245" writing-mode="vertical-rl" text-anchor="start">六十甲子籤</text>
-                <rect class="tube-outline" x="60" y="150" width="100" height="222"/>
+                <rect class="tube-fill" x="32" y="150" width="156" height="222"/>
+                <rect class="grain-overlay" x="32" y="150" width="156" height="222" fill="url(#grainPattern)"/>
+                <rect class="node-band" x="32" y="224" width="156" height="3"/>
+                <rect class="node-band" x="32" y="304" width="156" height="3"/>
+                <rect class="top-shade" x="32" y="150" width="156" height="46" fill="url(#topShadeGrad)"/>
+                <rect class="gold-frame-rect" x="92" y="205" width="36" height="155"/>
+                <text class="gold-frame-text" x="110" y="208" writing-mode="vertical-rl" text-anchor="start">六十甲子籤</text>
+                <rect class="tube-outline" x="32" y="150" width="156" height="222"/>
               </g>
 
               <!-- front-rim：筒口完整前半橢圓弧，畫在籤與筒身之後，蓋住籤的底部一小段，
-                   跟 tube-body 共用同一條分割線 (y=150, x=58~162)，不會露出縫隙 -->
+                   跟 tube-body 共用同一條分割線 (y=150, x=30~190)，不會露出縫隙。
+                   筒身寬度已大於籤枝散開的最大範圍，籤不會超出筒身兩側。 -->
               <path id="front-rim" class="rim-shape"
-                d="M58,150 A52,9 0 0 0 162,150 Z"/>
+                d="M30,150 A80,9 0 0 0 190,150 Z"/>
 
               <!-- bottom：跟筒身同寬、同一條分割線，當作圓柱底部的透視弧面 -->
               <path id="bottom" class="bottom-shape"
-                d="M60,372 A50,7 0 0 0 160,372 Z"/>
+                d="M32,372 A78,7 0 0 0 188,372 Z"/>
             </g>
           </svg>
 
@@ -198,28 +206,44 @@
       </section>
 
       <section class="screen center-screen" id="confirm" aria-live="polite">
-        <p class="eyebrow" data-i18n="confirmEyebrow">擲筊確認</p>
+        <div class="confirm-topbar">
+          <label class="jiaobei-toggle">
+            <input type="checkbox" id="jiaobei-toggle">
+            <span class="jiaobei-toggle-track" aria-hidden="true"></span>
+            <span class="jiaobei-toggle-label" data-i18n="jiaobeiToggle">擲筊確認（可選）</span>
+          </label>
+        </div>
+
+        <p class="eyebrow" data-i18n="confirmEyebrow">抽籤結果</p>
         <h2 data-i18n="confirmTitle">已抽得一支籤</h2>
         <div class="drawn-lot" id="drawn-number">第 01 籤 · 甲子</div>
-        <p class="muted confirm-lead" data-i18n="confirmLead">請親自點擊「擲筊確認」。連續三個聖筊，此籤才正式成立。</p>
-
-        <div class="sheng-progress" id="sheng-progress" aria-label="confirmation progress">
-          <span></span><span></span><span></span>
-        </div>
-        <p class="progress-text" id="progress-text">已得 0 / 3 個聖筊</p>
-
-        <div class="jiaobei-floor">
-          <div class="jiaobei-stage" aria-label="jiaobei result">
-            <div class="jiao-piece left" id="jiaobei-left"><b></b></div>
-            <div class="jiao-piece right" id="jiaobei-right"><b></b></div>
-          </div>
-        </div>
-        <h3 class="jiaobei-result" id="jiaobei-result"></h3>
-        <p class="jiaobei-desc" id="jiaobei-desc"></p>
+        <p class="muted confirm-lead" data-i18n="confirmLead">可以直接查看籤詩內容；若想擲筊確認，請在右上角開啟。</p>
 
         <div class="button-row">
-          <button class="primary-btn" id="toss-btn" type="button">擲筊確認</button>
-          <button class="secondary-btn" id="redraw-btn" type="button" hidden>此籤未得允，重新求籤</button>
+          <button class="primary-btn" id="view-btn" type="button" data-i18n="viewResult">查看籤詩內容</button>
+        </div>
+
+        <div class="jiaobei-panel" id="jiaobei-panel" hidden>
+          <p class="muted jiaobei-panel-lead" data-i18n="jiaobeiLead">請親自點擊「擲筊確認」。連續三個聖筊，此籤才正式成立。</p>
+
+          <div class="sheng-progress" id="sheng-progress" aria-label="confirmation progress">
+            <span></span><span></span><span></span>
+          </div>
+          <p class="progress-text" id="progress-text">已得 0 / 3 個聖筊</p>
+
+          <div class="jiaobei-floor">
+            <div class="jiaobei-stage" aria-label="jiaobei result">
+              <div class="jiao-piece left" id="jiaobei-left"><b></b></div>
+              <div class="jiao-piece right" id="jiaobei-right"><b></b></div>
+            </div>
+          </div>
+          <h3 class="jiaobei-result" id="jiaobei-result"></h3>
+          <p class="jiaobei-desc" id="jiaobei-desc"></p>
+
+          <div class="button-row">
+            <button class="primary-btn" id="toss-btn" type="button">擲筊確認</button>
+            <button class="secondary-btn" id="redraw-btn" type="button" hidden>此籤未得允，重新求籤</button>
+          </div>
         </div>
       </section>
 
