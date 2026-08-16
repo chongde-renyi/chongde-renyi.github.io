@@ -1,4 +1,4 @@
-import { PHOTOS } from './photos-data.js';
+import { PHOTOS } from './photos-data.js?v=3';
 import { filterPhotos, getAvailableCountries } from './filter-logic.mjs';
 
 const filterForm = document.querySelector('#photo-filters');
