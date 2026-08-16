@@ -3,6 +3,7 @@ import {
   buildDownloadFilename,
   calculatePdfPageSize,
   getCardExportOptions,
+  waitForImageReady,
 } from './download-utils.mjs';
 
 const teachings=[
@@ -126,10 +127,11 @@ const newPortraits={n1:"baishui-shengdi-v1.jpg",n2:"buxiuxi-pusa-v1.jpg",n3:"jes
 function portraitBg(name,portraitClass){
   const isRenyi=name==="仁義大仙";
   const isNew=/^n/.test(portraitClass);
-  const image=isRenyi?'url("images/renyi-daxian-v1.jpg?v=20260812-2")':isNew?`url("images/${newPortraits[portraitClass]}?v=20260812-1")`:'url("images/eight-immortals-v3.jpg?v=20260812-5")';
+  const src=isRenyi?'images/renyi-daxian-v1.jpg?v=20260812-2':isNew?`images/${newPortraits[portraitClass]}?v=20260812-1`:'images/eight-immortals-v3.jpg?v=20260812-5';
+  const image=`url("${src}")`;
   const position=isRenyi||isNew?"center":portraitPositions[portraitClass];
   const size=isRenyi||isNew?"cover":"400% 200%";
-  return{image,position,size};
+  return{image,position,size,src,isSprite:!isRenyi&&!isNew};
 }
 let currentName=null,currentItem=null,currentPortraitClass=null;
 const choices=document.querySelector(".choices");
@@ -172,7 +174,7 @@ function renderDownloadCard(){
         <p class="dc-kicker">崇德仁義 · 今日慈語</p>
         <h2 class="dc-title">${currentName} 慈悲指引</h2>
       </div>
-      <span class="dc-portrait"></span>
+      <span class="dc-portrait ${bg.isSprite?`dc-sprite ${currentPortraitClass}`:"dc-single"}"><img src="${bg.src}" alt=""></span>
     </div>
     <section class="dc-section dc-quote"><p>「${currentItem.q}」</p></section>
     <section class="dc-section">
@@ -180,10 +182,6 @@ function renderDownloadCard(){
       <p class="dc-text-en">${currentItem.ge}</p>
     </section>
     <div class="dc-foot">此頁旨在靜心自省與善念提醒，慈語不作占卜或重大決策依據。</div>`;
-  const portrait=document.querySelector("#download-card .dc-portrait");
-  portrait.style.setProperty("background-image",bg.image,"important");
-  portrait.style.backgroundPosition=bg.position;
-  portrait.style.backgroundSize=bg.size;
 }
 function downloadBlob(blob,filename){
   const url=URL.createObjectURL(blob);
@@ -206,6 +204,7 @@ async function downloadBlessingCard(){
   try{
     renderDownloadCard();
     if(document.fonts?.ready)await document.fonts.ready;
+    await waitForImageReady(document.querySelector("#download-card .dc-portrait img"));
     if(!window.html2canvas)throw new Error("html2canvas is unavailable");
     const format=chooseDownloadFormat({
       userAgent:navigator.userAgent,

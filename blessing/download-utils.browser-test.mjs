@@ -3,18 +3,18 @@ import {
   buildDownloadFilename,
   calculatePdfPageSize,
   getCardExportOptions,
+  waitForImageReady,
 } from './download-utils.mjs';
 
 const output = document.querySelector('#test-output');
 const results = [];
+const pendingTests = [];
 
 function test(name, fn) {
-  try {
-    fn();
-    results.push(`PASS: ${name}`);
-  } catch (error) {
-    results.push(`FAIL: ${name}\n  ${error.message}`);
-  }
+  pendingTests.push(Promise.resolve()
+    .then(fn)
+    .then(() => results.push(`PASS: ${name}`))
+    .catch(error => results.push(`FAIL: ${name}\n  ${error.message}`)));
 }
 
 function equal(actual, expected) {
@@ -98,6 +98,15 @@ test('card export keeps portraits sharp without JPEG recompression', () => {
   });
 });
 
+test('portrait image is loaded and decoded before export', async () => {
+  const image = new Image();
+  image.src = 'images/baishui-shengdi-v1.jpg';
+  await waitForImageReady(image);
+  equal(image.complete, true);
+  equal(image.naturalWidth, 300);
+});
+
+await Promise.all(pendingTests);
 const failures = results.filter(line => line.startsWith('FAIL'));
 output.textContent = `${results.join('\n')}\n\n${failures.length ? `${failures.length} failed` : `${results.length} passed`}`;
 document.documentElement.dataset.testStatus = failures.length ? 'failed' : 'passed';

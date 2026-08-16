@@ -29,3 +29,20 @@ export function getCardExportOptions(format) {
     pdfImageFormat: format === 'pdf' ? 'PNG' : null,
   };
 }
+
+export async function waitForImageReady(image) {
+  if (!image.complete) {
+    await new Promise((resolve, reject) => {
+      image.addEventListener('load', resolve, { once: true });
+      image.addEventListener('error', () => reject(new Error('Portrait image failed to load')), { once: true });
+    });
+  }
+  if (!image.naturalWidth) throw new Error('Portrait image failed to load');
+  if (typeof image.decode === 'function') {
+    try {
+      await image.decode();
+    } catch {
+      if (!image.naturalWidth) throw new Error('Portrait image failed to decode');
+    }
+  }
+}
