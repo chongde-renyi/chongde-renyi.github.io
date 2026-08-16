@@ -1,3 +1,9 @@
+import {
+  chooseDownloadFormat,
+  buildDownloadFilename,
+  calculatePdfPageSize,
+} from './download-utils.mjs';
+
 const teachings=[
  {q:"常保初發心，成道有餘。",g:"守住最初的善念，今日把一件應做的事踏實完成。",ge:"Hold on to your first sincere intention — complete one thing you should do today, step by step."},
  {q:"修道要真修，辦道要真辦，行道要真行，成道要真成。",g:"真誠不在言語，而在每一次選擇與行動。",ge:"Sincerity isn't in words, but in every choice and action you make."},
@@ -115,6 +121,16 @@ const teachings=[
 const screens=[...document.querySelectorAll(".screen")];
 const show=id=>screens.forEach(s=>s.classList.toggle("active",s.id===id));
 const portraitPositions={p1:"0% 0%",p2:"33.333% 0%",p3:"66.667% 0%",p4:"100% 0%",p5:"0% 100%",p6:"33.333% 100%",p7:"66.667% 100%",p8:"100% 100%"};
+const newPortraits={n1:"baishui-shengdi-v1.jpg",n2:"buxiuxi-pusa-v1.jpg",n3:"jesus-christ-v1.jpg",n4:"virgin-mary-v1.jpg"};
+function portraitBg(name,portraitClass){
+  const isRenyi=name==="仁義大仙";
+  const isNew=/^n/.test(portraitClass);
+  const image=isRenyi?'url("images/renyi-daxian-v1.jpg?v=20260812-2")':isNew?`url("images/${newPortraits[portraitClass]}?v=20260812-1")`:'url("images/eight-immortals-v3.jpg?v=20260812-5")';
+  const position=isRenyi||isNew?"center":portraitPositions[portraitClass];
+  const size=isRenyi||isNew?"cover":"400% 200%";
+  return{image,position,size};
+}
+let currentName=null,currentItem=null,currentPortraitClass=null;
 const choices=document.querySelector(".choices");
 const shuffled=[...choices.children];
 for(let i=shuffled.length-1;i>0;i--){
@@ -128,16 +144,15 @@ document.querySelectorAll(".choices button").forEach(btn=>btn.addEventListener("
   show("drawing");
   window.setTimeout(()=>{
     const item=teachings[Math.floor(Math.random()*teachings.length)];
+    currentName=name;currentItem=item;currentPortraitClass=portraitClass;
     document.querySelector("#chosen-name").textContent=name+" 慈悲指引";
     const resultPortrait=document.querySelector("#seal");
     resultPortrait.textContent="";
     resultPortrait.className="seal result-portrait "+portraitClass;
-    const isRenyi=name==="仁義大仙";
-    const isNew=/^n/.test(portraitClass);
-    const newPortraits={n1:"baishui-shengdi-v1.jpg",n2:"buxiuxi-pusa-v1.jpg",n3:"jesus-christ-v1.jpg",n4:"virgin-mary-v1.jpg"};
-    resultPortrait.style.setProperty("background-image",isRenyi?'url("images/renyi-daxian-v1.jpg?v=20260812-2")':isNew?`url("images/${newPortraits[portraitClass]}?v=20260812-1")`:'url("images/eight-immortals-v3.jpg?v=20260812-5")',"important");
-    resultPortrait.style.backgroundPosition=isRenyi||isNew?"center":portraitPositions[portraitClass];
-    resultPortrait.style.backgroundSize=isRenyi||isNew?"cover":"400% 200%";
+    const bg=portraitBg(name,portraitClass);
+    resultPortrait.style.setProperty("background-image",bg.image,"important");
+    resultPortrait.style.backgroundPosition=bg.position;
+    resultPortrait.style.backgroundSize=bg.size;
     resultPortrait.setAttribute("aria-label",name+"畫像");
     document.querySelector("#quote").textContent="「"+item.q+"」";
     document.querySelector("#guidance").textContent=item.g;
@@ -146,7 +161,92 @@ document.querySelectorAll(".choices button").forEach(btn=>btn.addEventListener("
   },2200);
 }));
 document.querySelector("#again").addEventListener("click",()=>show("choose"));
-document.querySelector("#copy").addEventListener("click",async e=>{
-  const text=document.querySelector("#chosen-name").textContent+"\n"+document.querySelector("#quote").textContent+"\n"+document.querySelector("#guidance").textContent+"\n"+document.querySelector("#guidance-en").textContent;
-  try{await navigator.clipboard.writeText(text);e.currentTarget.textContent="已複製";setTimeout(()=>e.currentTarget.textContent="複製慈語",1500)}catch{e.currentTarget.textContent="請長按文字複製"}
-});
+
+function renderDownloadCard(){
+  if(!currentItem)return;
+  const bg=portraitBg(currentName,currentPortraitClass);
+  document.querySelector("#download-card").innerHTML=`
+    <div class="dc-top">
+      <div>
+        <p class="dc-kicker">崇德仁義 · 今日慈語</p>
+        <h2 class="dc-title">${currentName} 慈悲指引</h2>
+      </div>
+      <span class="dc-portrait"></span>
+    </div>
+    <section class="dc-section dc-quote"><p>「${currentItem.q}」</p></section>
+    <section class="dc-section">
+      <p class="dc-text">${currentItem.g}</p>
+      <p class="dc-text-en">${currentItem.ge}</p>
+    </section>
+    <div class="dc-foot">此頁旨在靜心自省與善念提醒，慈語不作占卜或重大決策依據。</div>`;
+  const portrait=document.querySelector("#download-card .dc-portrait");
+  portrait.style.setProperty("background-image",bg.image,"important");
+  portrait.style.backgroundPosition=bg.position;
+  portrait.style.backgroundSize=bg.size;
+}
+function downloadBlob(blob,filename){
+  const url=URL.createObjectURL(blob);
+  const link=document.createElement("a");
+  link.href=url;link.download=filename;
+  document.body.appendChild(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1200);
+}
+function canvasToBlob(canvas,type="image/png",quality=1){
+  return new Promise((resolve,reject)=>{
+    canvas.toBlob(blob=>blob?resolve(blob):reject(new Error("Canvas export failed")),type,quality);
+  });
+}
+async function downloadBlessingCard(){
+  if(!currentItem)return;
+  const button=document.querySelector("#download-btn");
+  const originalText="下載慈語卡片";
+  button.disabled=true;
+  button.textContent="正在製作卡片…";
+  try{
+    renderDownloadCard();
+    if(document.fonts?.ready)await document.fonts.ready;
+    if(!window.html2canvas)throw new Error("html2canvas is unavailable");
+    const card=document.querySelector("#download-card");
+    const canvas=await window.html2canvas(card,{backgroundColor:"#fffaf0",scale:2,useCORS:true,logging:false});
+    const format=chooseDownloadFormat({
+      userAgent:navigator.userAgent,
+      maxTouchPoints:navigator.maxTouchPoints||0,
+      innerWidth:window.innerWidth,
+    });
+    const filename=buildDownloadFilename(currentName,format);
+    if(format==="png"){
+      const blob=await canvasToBlob(canvas,"image/png",1);
+      downloadBlob(blob,filename);
+    }else{
+      const jsPDF=window.jspdf?.jsPDF;
+      if(!jsPDF)throw new Error("jsPDF is unavailable");
+      const {width,height,orientation}=calculatePdfPageSize(canvas.width,canvas.height);
+      const pdf=new jsPDF({orientation,unit:"px",format:[width,height],hotfixes:["px_scaling"]});
+      const image=canvas.toDataURL("image/jpeg",0.96);
+      pdf.addImage(image,"JPEG",0,0,width,height,undefined,"FAST");
+      pdf.save(filename);
+    }
+    button.textContent="已產生下載";
+    setTimeout(()=>{button.disabled=false;button.textContent=originalText;},1400);
+  }catch(err){
+    console.error(err);
+    button.disabled=false;
+    button.textContent="下載失敗，請再試一次";
+    setTimeout(()=>button.textContent=originalText,1800);
+  }
+}
+document.querySelector("#download-btn").addEventListener("click",downloadBlessingCard);
+if(new URLSearchParams(location.search).get("debugIdx")!==null){
+  const idx=Number(new URLSearchParams(location.search).get("debugIdx"));
+  currentName="彌勒祖師";currentItem=teachings[idx];currentPortraitClass="p1";
+  document.querySelector("#chosen-name").textContent=currentName+" 慈悲指引";
+  document.querySelector("#quote").textContent="「"+currentItem.q+"」";
+  document.querySelector("#guidance").textContent=currentItem.g;
+  document.querySelector("#guidance-en").textContent=currentItem.ge;
+  const bg=portraitBg(currentName,currentPortraitClass);
+  const seal=document.querySelector("#seal");
+  seal.className="seal result-portrait "+currentPortraitClass;
+  seal.style.setProperty("background-image",bg.image,"important");
+  seal.style.backgroundPosition=bg.position;seal.style.backgroundSize=bg.size;
+  show("result");
+}

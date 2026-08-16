@@ -5,7 +5,9 @@
   <meta name="description" content="靜心選擇一位仙佛，領受一則今日法語。">
   <title>感恩發愿｜仙佛慈語</title>
   <link rel="stylesheet" href="blessing.css?v=individual-portraits-20260812-1">
-  <script src="blessing.js?v=individual-portraits-20260812-1" defer></script>
+  <script src="vendor/html2canvas-1.4.1.min.js"></script>
+  <script src="vendor/jspdf-2.5.2.umd.min.js"></script>
+  <script type="module" src="blessing.js?v=card-download-20260815-1"></script>
 </head>
 <body>
   <header><a href="../">← 崇德仁義總站</a><strong>感恩發愿 · 仙佛慈語</strong><span>靜心 · 誠意 · 領受</span></header>
@@ -42,10 +44,14 @@
       <blockquote id="quote"></blockquote>
       <p class="guidance" id="guidance"></p>
       <p class="guidance-en" id="guidance-en"></p>
-      <div class="actions"><button id="again">再次領受</button><button class="secondary" id="copy">複製慈語</button></div>
+      <div class="actions"><button id="again">再次領受</button><button class="secondary" id="download-btn">下載慈語卡片</button></div>
       <p class="note">此頁旨在靜心自省與善念提醒，慈語不作占卜或重大決策依據。</p>
     </section>
   </main>
   <footer>崇德仁義 · 存好心 · 說好話 · 行好事</footer>
+
+  <div class="download-card-host" aria-hidden="true">
+    <article class="download-card" id="download-card"></article>
+  </div>
 </body>
 </html>
